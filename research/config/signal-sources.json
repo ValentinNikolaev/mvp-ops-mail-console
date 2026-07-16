@@ -1,0 +1,174 @@
+{
+  "global": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpsMailConsoleResearchBot/1.0",
+    "requestTimeoutSeconds": 30,
+    "maxRetries": 3,
+    "retryBaseSeconds": 2,
+    "maxItemsPerQuery": 6,
+    "minimumPublishedYear": 2024,
+    "positivePatterns": [
+      "spf",
+      "dkim",
+      "dmarc",
+      "postmaster",
+      "snds",
+      "junk",
+      "spam folder",
+      "inbox placement",
+      "quarantine",
+      "silent drop",
+      "throttl",
+      "blocklist",
+      "blacklist",
+      "warm",
+      "reputation",
+      "delist",
+      "deliverability"
+    ],
+    "excludePatterns": [
+      "seo service",
+      "marketing agency",
+      "affiliate",
+      "guest post",
+      "casino",
+      "crypto giveaway"
+    ],
+    "painTypeRules": [
+      {
+        "name": "auth_ok_delivery_bad",
+        "pattern": "(spf|dkim|dmarc).*(spam|junk|deliver|delivery|inbox)|(deliver|delivery).*(spf|dkim|dmarc)"
+      },
+      {
+        "name": "low_volume_visibility_gap",
+        "pattern": "low[- ]volume|small sender|postmaster|snds|no data|not enough data|insufficient data"
+      },
+      {
+        "name": "warmup_rewarm",
+        "pattern": "warm[- ]?up|re[- ]?warm|new domain|new ip|new tenant"
+      },
+      {
+        "name": "junk_or_quarantine",
+        "pattern": "junk|spam folder|quarantine|quarantined|clutter"
+      },
+      {
+        "name": "silent_drop_or_throttle",
+        "pattern": "silent drop|throttl|deferred|deferral|421|rate limit"
+      },
+      {
+        "name": "blocklist_vs_reputation",
+        "pattern": "blocklist|blacklist|delist|delisting|reputation issue|sender reputation"
+      },
+      {
+        "name": "root_cause_visibility",
+        "pattern": "root cause|visibility|explainability|combined monitoring|monitoring gap"
+      }
+    ],
+    "segmentRules": [
+      {
+        "name": "low-volume",
+        "pattern": "low[- ]volume|small sender|new domain|not enough data"
+      },
+      {
+        "name": "mid-volume",
+        "pattern": "mid[- ]volume|growing sender|warming program|shared ip"
+      }
+    ],
+    "keywordClusters": [
+      {
+        "name": "auth-ok-delivery-bad",
+        "terms": "\"SPF\" \"DKIM\" \"DMARC\" deliverability inbox spam"
+      },
+      {
+        "name": "low-volume-no-data",
+        "terms": "\"low volume\" sender postmaster SNDS \"no data\""
+      },
+      {
+        "name": "warmup-rewarm",
+        "terms": "\"new domain\" warmup rewarm throttling deliverability"
+      },
+      {
+        "name": "junk-placement",
+        "terms": "gmail outlook junk placement spam folder inbox"
+      },
+      {
+        "name": "blocklist-remediation",
+        "terms": "blocklist blacklist delist remediation sender reputation"
+      },
+      {
+        "name": "visibility-root-cause",
+        "terms": "\"inbox placement\" explainability visibility \"root cause\""
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Google Workspace Admin Community",
+      "slug": "google-workspace-admin-community",
+      "kind": "bing-rss",
+      "siteScope": "site:support.google.com/a/community",
+      "priority": 100
+    },
+    {
+      "name": "Gmail Community",
+      "slug": "gmail-community",
+      "kind": "bing-rss",
+      "siteScope": "site:support.google.com/mail/thread",
+      "priority": 95
+    },
+    {
+      "name": "Microsoft Q&A",
+      "slug": "microsoft-qa",
+      "kind": "bing-rss",
+      "siteScope": "site:learn.microsoft.com/en-us/answers",
+      "priority": 100
+    },
+    {
+      "name": "Hacker News",
+      "slug": "hacker-news",
+      "kind": "hn-algolia",
+      "priority": 85
+    },
+    {
+      "name": "Server Fault",
+      "slug": "server-fault",
+      "kind": "stackexchange-api",
+      "site": "serverfault",
+      "priority": 90
+    },
+    {
+      "name": "mailcow Community",
+      "slug": "mailcow-community",
+      "kind": "bing-rss",
+      "siteScope": "site:community.mailcow.email",
+      "priority": 85
+    },
+    {
+      "name": "HubSpot Community",
+      "slug": "hubspot-community",
+      "kind": "bing-rss",
+      "siteScope": "site:community.hubspot.com",
+      "priority": 80
+    },
+    {
+      "name": "Qualtrics Community",
+      "slug": "qualtrics-community",
+      "kind": "bing-rss",
+      "siteScope": "site:community.qualtrics.com",
+      "priority": 75
+    },
+    {
+      "name": "Adobe Experience League Community",
+      "slug": "adobe-experience-league-community",
+      "kind": "bing-rss",
+      "siteScope": "site:experienceleaguecommunities.adobe.com",
+      "priority": 80
+    },
+    {
+      "name": "AWS re:Post",
+      "slug": "aws-repost",
+      "kind": "bing-rss",
+      "siteScope": "site:repost.aws",
+      "priority": 90
+    }
+  ]
+}
