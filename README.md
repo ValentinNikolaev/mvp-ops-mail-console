@@ -12,6 +12,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/signals/` - one markdown file per normalized signal.
 - `research/digests/daily/` - daily digest files for new or updated signals.
 - `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
+- `research/product-specs/` - Tuesday versioned product specifications based on the latest MVP synthesis.
 - `research/logs/` - per-run execution logs. Tracked in Git.
 - `research/state/` - tracked run state and repo-side metadata when the pipeline needs them.
 - `automation/codex-hourly-market-monitor.prompt.md` - prompt mirror for the Codex cron automation.
@@ -46,6 +47,22 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
   - cons
   - open questions
 - Use tracked state in `research/state/mvp-iteration-registry.md` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
+
+## Tuesday Product Specification
+
+- On Tuesdays, create a versioned product specification in `research/product-specs/`.
+- Base each Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
+- Keep these product specifications separate from raw signals, digests, and MVP syntheses.
+- Each Tuesday specification should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
+- Each specification should include:
+  - product scope
+  - recommended stack and why it is fast and low-cost
+  - architecture and major components
+  - MVP feature set
+  - operational tradeoffs
+  - support and scaling considerations
+  - open questions
+- Use `research/state/product-spec-registry.md` so repeated hourly runs on the same Tuesday update the same spec file instead of creating duplicates.
 
 ## Debugging
 

@@ -32,10 +32,12 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - One canonical signal file per accepted signal in `research/signals/`.
 - One daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - On Mondays and Fridays, one incremental refined MVP synthesis in `research/mvp-iterations/`.
+- On Tuesdays, one versioned product specification in `research/product-specs/`.
 - One run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Optional tracked runtime metadata in `research/state/`.
 - Maintain `research/state/comment-source-registry.md` so future runs know which parsed items are worth comment rechecks.
 - Maintain `research/state/mvp-iteration-registry.md` so repeated hourly runs do not create duplicate Monday/Friday MVP syntheses.
+- Maintain `research/state/product-spec-registry.md` so repeated hourly runs do not create duplicate Tuesday product specifications.
 
 ## Monday and Friday synthesis
 
@@ -49,6 +51,22 @@ Find fresh market pain around email deliverability and turn it into a compact ma
   - cons
   - open questions
 - If the same Monday or Friday run happens again later that day, update the existing file instead of creating a duplicate unless a new version is truly needed.
+
+## Tuesday product specification
+
+- Keep these files in the separate folder `research/product-specs/`.
+- Build each Tuesday specification from the latest available MVP document.
+- Describe a simple product that can be built quickly, cheaply, and with relatively easy maintenance and scaling.
+- Explain:
+  - recommended stack
+  - architecture
+  - product scope
+  - MVP feature set
+  - tradeoffs
+  - support and scaling considerations
+  - open questions
+- Prefer practical and boring technology choices over fancy ones.
+- If the same Tuesday run happens again later that day, update the existing file instead of creating a duplicate unless a new version is truly needed.
 
 ## Quality bar
 

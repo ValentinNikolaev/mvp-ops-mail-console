@@ -16,6 +16,12 @@ Requirements:
 - Base the synthesis on the cumulative sample already captured in `research/signals/` plus any newly added useful comments.
 - Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, and open questions.
 - Use `research/state/mvp-iteration-registry.md` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
+- If the run date is Tuesday, create or update one versioned product specification in `research/product-specs/` using `research/product-specs/TEMPLATE.md`.
+- Base the Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
+- Keep the Tuesday specification in that separate folder only.
+- The specification must recommend a product shape and stack that can be built quickly, cheaply, and with relatively easy maintenance and scaling.
+- Include scope, recommended stack, architecture, MVP feature set, operational tradeoffs, support and scaling considerations, and open questions.
+- Use `research/state/product-spec-registry.md` to avoid duplicate Tuesday specifications across repeated hourly runs on the same day.
 - Write a human-readable run log under `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Continue if one source fails or rate-limits.
 - Treat Windows-related ecosystem threads and Microsoft properties as valid first-class sources.
@@ -27,4 +33,6 @@ Requirements:
 
 After the run:
 - Summarize how many sources succeeded, how many failed, and how many signals were created or updated.
+- If a Monday or Friday MVP synthesis was created or updated, mention its file path and iteration id.
+- If a Tuesday product specification was created or updated, mention its file path and version id.
 - If push failed, report the exact blocker.

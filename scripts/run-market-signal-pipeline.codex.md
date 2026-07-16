@@ -12,6 +12,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Existing files under `research/signals/`
 - Existing files under `research/digests/daily/`
 - Existing files under `research/mvp-iterations/`
+- Existing files under `research/product-specs/`
 - Current date and time at execution
 
 ## Source policy
@@ -44,10 +45,12 @@ Accept a signal when at least one of these is true:
 - Use YAML frontmatter exactly as described in `research/config/signal-template.md`.
 - Write a daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - On Mondays and Fridays, write one incremental refined MVP synthesis in `research/mvp-iterations/`.
+- On Tuesdays, write one versioned product specification in `research/product-specs/`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
 - Track comment availability and comment recheck decisions in `research/state/comment-source-registry.md`.
 - Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.md`.
+- Track Tuesday product specification creation in `research/state/product-spec-registry.md`.
 
 ## Monday and Friday MVP synthesis
 
@@ -63,6 +66,24 @@ Accept a signal when at least one of these is true:
   - open questions
 - Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.
 - Use the template in `research/mvp-iterations/TEMPLATE.md`.
+
+## Tuesday product specification
+
+- This specification must live in the separate folder `research/product-specs/`.
+- It must be based on the latest available MVP document from `research/mvp-iterations/`.
+- It should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
+- The specification should explicitly cover:
+  - recommended implementation approach
+  - recommended stack and hosting choices
+  - why the stack is fast to build with
+  - why the stack is low cost
+  - why the stack is relatively easy to support and scale
+  - the product scope and MVP feature set
+  - operational tradeoffs
+  - open questions
+- Prefer pragmatic choices over novelty. Bias toward boring, proven components with low operational overhead.
+- Create at most one Tuesday specification per calendar date unless the same day's file needs a material revision; if revised, update the existing file instead of creating duplicates.
+- Use the template in `research/product-specs/TEMPLATE.md`.
 
 ## Deduplication
 
