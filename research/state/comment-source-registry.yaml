@@ -5,88 +5,106 @@ comment_sources:
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: null
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
+    comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Comments are available, but the initial available/parsing counts were not recorded yet."
+    note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/349591744/don-t-receive-dmarc-reports-from-google?hl=en"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: null
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
+    comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Comments are available, but the initial available/parsing counts were not recorded yet."
+    note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5723349/new-domain-for-my-online-marketplace-and-they-go-t"
     comments_supported: "yes"
-    comments_available_count: null
-    comments_parsed_count: null
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Comments are available, but the initial available/parsing counts were not recorded yet."
+    comments_available_count: 0
+    comments_parsed_count: 0
+    comments_artifact_file: "research/comments/2026-01-17-microsoft-new-domain-goes-to-junk-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "The question has zero visible comments; answer-level replies are not counted as question comments."
   - source: "Server Fault"
     url: "https://serverfault.com/questions/1190987/emails-sent-to-ms365-tenant-recipients-from-specific-user-always-flagged-as-spam"
     comments_supported: "yes"
-    comments_available_count: null
-    comments_parsed_count: null
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Comments are available, but the initial available/parsing counts were not recorded yet."
+    comments_available_count: 3
+    comments_parsed_count: 3
+    comments_artifact_file: "research/comments/2025-08-27-serverfault-ms365-user-specific-spam-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All three visible comments were parsed; they point diagnosis to the recipient tenant evidence."
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=47075915"
     comments_supported: "yes"
     comments_available_count: 11
     comments_parsed_count: 11
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
+    comments_artifact_file: "research/comments/2026-02-19-ask-hn-verified-data-deliverability-trap-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "periodic-refresh"
-    note: "Initial comment counts were captured; no materially new comment accepted."
+    note: "Full 11-comment pass retained in the artifact; no materially new signal this run."
   - source: "HubSpot Community"
     url: "https://community.hubspot.com/t/are-my-emails-really-reaching-inboxes-looking-for-deliverability-tools-benchmarks/147728"
     comments_supported: "yes"
-    comments_available_count: null
-    comments_parsed_count: null
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Comments are available, but the initial available/parsing counts were not recorded yet."
+    comments_available_count: 5
+    comments_parsed_count: 5
+    comments_artifact_file: "research/comments/2026-03-27-hubspot-inbox-placement-visibility-gap-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All five indexed replies were parsed; they reinforce the inbox-placement visibility gap."
   - source: "Qualtrics Community"
     url: "https://community.qualtrics.com/survey-platform-54/survey-invite-emails-bouncing-for-specific-providers-e-g-gmail-33289"
     comments_supported: "yes"
     comments_available_count: 1
     comments_parsed_count: 1
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:02:46+02:00"
+    comments_artifact_file: "research/comments/2026-04-30-qualtrics-gmail-bounce-spam-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "periodic-refresh"
-    note: "Initial comment counts were captured; the available reply was already reflected in the canonical signal."
+    note: "The single reply was preserved in the comment artifact and is already reflected in the canonical signal."
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=46989217"
     comments_supported: "yes"
     comments_available_count: 415
     comments_parsed_count: 415
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:28:48+02:00"
+    comments_artifact_file: "research/comments/2026-03-16-hacker-news-gmail-message-id-rejection-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "periodic-refresh"
-    note: "Full initial comment counts were captured; accepted material operational detail on provider-specific rejection, hidden failure modes, and limited escalation paths."
+    note: "Full 415-comment pass is retained in the artifact; it includes provider-specific rejection and escalation friction."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5737161/since-end-december-2025-add-user-%29-invite-external"
     comments_supported: "yes"
     comments_available_count: 8
     comments_parsed_count: 8
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:28:48+02:00"
+    comments_artifact_file: "research/comments/2026-01-24-microsoft-qa-entra-invites-not-delivered-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "periodic-refresh"
-    note: "Full initial comment counts were captured; comments confirmed multi-tenant recurrence and persistent non-delivery after the workflow completed."
+    note: "Full eight-comment pass is retained in the artifact; it confirms multi-tenant recurrence after workflow completion."
   - source: "AWS re:Post"
     url: "https://repost.aws/de/questions/QUutjw2okCQcauMIJMAS821A/ses-sometimes-fails-to-reach-existing-email-accounts"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:28:48+02:00"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "retry-until-determined"
-    note: "The page content was indexed, but comment retrieval was unavailable in this run; try again on the next run until support is determined."
+    note: "The page content is indexed but comment retrieval remains unavailable; retry until support is determined."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5694073/outlook-microsoft-365-marking-fully-authenticated"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-01-06-microsoft-qa-authenticated-transactional-junk-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "The single question comment preserves the SCL=5/Junk header evidence."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1196264/microsoft-365-rejecting-email"
+    comments_supported: "yes"
+    comments_available_count: 12
+    comments_parsed_count: 5
+    comments_artifact_file: "research/comments/2025-12-10-serverfault-microsoft-blocklist-verdict-gap-comments.md"
+    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Five visible comments were parsed; seven hidden comments remain for retry."
