@@ -11,6 +11,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - `research/config/signal-sources.json`
 - Existing files under `research/signals/`
 - Existing files under `research/digests/daily/`
+- Existing files under `research/mvp-iterations/`
 - Current date and time at execution
 
 ## Source policy
@@ -42,9 +43,26 @@ Accept a signal when at least one of these is true:
 - Keep one canonical markdown file per signal in `research/signals/`.
 - Use YAML frontmatter exactly as described in `research/config/signal-template.md`.
 - Write a daily digest in `research/digests/daily/YYYY-MM-DD.md`.
+- On Mondays and Fridays, write one incremental refined MVP synthesis in `research/mvp-iterations/`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
 - Track comment availability and comment recheck decisions in `research/state/comment-source-registry.md`.
+- Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.md`.
+
+## Monday and Friday MVP synthesis
+
+- This synthesis must live in the separate folder `research/mvp-iterations/`.
+- It should be an incremented refined version, not a raw digest.
+- It should synthesize the current sample into a potential MVP ops tool for low-volume and mid-volume senders.
+- The tool description should explicitly cover reputation, blocklists, provider feedback, inbox placement, and remediation steps in one explainable console.
+- The synthesis should describe:
+  - what can be built now as the MVP
+  - which majority needs from the current sample it would close
+  - pros
+  - cons
+  - open questions
+- Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.
+- Use the template in `research/mvp-iterations/TEMPLATE.md`.
 
 ## Deduplication
 

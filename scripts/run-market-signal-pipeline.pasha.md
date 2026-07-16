@@ -31,9 +31,24 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 
 - One canonical signal file per accepted signal in `research/signals/`.
 - One daily digest in `research/digests/daily/YYYY-MM-DD.md`.
+- On Mondays and Fridays, one incremental refined MVP synthesis in `research/mvp-iterations/`.
 - One run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Optional tracked runtime metadata in `research/state/`.
 - Maintain `research/state/comment-source-registry.md` so future runs know which parsed items are worth comment rechecks.
+- Maintain `research/state/mvp-iteration-registry.md` so repeated hourly runs do not create duplicate Monday/Friday MVP syntheses.
+
+## Monday and Friday synthesis
+
+- Keep these files in the separate folder `research/mvp-iterations/`.
+- Build an incremented refined MVP version for an ops tool for low-volume and mid-volume senders.
+- The MVP must combine reputation, blocklists, provider feedback, inbox placement, and remediation steps into one explainable console.
+- Explain:
+  - what MVP can be built now
+  - which needs from most of the sample it addresses
+  - pros
+  - cons
+  - open questions
+- If the same Monday or Friday run happens again later that day, update the existing file instead of creating a duplicate unless a new version is truly needed.
 
 ## Quality bar
 

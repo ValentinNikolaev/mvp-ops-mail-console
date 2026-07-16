@@ -11,6 +11,11 @@ Requirements:
 - For each accepted signal, normalize the URL, deduplicate against existing files in `research/signals/`, and keep one canonical `.md` file per signal.
 - Use `research/config/signal-template.md` for each signal file.
 - Use `research/config/digest-template.md` for the daily digest in `research/digests/daily/YYYY-MM-DD.md`.
+- If the run date is Monday or Friday, create or update one incremental refined MVP synthesis in `research/mvp-iterations/` using `research/mvp-iterations/TEMPLATE.md`.
+- Keep the Monday/Friday MVP synthesis in that separate folder only.
+- Base the synthesis on the cumulative sample already captured in `research/signals/` plus any newly added useful comments.
+- Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, and open questions.
+- Use `research/state/mvp-iteration-registry.md` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
 - Write a human-readable run log under `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Continue if one source fails or rate-limits.
 - Treat Windows-related ecosystem threads and Microsoft properties as valid first-class sources.

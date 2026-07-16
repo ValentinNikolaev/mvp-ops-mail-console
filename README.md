@@ -11,6 +11,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/config/digest-template.md` - canonical structure for daily digests.
 - `research/signals/` - one markdown file per normalized signal.
 - `research/digests/daily/` - daily digest files for new or updated signals.
+- `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
 - `research/logs/` - per-run execution logs. Tracked in Git.
 - `research/state/` - tracked run state and repo-side metadata when the pipeline needs them.
 - `automation/codex-hourly-market-monitor.prompt.md` - prompt mirror for the Codex cron automation.
@@ -32,6 +33,19 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - Revisit already parsed items only when comments can actually be fetched from that source or thread.
 - If comments are disabled or unavailable for a parsed item, mark that fact in tracked state and do not re-fetch the article only to check comments again.
 - Use `research/state/comment-source-registry.md` to remember whether comment rechecks are worth doing.
+
+## Monday And Friday MVP Synthesis
+
+- On Mondays and Fridays, create an incremental refined MVP synthesis in `research/mvp-iterations/`.
+- Keep these MVP syntheses separate from raw signal files and daily digests.
+- Each synthesis should describe a potential MVP ops tool for low-volume and mid-volume senders that combines reputation, blocklists, provider feedback, inbox placement, and remediation steps into one explainable console.
+- Each synthesis should include:
+  - the proposed MVP
+  - what majority needs from the sample it closes
+  - pros
+  - cons
+  - open questions
+- Use tracked state in `research/state/mvp-iteration-registry.md` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
 
 ## Debugging
 
