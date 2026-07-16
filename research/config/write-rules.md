@@ -5,6 +5,7 @@ This file is the canonical write-policy reference for unattended runs.
 ## Naming rules
 
 - Signals: `YYYY-MM-DD-<source-slug>-<topic-slug>.md`
+- Comment artifacts: `<canonical_id>-comments.md`
 - Daily digests: `YYYY-MM-DD.md`
 - Run logs: `YYYY-MM-DD/run-HHmmss.md`
 - Monday/Friday MVP syntheses: `YYYY-MM-DD-mvp-iteration-NNN.md`
@@ -30,3 +31,21 @@ This file is the canonical write-policy reference for unattended runs.
   3. latest Tuesday product specification
   4. older MVP syntheses
 - When there is conflict, prefer the higher-ranked source and note the conflict briefly.
+
+## Comment parsing rules
+
+- If comments are available for a source thread, parsing them is mandatory.
+- On the first successful comment fetch, record:
+  - `comments_available_count`
+  - `comments_parsed_count`
+  - `comments_artifact_file`
+- Comment artifacts must live in `research/comments/`.
+- Each comment artifact must contain:
+  - source and thread metadata
+  - available and parsed counts
+  - parse status
+  - concise summary of the most useful comments for the current request
+  - a short list of comment-level artifacts or paraphrases worth preserving
+- If `comments_parsed_count` is lower than `comments_available_count`, set the registry policy to retry on the next run.
+- If counts are unknown because parsing was incomplete or failed, retry on the next run.
+- Only use `skip` when comments are explicitly disabled or structurally unsupported for that source/thread.

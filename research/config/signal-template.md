@@ -21,5 +21,8 @@ Explain why this matters for an ops console that combines reputation, blocklists
 ## Evidence
 Include one short quote or a tight paraphrase of the pain signal.
 
+## Comment Insights
+If comments were available, link the related comment artifact and summarize the most useful comment-derived insight in one or two lines.
+
 ## Source
 - [Original source](<normalized canonical url>)

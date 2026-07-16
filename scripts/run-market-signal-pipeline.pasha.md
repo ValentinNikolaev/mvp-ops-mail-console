@@ -25,18 +25,21 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - Windows and Microsoft ecosystem sources count as valid project sources.
 - Fresh threads from 2025-2026 should be preferred over older material.
 - Only new articles and useful comments should be added.
-- If comments can be fetched for a source, previously parsed items may be revisited from time to time to collect new useful comments.
-- If comments are disabled or unavailable, do not keep re-fetching that article for comment checks.
+- If comments can be fetched for a source, parsing them is mandatory.
+- On the first successful comment fetch, record the total available count and the parsed count.
+- If comments were not fully parsed last time, retry next time.
+- Only stop retrying when comments are clearly disabled or unsupported.
 
 ## What to write
 
 - One canonical signal file per accepted signal in `research/signals/`.
+- One canonical comment artifact per comment-capable source thread in `research/comments/`.
 - One daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - On Mondays and Fridays, one incremental refined MVP synthesis in `research/mvp-iterations/`.
 - On Tuesdays, one versioned product specification in `research/product-specs/`.
 - One run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Optional tracked runtime metadata in `research/state/`.
-- Maintain `research/state/comment-source-registry.yaml` so future runs know which parsed items are worth comment rechecks.
+- Maintain `research/state/comment-source-registry.yaml` so future runs know comment counts, artifact paths, and whether incomplete comment parsing must be retried.
 - Maintain `research/state/mvp-iteration-registry.yaml` so repeated hourly runs do not create duplicate Monday/Friday MVP syntheses.
 - Maintain `research/state/product-spec-registry.yaml` so repeated hourly runs do not create duplicate Tuesday product specifications.
 
@@ -98,6 +101,7 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - Mark confidence honestly.
 - Keep summaries concise and useful for product discovery.
 - Useful comments count only when they add new pain evidence, workaround detail, provider behavior, or remediation context.
+- Keep a concise artifact-level summary of the most useful comments for later MVP and product-spec synthesis.
 
 ## Deduplication
 

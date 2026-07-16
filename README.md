@@ -11,6 +11,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/config/signal-template.md` - canonical structure for one signal file.
 - `research/config/digest-template.md` - canonical structure for daily digests.
 - `research/signals/` - one markdown file per normalized signal.
+- `research/comments/` - one comment artifact per source thread when comments are available or partially parsed.
 - `research/digests/daily/` - daily digest files for new or updated signals.
 - `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
 - `research/product-specs/` - Tuesday versioned product specifications based on the latest MVP synthesis.
@@ -42,8 +43,12 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 ## Comment policy
 
 - Add only new articles and useful comments.
-- Revisit already parsed items only when comments can actually be fetched from that source or thread.
-- If comments are disabled or unavailable for a parsed item, mark that fact in tracked state and do not re-fetch the article only to check comments again.
+- If comments are available, parsing them is mandatory.
+- On the initial comment pass, record both the total available comment count and the parsed comment count.
+- Store comments as a first-class artifact in `research/comments/`.
+- Each comment artifact should contain a concise summary of the most useful comments for the current problem space.
+- If comments were only partially parsed in a previous run, the next run must try again until parsing is complete or comments are explicitly proven unavailable.
+- Only stop retrying when comments are explicitly disabled or clearly unsupported for that source/thread.
 - Use `research/state/comment-source-registry.yaml` to remember whether comment rechecks are worth doing.
 
 ## Monday And Friday MVP Synthesis

@@ -7,8 +7,13 @@ Requirements:
 - Search the configured priority sources on the web for fresh user pain signals related to deliverability, reputation, provider filtering, blocklists, inbox placement, visibility gaps, and remediation workflows.
 - Prefer 2025-2026 discussions. Ignore low-value SEO articles unless they contain a unique signal.
 - Add only new articles and useful comments.
-- For sources and threads where comments can be fetched, periodically revisit already parsed items to collect newly appeared useful comments.
-- If comments are disabled, unavailable, or not fetchable for a parsed item, record that in `research/state/comment-source-registry.yaml` and do not re-fetch that article only to check comments again.
+- If comments are available for a source thread, parsing them is mandatory.
+- On the first successful comment pass for a thread, record the total available comment count and the parsed comment count.
+- Create or update a comment artifact in `research/comments/` for every thread where comments are available or partially parsed.
+- Each comment artifact must include a concise summary of the most useful comments for the current request.
+- If comments were only partially parsed in a previous run, retry on the next run.
+- If comments were unavailable or parsing failed, retry on the next run unless comments are explicitly disabled or unsupported for that source.
+- Record comment counts, artifact paths, and retry status in `research/state/comment-source-registry.yaml`.
 - For each accepted signal, normalize the URL, deduplicate against existing files in `research/signals/`, and keep one canonical `.md` file per signal.
 - Use `research/config/signal-template.md` for each signal file.
 - Use `research/config/digest-template.md` for the daily digest in `research/digests/daily/YYYY-MM-DD.md`.
@@ -50,6 +55,7 @@ Requirements:
 
 After the run:
 - Summarize how many sources succeeded, how many failed, and how many signals were created or updated.
+- Summarize how many comment-capable threads were checked, how many comments were available, how many were parsed, and which threads remain incomplete for retry.
 - If a Monday or Friday MVP synthesis was created or updated, mention its file path and iteration id.
 - If a Tuesday product specification was created or updated, mention its file path and version id.
 - If push failed, report the exact blocker.

@@ -11,6 +11,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - `research/config/signal-sources.json`
 - `research/config/write-rules.md`
 - Existing files under `research/signals/`
+- Existing files under `research/comments/`
 - Existing files under `research/digests/daily/`
 - Existing files under `research/mvp-iterations/`
 - Existing files under `research/product-specs/`
@@ -24,8 +25,10 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Reddit is optional, not mandatory for MVP.
 - Weak SEO pages should be skipped unless they contain a unique pain signal.
 - Only new articles and useful comments should be added to the database.
-- For sources where comments can be fetched, already parsed items may be revisited periodically to capture newly appeared useful comments.
-- If comments are disabled or not retrievable for a parsed item, that item should not be re-fetched just to check for comments again.
+- If comments are available for a source thread, parsing them is mandatory.
+- On the first successful comment fetch, record how many comments are available and how many were actually parsed.
+- If a prior run parsed only part of the available comments, the next run must retry.
+- Only stop retrying when comments are explicitly disabled or structurally unsupported for that thread.
 
 ## Acceptance rules
 
@@ -43,13 +46,14 @@ Accept a signal when at least one of these is true:
 ## Output rules
 
 - Keep one canonical markdown file per signal in `research/signals/`.
+- Keep one canonical comment artifact per source thread in `research/comments/` when comments are available or partially parsed.
 - Use YAML frontmatter exactly as described in `research/config/signal-template.md`.
 - Write a daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - On Mondays and Fridays, write one incremental refined MVP synthesis in `research/mvp-iterations/`.
 - On Tuesdays, write one versioned product specification in `research/product-specs/`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
-- Track comment availability and comment recheck decisions in `research/state/comment-source-registry.yaml`.
+- Track comment availability, available-count, parsed-count, artifact path, and recheck decisions in `research/state/comment-source-registry.yaml`.
 - Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.yaml`.
 - Track Tuesday product specification creation in `research/state/product-spec-registry.yaml`.
 
@@ -118,6 +122,14 @@ Accept a signal when at least one of these is true:
 - Update the existing canonical signal file instead of creating near-duplicate follow-ups unless the new thread is materially distinct.
 - Do not create a new signal file for a comment if it only repeats the same pain already captured from the article or thread.
 - If a useful new comment materially extends an existing signal, update the existing canonical file instead of re-adding the article.
+
+## Comment handling
+
+- When comments are available, create or update the thread's comment artifact in `research/comments/`.
+- Record `comments_available_count` and `comments_parsed_count` in the registry.
+- If `comments_parsed_count < comments_available_count`, set the recheck policy to retry on the next run.
+- If the count is unknown because parsing failed partway through, retry on the next run.
+- Extract a concise summary of the most useful comments and use that summary as an artifact for future synthesis work.
 
 ## Git policy
 
