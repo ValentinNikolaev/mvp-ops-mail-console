@@ -56,14 +56,28 @@ Accept a signal when at least one of these is true:
 
 - This synthesis must live in the separate folder `research/mvp-iterations/`.
 - It should be an incremented refined version, not a raw digest.
+- Before writing, review the latest relevant MVP syntheses and the latest relevant Tuesday product specifications.
+- It should be written as a senior business analyst and implementation planner with strong backend and ops judgment.
+- It should identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
+- Keep it concise, specific, and optimized for token efficiency.
 - It should synthesize the current sample into a potential MVP ops tool for low-volume and mid-volume senders.
 - The tool description should explicitly cover reputation, blocklists, provider feedback, inbox placement, and remediation steps in one explainable console.
+- It should also act as if written by an experienced venture investor and business consultant.
 - The synthesis should describe:
   - what can be built now as the MVP
+  - finalized decisions
+  - changes
+  - fixes
+  - requirements
   - which majority needs from the current sample it would close
   - pros
   - cons
   - open questions
+  - value and problem severity
+  - business model and scalability
+  - market sizing and competitors
+  - likely acquisition and retention economics
+  - 3 main business risks and mitigations
 - Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.
 - Use the template in `research/mvp-iterations/TEMPLATE.md`.
 

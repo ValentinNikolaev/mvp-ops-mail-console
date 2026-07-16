@@ -40,12 +40,26 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - On Mondays and Fridays, create an incremental refined MVP synthesis in `research/mvp-iterations/`.
 - Keep these MVP syntheses separate from raw signal files and daily digests.
 - Each synthesis should describe a potential MVP ops tool for low-volume and mid-volume senders that combines reputation, blocklists, provider feedback, inbox placement, and remediation steps into one explainable console.
+- Each synthesis should act as if written by a senior business analyst and implementation planner with strong backend and ops judgment.
+- Each synthesis should always review the latest relevant MVP documents and the latest relevant product specification documents before writing.
+- Each synthesis should identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
+- Keep the result concise, specific, and optimized for token efficiency.
+- Each synthesis should also include a venture-style business assessment from the perspective of an experienced investor and business consultant.
 - Each synthesis should include:
   - the proposed MVP
+  - finalized decisions
+  - changes
+  - fixes
+  - requirements
   - what majority needs from the sample it closes
   - pros
   - cons
   - open questions
+  - value and problem severity
+  - business model and scalability
+  - market and competitors
+  - marketing and sales channels
+  - 3 main business risks with mitigations
 - Use tracked state in `research/state/mvp-iteration-registry.md` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
 
 ## Tuesday Product Specification

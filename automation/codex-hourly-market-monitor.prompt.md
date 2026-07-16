@@ -14,7 +14,12 @@ Requirements:
 - If the run date is Monday or Friday, create or update one incremental refined MVP synthesis in `research/mvp-iterations/` using `research/mvp-iterations/TEMPLATE.md`.
 - Keep the Monday/Friday MVP synthesis in that separate folder only.
 - Base the synthesis on the cumulative sample already captured in `research/signals/` plus any newly added useful comments.
-- Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, and open questions.
+- Before writing, review the latest relevant MVP documents and the latest relevant Tuesday product specifications.
+- Write the synthesis as a senior business analyst and implementation planner with strong backend and ops judgment.
+- Identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
+- Keep the synthesis concise, specific, and optimized for token efficiency.
+- Also act as an experienced venture investor and business consultant.
+- Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, open questions, value and problem severity, business model and scalability, market and competitors, marketing and sales channels, and 3 main business risks with mitigations.
 - Use `research/state/mvp-iteration-registry.md` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
 - If the run date is Tuesday, create or update one versioned product specification in `research/product-specs/` using `research/product-specs/TEMPLATE.md`.
 - Base the Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.

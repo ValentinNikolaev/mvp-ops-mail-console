@@ -42,14 +42,28 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 ## Monday and Friday synthesis
 
 - Keep these files in the separate folder `research/mvp-iterations/`.
+- Review the latest MVP files and the latest Tuesday product specification files before writing.
+- Write it as a senior business analyst and implementation planner with strong backend and ops judgment.
+- Extract all finalized decisions, changes, fixes, and requirements from the reviewed context.
+- Keep it concise, specific, and token-efficient.
 - Build an incremented refined MVP version for an ops tool for low-volume and mid-volume senders.
 - The MVP must combine reputation, blocklists, provider feedback, inbox placement, and remediation steps into one explainable console.
+- Also act as an experienced venture investor and business consultant.
 - Explain:
   - what MVP can be built now
+  - finalized decisions
+  - changes
+  - fixes
+  - requirements
   - which needs from most of the sample it addresses
   - pros
   - cons
   - open questions
+  - value and problem severity
+  - business model and scalability
+  - market and competitors
+  - marketing and sales
+  - 3 main risks with mitigations
 - If the same Monday or Friday run happens again later that day, update the existing file instead of creating a duplicate unless a new version is truly needed.
 
 ## Tuesday product specification
