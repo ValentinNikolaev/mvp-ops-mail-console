@@ -7,6 +7,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `scripts/run-market-signal-pipeline.codex.md` - canonical pipeline instructions for Codex.
 - `scripts/run-market-signal-pipeline.pasha.md` - same pipeline written separately for Pasha.
 - `research/config/signal-sources.json` - source list, keyword clusters, and filtering rules.
+- `research/config/write-rules.md` - canonical naming, versioning, and commit-gating rules.
 - `research/config/signal-template.md` - canonical structure for one signal file.
 - `research/config/digest-template.md` - canonical structure for daily digests.
 - `research/signals/` - one markdown file per normalized signal.
@@ -25,15 +26,25 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 
 - All generated and maintained files live in Git.
 - The pipeline should use `git add -A`.
-- If there are staged changes, commit them and push to branch `main`.
+- If the only changed files are under `research/logs/`, do not commit or push.
+- If there are staged non-log changes, commit them and push to branch `main`.
 - If there are no file changes, do not create an empty commit.
+
+## Source Of Truth
+
+- Use this precedence order when synthesizing Monday/Friday MVP documents and Tuesday product specifications:
+  1. `research/signals/` and useful comments captured from source threads
+  2. `research/config/` and tracked state registries
+  3. latest Tuesday product specification
+  4. older MVP syntheses
+- If sources disagree, prefer the higher-precedence layer and note the conflict briefly instead of silently blending them.
 
 ## Comment policy
 
 - Add only new articles and useful comments.
 - Revisit already parsed items only when comments can actually be fetched from that source or thread.
 - If comments are disabled or unavailable for a parsed item, mark that fact in tracked state and do not re-fetch the article only to check comments again.
-- Use `research/state/comment-source-registry.md` to remember whether comment rechecks are worth doing.
+- Use `research/state/comment-source-registry.yaml` to remember whether comment rechecks are worth doing.
 
 ## Monday And Friday MVP Synthesis
 
@@ -60,7 +71,7 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
   - market and competitors
   - marketing and sales channels
   - 3 main business risks with mitigations
-- Use tracked state in `research/state/mvp-iteration-registry.md` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
+- Use tracked state in `research/state/mvp-iteration-registry.yaml` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
 
 ## Tuesday Product Specification
 
@@ -78,7 +89,7 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
   - `Proposed Tech Stack & Tools`
 - `Executive Summary` should be only a 2-word to 3-word overview of the proposed solution.
 - `Proposed Tech Stack & Tools` should be a bulleted list of specific technologies with reasons, and should also cover the proposed MVP architecture and major system components.
-- Use `research/state/product-spec-registry.md` so repeated hourly runs on the same Tuesday update the same spec file instead of creating duplicates.
+- Use `research/state/product-spec-registry.yaml` so repeated hourly runs on the same Tuesday update the same spec file instead of creating duplicates.
 
 ## Debugging
 
@@ -86,6 +97,7 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - Read the latest digest under `research/digests/daily/` to confirm what changed.
 - If a source is flaky, the automation should log the error and continue with the rest.
 - If Git push fails in unattended mode, confirm the remote, branch, and authentication are already configured on the host.
+- If outputs start drifting, inspect `research/config/write-rules.md` and the YAML registries in `research/state/` first.
 
 ## Recovery
 

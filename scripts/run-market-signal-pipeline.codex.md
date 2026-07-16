@@ -9,6 +9,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 ## Inputs
 
 - `research/config/signal-sources.json`
+- `research/config/write-rules.md`
 - Existing files under `research/signals/`
 - Existing files under `research/digests/daily/`
 - Existing files under `research/mvp-iterations/`
@@ -48,15 +49,16 @@ Accept a signal when at least one of these is true:
 - On Tuesdays, write one versioned product specification in `research/product-specs/`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
-- Track comment availability and comment recheck decisions in `research/state/comment-source-registry.md`.
-- Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.md`.
-- Track Tuesday product specification creation in `research/state/product-spec-registry.md`.
+- Track comment availability and comment recheck decisions in `research/state/comment-source-registry.yaml`.
+- Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.yaml`.
+- Track Tuesday product specification creation in `research/state/product-spec-registry.yaml`.
 
 ## Monday and Friday MVP synthesis
 
 - This synthesis must live in the separate folder `research/mvp-iterations/`.
 - It should be an incremented refined version, not a raw digest.
 - Before writing, review the latest relevant MVP syntheses and the latest relevant Tuesday product specifications.
+- Use the source-of-truth order from `research/config/write-rules.md`.
 - It should be written as a senior business analyst and implementation planner with strong backend and ops judgment.
 - It should identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
 - Keep it concise, specific, and optimized for token efficiency.
@@ -120,7 +122,8 @@ Accept a signal when at least one of these is true:
 ## Git policy
 
 - Always stage all changed files with `git add -A`.
-- If there is a diff, commit it with `research: hourly signal update YYYY-MM-DD HHmm`.
+- If the only staged changes are under `research/logs/`, do not commit and do not push.
+- If there is a diff outside `research/logs/`, commit it with `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push the result to branch `main`.
 - Do not create empty commits.
 

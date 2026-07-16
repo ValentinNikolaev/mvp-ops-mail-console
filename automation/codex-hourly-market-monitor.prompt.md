@@ -3,11 +3,12 @@ Run the hourly market-signal monitoring workflow for this repository.
 Requirements:
 - Read `scripts/run-market-signal-pipeline.codex.md` first.
 - Read `research/config/signal-sources.json` first.
+- Read `research/config/write-rules.md` first.
 - Search the configured priority sources on the web for fresh user pain signals related to deliverability, reputation, provider filtering, blocklists, inbox placement, visibility gaps, and remediation workflows.
 - Prefer 2025-2026 discussions. Ignore low-value SEO articles unless they contain a unique signal.
 - Add only new articles and useful comments.
 - For sources and threads where comments can be fetched, periodically revisit already parsed items to collect newly appeared useful comments.
-- If comments are disabled, unavailable, or not fetchable for a parsed item, record that in `research/state/comment-source-registry.md` and do not re-fetch that article only to check comments again.
+- If comments are disabled, unavailable, or not fetchable for a parsed item, record that in `research/state/comment-source-registry.yaml` and do not re-fetch that article only to check comments again.
 - For each accepted signal, normalize the URL, deduplicate against existing files in `research/signals/`, and keep one canonical `.md` file per signal.
 - Use `research/config/signal-template.md` for each signal file.
 - Use `research/config/digest-template.md` for the daily digest in `research/digests/daily/YYYY-MM-DD.md`.
@@ -15,12 +16,13 @@ Requirements:
 - Keep the Monday/Friday MVP synthesis in that separate folder only.
 - Base the synthesis on the cumulative sample already captured in `research/signals/` plus any newly added useful comments.
 - Before writing, review the latest relevant MVP documents and the latest relevant Tuesday product specifications.
+- Use the source-of-truth precedence from `research/config/write-rules.md` instead of blending conflicting layers arbitrarily.
 - Write the synthesis as a senior business analyst and implementation planner with strong backend and ops judgment.
 - Identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
 - Keep the synthesis concise, specific, and optimized for token efficiency.
 - Also act as an experienced venture investor and business consultant.
 - Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, open questions, value and problem severity, business model and scalability, market and competitors, marketing and sales channels, and 3 main business risks with mitigations.
-- Use `research/state/mvp-iteration-registry.md` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
+- Use `research/state/mvp-iteration-registry.yaml` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
 - If the run date is Tuesday, create or update one versioned product specification in `research/product-specs/` using `research/product-specs/TEMPLATE.md`.
 - Base the Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
 - Keep the Tuesday specification in that separate folder only.
@@ -35,12 +37,13 @@ Requirements:
   - `Proposed Tech Stack & Tools`
 - `Executive Summary` must be only a 2-word to 3-word overview of the proposed solution.
 - `Proposed Tech Stack & Tools` must be a bulleted list of specific technologies with reasons, and should include the recommended MVP architecture and major system components.
-- Use `research/state/product-spec-registry.md` to avoid duplicate Tuesday specifications across repeated hourly runs on the same day.
+- Use `research/state/product-spec-registry.yaml` to avoid duplicate Tuesday specifications across repeated hourly runs on the same day.
 - Write a human-readable run log under `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Continue if one source fails or rate-limits.
 - Treat Windows-related ecosystem threads and Microsoft properties as valid first-class sources.
 - Stage all changed files with `git add -A`.
-- Commit and push only if there is a real diff after staging.
+- If the only staged changes are under `research/logs/`, do not commit and do not push.
+- Otherwise, commit and push if there is a real diff after staging.
 - Use commit message format `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push to branch `main`.
 - Do not edit config or templates unless they are clearly broken.

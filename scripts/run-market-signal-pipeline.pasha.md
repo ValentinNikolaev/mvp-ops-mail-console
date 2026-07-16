@@ -20,6 +20,7 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 ## What counts as a source
 
 - Priority sources from `research/config/signal-sources.json`.
+- Naming, versioning, and commit behavior from `research/config/write-rules.md`.
 - Official communities and technical forums.
 - Windows and Microsoft ecosystem sources count as valid project sources.
 - Fresh threads from 2025-2026 should be preferred over older material.
@@ -35,14 +36,15 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - On Tuesdays, one versioned product specification in `research/product-specs/`.
 - One run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Optional tracked runtime metadata in `research/state/`.
-- Maintain `research/state/comment-source-registry.md` so future runs know which parsed items are worth comment rechecks.
-- Maintain `research/state/mvp-iteration-registry.md` so repeated hourly runs do not create duplicate Monday/Friday MVP syntheses.
-- Maintain `research/state/product-spec-registry.md` so repeated hourly runs do not create duplicate Tuesday product specifications.
+- Maintain `research/state/comment-source-registry.yaml` so future runs know which parsed items are worth comment rechecks.
+- Maintain `research/state/mvp-iteration-registry.yaml` so repeated hourly runs do not create duplicate Monday/Friday MVP syntheses.
+- Maintain `research/state/product-spec-registry.yaml` so repeated hourly runs do not create duplicate Tuesday product specifications.
 
 ## Monday and Friday synthesis
 
 - Keep these files in the separate folder `research/mvp-iterations/`.
 - Review the latest MVP files and the latest Tuesday product specification files before writing.
+- Use the source-of-truth order from `research/config/write-rules.md`.
 - Write it as a senior business analyst and implementation planner with strong backend and ops judgment.
 - Extract all finalized decisions, changes, fixes, and requirements from the reviewed context.
 - Keep it concise, specific, and token-efficient.
@@ -107,7 +109,8 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 ## Git behavior
 
 - Stage everything with `git add -A`.
-- Commit only when there is a real diff.
+- If the only staged changes are under `research/logs/`, do not commit or push.
+- Commit only when there is a real non-log diff.
 - Use commit message `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push to `main`.
 
