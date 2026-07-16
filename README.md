@@ -26,6 +26,13 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - If there are staged changes, commit them and push to branch `main`.
 - If there are no file changes, do not create an empty commit.
 
+## Comment policy
+
+- Add only new articles and useful comments.
+- Revisit already parsed items only when comments can actually be fetched from that source or thread.
+- If comments are disabled or unavailable for a parsed item, mark that fact in tracked state and do not re-fetch the article only to check comments again.
+- Use `research/state/comment-source-registry.md` to remember whether comment rechecks are worth doing.
+
 ## Debugging
 
 - Check the newest run log under `research/logs/YYYY-MM-DD/`.

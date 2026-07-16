@@ -5,6 +5,9 @@ Requirements:
 - Read `research/config/signal-sources.json` first.
 - Search the configured priority sources on the web for fresh user pain signals related to deliverability, reputation, provider filtering, blocklists, inbox placement, visibility gaps, and remediation workflows.
 - Prefer 2025-2026 discussions. Ignore low-value SEO articles unless they contain a unique signal.
+- Add only new articles and useful comments.
+- For sources and threads where comments can be fetched, periodically revisit already parsed items to collect newly appeared useful comments.
+- If comments are disabled, unavailable, or not fetchable for a parsed item, record that in `research/state/comment-source-registry.md` and do not re-fetch that article only to check comments again.
 - For each accepted signal, normalize the URL, deduplicate against existing files in `research/signals/`, and keep one canonical `.md` file per signal.
 - Use `research/config/signal-template.md` for each signal file.
 - Use `research/config/digest-template.md` for the daily digest in `research/digests/daily/YYYY-MM-DD.md`.

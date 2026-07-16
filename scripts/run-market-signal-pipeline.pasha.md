@@ -23,6 +23,9 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - Official communities and technical forums.
 - Windows and Microsoft ecosystem sources count as valid project sources.
 - Fresh threads from 2025-2026 should be preferred over older material.
+- Only new articles and useful comments should be added.
+- If comments can be fetched for a source, previously parsed items may be revisited from time to time to collect new useful comments.
+- If comments are disabled or unavailable, do not keep re-fetching that article for comment checks.
 
 ## What to write
 
@@ -30,6 +33,7 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - One daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - One run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Optional tracked runtime metadata in `research/state/`.
+- Maintain `research/state/comment-source-registry.md` so future runs know which parsed items are worth comment rechecks.
 
 ## Quality bar
 
@@ -37,12 +41,14 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - Prefer concrete operational ambiguity over broad marketing commentary.
 - Mark confidence honestly.
 - Keep summaries concise and useful for product discovery.
+- Useful comments count only when they add new pain evidence, workaround detail, provider behavior, or remediation context.
 
 ## Deduplication
 
 - Normalize the URL.
 - Check whether the same source or same pain signal already exists.
 - Update the existing file when the new finding is not materially distinct.
+- Do not create another entry for a comment that only restates the same issue already captured.
 
 ## Git behavior
 

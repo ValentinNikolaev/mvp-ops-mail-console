@@ -20,6 +20,9 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Fresh 2025-2026 discussions have priority.
 - Reddit is optional, not mandatory for MVP.
 - Weak SEO pages should be skipped unless they contain a unique pain signal.
+- Only new articles and useful comments should be added to the database.
+- For sources where comments can be fetched, already parsed items may be revisited periodically to capture newly appeared useful comments.
+- If comments are disabled or not retrievable for a parsed item, that item should not be re-fetched just to check for comments again.
 
 ## Acceptance rules
 
@@ -32,6 +35,7 @@ Accept a signal when at least one of these is true:
 - It exposes junk placement, quarantine, throttling, or silent drop.
 - It shows confusion between blocklists and broader reputation issues.
 - It shows remediation friction or lack of explainability.
+- It appears in a useful comment that adds new operational detail, root cause evidence, or remediation context not already captured from the article or thread opener.
 
 ## Output rules
 
@@ -40,12 +44,15 @@ Accept a signal when at least one of these is true:
 - Write a daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
+- Track comment availability and comment recheck decisions in `research/state/comment-source-registry.md`.
 
 ## Deduplication
 
 - Deduplicate by normalized canonical URL first.
 - Then deduplicate by content fingerprint or obviously duplicated pain statement.
 - Update the existing canonical signal file instead of creating near-duplicate follow-ups unless the new thread is materially distinct.
+- Do not create a new signal file for a comment if it only repeats the same pain already captured from the article or thread.
+- If a useful new comment materially extends an existing signal, update the existing canonical file instead of re-adding the article.
 
 ## Git policy
 

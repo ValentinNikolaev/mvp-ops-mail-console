@@ -8,3 +8,4 @@ Use it for lightweight runtime metadata that helps future runs stay deterministi
 - deduplication cache material
 - source health notes
 - pipeline-side metadata that should remain visible in version history
+- comment availability and recheck decisions for already parsed items
