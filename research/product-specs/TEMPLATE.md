@@ -7,68 +7,69 @@
 - Based on MVP file: `research/mvp-iterations/<file>.md`
 - Based on sample through: YYYY-MM-DD
 
-## Product Summary
+## Executive Summary
 
-Describe the simple product to build now from the latest MVP direction.
+Write only a 2-word to 3-word overview of the proposed solution.
 
-## Recommended Stack
+## Pros & Benefits
 
-- Frontend:
-- Backend:
-- Database:
-- Queue or async jobs:
-- Hosting:
-- Auth:
-- Observability:
+- Architectural advantage
+- Performance gain
+- Maintainability benefit
+- Business or operational benefit
 
-## Why This Stack
+## Cons & Risks
 
-### Fast To Build
+- Technical debt concern
+- Limitation
+- Security risk
+- Edge case or operational risk
 
-- Point
-- Point
+## Proposed Tech Stack & Tools
 
-### Low Cost
+- Frontend: technology + reason
+- Backend: technology + reason
+- Database: technology + reason
+- Queue or async jobs: technology + reason
+- Hosting: technology + reason
+- Auth: technology + reason
+- Observability: technology + reason
 
-- Point
-- Point
+### MVP Architecture
 
-### Easy To Support And Scale
+- Major component
+- Major component
+- Major integration
+- Deployment shape
 
-- Point
-- Point
-
-## Product Scope
+### Product Scope
 
 - Scope item
 - Scope item
 
-## MVP Feature Set
+### MVP Feature Set
 
 - Feature
 - Feature
 
-## Architecture
+### Fast, Cheap, Maintainable, Scalable Rationale
 
-- Major component
-- Major component
+- Why this stack is fast to build
+- Why this stack is low cost
+- Why this stack is relatively easy to maintain
+- Why this stack can scale reasonably well
 
-## Operational Tradeoffs
+### Operational Tradeoffs
 
 - Tradeoff
 - Tradeoff
 
-## Support And Scaling Notes
-
-- Note
-- Note
-
-## Open Questions
+### Open Questions
 
 - Question
 - Question
 
-## Source MVP Evidence
+### Source MVP Evidence
 
 - Link to the MVP file
 - Link to the most relevant signal files

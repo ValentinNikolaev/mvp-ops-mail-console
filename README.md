@@ -53,15 +53,17 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - On Tuesdays, create a versioned product specification in `research/product-specs/`.
 - Base each Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
 - Keep these product specifications separate from raw signals, digests, and MVP syntheses.
+- Each Tuesday specification should be written from the perspective of an expert software architect, systems engineer, and business analyst.
+- Each Tuesday specification should be a comprehensive pre-implementation blueprint.
+- The Tuesday document should cover both product specification and MVP architecture.
 - Each Tuesday specification should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
-- Each specification should include:
-  - product scope
-  - recommended stack and why it is fast and low-cost
-  - architecture and major components
-  - MVP feature set
-  - operational tradeoffs
-  - support and scaling considerations
-  - open questions
+- Structure the Tuesday specification with these exact top-level headers:
+  - `Executive Summary`
+  - `Pros & Benefits`
+  - `Cons & Risks`
+  - `Proposed Tech Stack & Tools`
+- `Executive Summary` should be only a 2-word to 3-word overview of the proposed solution.
+- `Proposed Tech Stack & Tools` should be a bulleted list of specific technologies with reasons, and should also cover the proposed MVP architecture and major system components.
 - Use `research/state/product-spec-registry.md` so repeated hourly runs on the same Tuesday update the same spec file instead of creating duplicates.
 
 ## Debugging

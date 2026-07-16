@@ -56,16 +56,23 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 
 - Keep these files in the separate folder `research/product-specs/`.
 - Build each Tuesday specification from the latest available MVP document.
+- Write it as an expert software architect, systems engineer, and business analyst.
+- Make it a comprehensive pre-implementation blueprint.
+- Cover both the product specification and the MVP architecture.
 - Describe a simple product that can be built quickly, cheaply, and with relatively easy maintenance and scaling.
 - Explain:
+  - a 2-word to 3-word executive summary
+  - pros and benefits
+  - cons and risks
   - recommended stack
-  - architecture
-  - product scope
-  - MVP feature set
-  - tradeoffs
-  - support and scaling considerations
-  - open questions
+  - MVP architecture
 - Prefer practical and boring technology choices over fancy ones.
+- Use these exact top-level headers:
+  - `Executive Summary`
+  - `Pros & Benefits`
+  - `Cons & Risks`
+  - `Proposed Tech Stack & Tools`
+- Under `Proposed Tech Stack & Tools`, use bullet points with concrete technologies and reasons for each choice, and include the recommended MVP architecture.
 - If the same Tuesday run happens again later that day, update the existing file instead of creating a duplicate unless a new version is truly needed.
 
 ## Quality bar

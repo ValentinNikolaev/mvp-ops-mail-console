@@ -19,8 +19,17 @@ Requirements:
 - If the run date is Tuesday, create or update one versioned product specification in `research/product-specs/` using `research/product-specs/TEMPLATE.md`.
 - Base the Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
 - Keep the Tuesday specification in that separate folder only.
+- Write the Tuesday specification as an expert software architect, systems engineer, and business analyst.
+- Make it a comprehensive pre-implementation blueprint.
+- The Tuesday specification must cover both the product specification and the MVP architecture.
 - The specification must recommend a product shape and stack that can be built quickly, cheaply, and with relatively easy maintenance and scaling.
-- Include scope, recommended stack, architecture, MVP feature set, operational tradeoffs, support and scaling considerations, and open questions.
+- Structure the Tuesday specification with these exact top-level headers:
+  - `Executive Summary`
+  - `Pros & Benefits`
+  - `Cons & Risks`
+  - `Proposed Tech Stack & Tools`
+- `Executive Summary` must be only a 2-word to 3-word overview of the proposed solution.
+- `Proposed Tech Stack & Tools` must be a bulleted list of specific technologies with reasons, and should include the recommended MVP architecture and major system components.
 - Use `research/state/product-spec-registry.md` to avoid duplicate Tuesday specifications across repeated hourly runs on the same day.
 - Write a human-readable run log under `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - Continue if one source fails or rate-limits.

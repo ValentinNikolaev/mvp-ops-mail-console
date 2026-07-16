@@ -71,17 +71,27 @@ Accept a signal when at least one of these is true:
 
 - This specification must live in the separate folder `research/product-specs/`.
 - It must be based on the latest available MVP document from `research/mvp-iterations/`.
+- It should be written from the perspective of an expert software architect, systems engineer, and business analyst.
+- It should be a comprehensive pre-implementation blueprint.
+- It should cover both the product specification and the MVP architecture.
 - It should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
 - The specification should explicitly cover:
+  - a 2-word to 3-word executive summary
+  - architectural advantages and performance or maintainability benefits
+  - technical debt, limitations, security risks, and edge cases
   - recommended implementation approach
   - recommended stack and hosting choices
   - why the stack is fast to build with
   - why the stack is low cost
   - why the stack is relatively easy to support and scale
-  - the product scope and MVP feature set
-  - operational tradeoffs
-  - open questions
+  - the MVP architecture and major components
 - Prefer pragmatic choices over novelty. Bias toward boring, proven components with low operational overhead.
+- The specification must use these exact top-level headers:
+  - `Executive Summary`
+  - `Pros & Benefits`
+  - `Cons & Risks`
+  - `Proposed Tech Stack & Tools`
+- Under `Proposed Tech Stack & Tools`, use bullet points with specific technologies and the reason for each choice, and include the proposed MVP architecture.
 - Create at most one Tuesday specification per calendar date unless the same day's file needs a material revision; if revised, update the existing file instead of creating duplicates.
 - Use the template in `research/product-specs/TEMPLATE.md`.
 
