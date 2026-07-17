@@ -27,7 +27,7 @@ canonical_id: "2025-12-10-serverfault-microsoft-blocklist-verdict-gap"
 Microsoft вернул `550 5.7.1` с `S3150`, тогда как `sender.office.com` утверждал, что IP не в Microsoft blocklist, и внешняя оценка была чистой.
 
 ## Comment Insights
-Первые пять из 12 комментариев разобраны: они подтверждают важность точного IP и объясняют, почему подмена адреса ломает диагностику; см. [artifact](../comments/2025-12-10-serverfault-microsoft-blocklist-verdict-gap-comments.md). Остальные семь будут повторно запрошены.
+Все 12 комментариев разобраны: помимо точного IP и безопасной маскировки они требуют проверить EHLO/PTR и SNDS до delist/escalation; см. [artifact](../comments/2025-12-10-serverfault-microsoft-blocklist-verdict-gap-comments.md).
 
 ## Source
 - [Original source](https://serverfault.com/questions/1196264/microsoft-365-rejecting-email)

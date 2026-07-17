@@ -6,7 +6,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
-    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
+    comments_last_checked_at: "2026-07-17T22:03:29+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Gmail Community"
@@ -15,7 +15,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
-    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
+    comments_last_checked_at: "2026-07-17T22:03:29+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Microsoft Q&A"
@@ -87,7 +87,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-02-05-aws-repost-ses-false-bounce-suppression-comments.md"
-    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
+    comments_last_checked_at: "2026-07-17T22:03:29+02:00"
     comments_recheck_policy: "retry-until-determined"
     note: "The page content is indexed but comment retrieval remains unavailable; retry until support is determined."
   - source: "Microsoft Q&A"
@@ -103,11 +103,11 @@ comment_sources:
     url: "https://serverfault.com/questions/1196264/microsoft-365-rejecting-email"
     comments_supported: "yes"
     comments_available_count: 12
-    comments_parsed_count: 5
+    comments_parsed_count: 12
     comments_artifact_file: "research/comments/2025-12-10-serverfault-microsoft-blocklist-verdict-gap-comments.md"
-    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Five visible comments were parsed; seven hidden comments remain for retry."
+    comments_last_checked_at: "2026-07-17T22:03:29+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All 12 question comments were parsed through the Stack Exchange API; they add EHLO/PTR and SNDS checks to the evidence workflow."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/438266459/emails-are-getting-tagged-as-spam-to-gmail-users-domains-with-google?hl=en"
     comments_supported: "yes"
@@ -135,3 +135,12 @@ comment_sources:
     comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "periodic-refresh"
     note: "All three visible replies were parsed; they emphasize documented incident response and database hygiene."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1199036/mail-deliverability-issues-reputation-or-p-reject"
+    comments_supported: "yes"
+    comments_available_count: 5
+    comments_parsed_count: 5
+    comments_artifact_file: "research/comments/2026-05-22-serverfault-new-domain-reputation-vs-dmarc-comments.md"
+    comments_last_checked_at: "2026-07-17T22:03:29+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All five question comments were parsed; they distinguish DMARC rollout monitoring from inbox placement and reputation."
