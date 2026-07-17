@@ -49,3 +49,15 @@ This file is the canonical write-policy reference for unattended runs.
 - If `comments_parsed_count` is lower than `comments_available_count`, set the registry policy to retry on the next run.
 - If counts are unknown because parsing was incomplete or failed, retry on the next run.
 - Only use `skip` when comments are explicitly disabled or structurally unsupported for that source/thread.
+
+## Candidate source discovery rules
+
+- Treat relevant external URLs found in an accepted signal, accepted comment artifact, or high-value source thread as **candidate sources**, not automatic permanent sources.
+- Normalise the candidate URL, deduplicate it by canonical URL/domain, and record it in `research/state/candidate-source-registry.yaml` with the referring canonical signal/thread, discovery date, relevance note, status, and next-review decision.
+- A candidate is eligible for promotion to `research/config/signal-sources.json` only when either:
+  - two distinct accepted signals or comment artifacts independently reference it; or
+  - one high-confidence, current community thread clearly demonstrates a repeatable user-pain discussion and comments can be parsed.
+- Before promotion, validate that the resource is public, searchable, materially in scope, and can yield primary user discussion or authoritative provider evidence. Apply the normal recency, deduplication, and comment policy on its first pass.
+- Never promote a link that is only SEO, affiliate, a generic vendor landing page, a paid tool listing, a one-off support article without user evidence, or a destination that cannot be searched or read reliably.
+- Keep unproven candidates in `candidate` or `rejected` state with a concise reason; do not repeatedly search rejected candidates unless new independent evidence appears.
+- In every run log, report candidate sources discovered, promoted, deferred, or rejected. A candidate registry change is a substantive research change and follows the normal commit policy.

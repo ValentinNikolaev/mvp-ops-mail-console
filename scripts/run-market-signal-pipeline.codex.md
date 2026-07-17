@@ -15,6 +15,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Existing files under `research/digests/daily/`
 - Existing files under `research/mvp-iterations/`
 - Existing files under `research/product-specs/`
+- `research/state/candidate-source-registry.yaml`
 - Current date and time at execution
 
 ## Source policy
@@ -23,6 +24,8 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Windows and Microsoft ecosystem sources count as first-class sources for this project.
 - Discussions published after 31 March 2026 have priority. Treat material dated on or before that date as secondary and potentially stale; use it only when it adds a unique signal or is needed as context for an existing canonical signal.
 - Reddit is optional, not mandatory for MVP.
+- Relevant third-party URLs found in accepted material are candidate sources for a self-expanding research system; evaluate and record them under the candidate-source rules in `research/config/write-rules.md`.
+- Do not add a discovered URL directly to the permanent source list. Promote it only after the configured independent-evidence threshold or a validated high-confidence community-thread exception.
 - Weak SEO pages should be skipped unless they contain a unique pain signal.
 - Only new articles and useful comments should be added to the database.
 - If comments are available for a source thread, parsing them is mandatory.
@@ -56,6 +59,7 @@ Accept a signal when at least one of these is true:
 - Track comment availability, available-count, parsed-count, artifact path, and recheck decisions in `research/state/comment-source-registry.yaml`.
 - Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.yaml`.
 - Track Tuesday product specification creation in `research/state/product-spec-registry.yaml`.
+- Track discovered, deferred, rejected, and promoted external source candidates in `research/state/candidate-source-registry.yaml`.
 
 ## Monday and Friday MVP synthesis
 
@@ -142,5 +146,7 @@ Accept a signal when at least one of these is true:
 ## Failure handling
 
 - If one source fails, log it and continue.
+- Extract relevant outbound URLs from accepted threads and useful comments after parsing; evaluate only URLs that could yield in-scope user discussion or authoritative provider evidence.
+- Report candidate-source actions in the run log, including why a candidate was promoted, deferred, or rejected.
 - If search results are thin, prefer fewer high-confidence signals over filler.
 - If Git push fails, leave files in place and report the exact blocker.

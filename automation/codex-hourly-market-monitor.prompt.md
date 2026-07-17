@@ -14,6 +14,8 @@ Requirements:
 - If comments were only partially parsed in a previous run, retry on the next run.
 - If comments were unavailable or parsing failed, retry on the next run unless comments are explicitly disabled or unsupported for that source.
 - Record comment counts, artifact paths, and retry status in `research/state/comment-source-registry.yaml`.
+- Extract relevant external URLs from accepted signals and useful comments. Record each possible source in `research/state/candidate-source-registry.yaml` using the candidate-source rules in `research/config/write-rules.md`.
+- Treat candidates as provisional: promote one to `research/config/signal-sources.json` only after the independent-evidence threshold or validated high-confidence community-thread exception; reject SEO, affiliate, generic vendor, and unreadable destinations.
 - For each accepted signal, normalize the URL, deduplicate against existing files in `research/signals/`, and keep one canonical `.md` file per signal.
 - Use `research/config/signal-template.md` for each signal file.
 - Use `research/config/digest-template.md` for the daily digest in `research/digests/daily/YYYY-MM-DD.md`.
@@ -51,7 +53,7 @@ Requirements:
 - Otherwise, commit and push if there is a real diff after staging.
 - Use commit message format `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push to branch `main`.
-- Do not edit config or templates unless they are clearly broken.
+- Do not edit config or templates unless they are clearly broken, except when promoting a validated candidate source under the candidate-source rules.
 
 After the run:
 - Summarize how many sources succeeded, how many failed, and how many signals were created or updated.
@@ -59,3 +61,4 @@ After the run:
 - If a Monday or Friday MVP synthesis was created or updated, mention its file path and iteration id.
 - If a Tuesday product specification was created or updated, mention its file path and version id.
 - If push failed, report the exact blocker.
+- Summarize candidate sources discovered, promoted, deferred, or rejected.

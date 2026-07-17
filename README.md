@@ -12,6 +12,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/config/digest-template.md` - canonical structure for daily digests.
 - `research/signals/` - one markdown file per normalized signal.
 - `research/comments/` - one comment artifact per source thread when comments are available or partially parsed.
+- `research/state/candidate-source-registry.yaml` - evaluated third-party links that may become permanent sources after independent evidence.
 - `research/digests/daily/` - daily digest files for new or updated signals.
 - `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
 - `research/product-specs/` - Tuesday versioned product specifications based on the latest MVP synthesis.
@@ -101,6 +102,10 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - Check the newest run log under `research/logs/YYYY-MM-DD/`.
 - Read the latest digest under `research/digests/daily/` to confirm what changed.
 - If a source is flaky, the automation should log the error and continue with the rest.
+
+## Self-Expanding Source Discovery
+
+The monitor extracts relevant external links from accepted signals and useful comments. It records them as candidates first, then promotes only sources with independent evidence or a validated high-confidence community-thread exception. SEO, affiliate, generic vendor, and unreadable destinations remain excluded. The authoritative promotion rules and candidate schema live in `research/config/write-rules.md` and `research/state/candidate-source-registry.yaml`.
 - If Git push fails in unattended mode, confirm the remote, branch, and authentication are already configured on the host.
 - If outputs start drifting, inspect `research/config/write-rules.md` and the YAML registries in `research/state/` first.
 

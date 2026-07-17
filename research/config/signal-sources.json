@@ -8,6 +8,14 @@
     "minimumPublishedYear": 2026,
     "priorityPublishedAfter": "2026-03-31",
     "staleBeforeOrOn": "2026-03-31",
+    "candidateSourceDiscovery": {
+      "enabled": true,
+      "registryFile": "research/state/candidate-source-registry.yaml",
+      "minimumDistinctReferrersForPromotion": 2,
+      "allowSingleHighConfidenceCommunityThread": true,
+      "excludeCommercialOnlyResources": true,
+      "excludeSeoAndAffiliateResources": true
+    },
     "positivePatterns": [
       "spf",
       "dkim",
