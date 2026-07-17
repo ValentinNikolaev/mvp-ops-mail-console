@@ -23,6 +23,7 @@ An explainable deliverability incident console for low- and mid-volume senders: 
 
 - Add a sender-history lens: domain age, early bounce bursts, volume changes, complaints, and engagement proxies.
 - Add an identity-evidence preflight: outbound IP, EHLO, forward/reverse DNS, alignment, and provider-specific IDs.
+- Add an outbound-block gate: preserve provider SMTP codes such as `5.7.520`, pause broad sends, and distinguish a content test from reputation recovery.
 
 ## Fixes
 
@@ -36,6 +37,7 @@ An explainable deliverability incident console for low- and mid-volume senders: 
 - Checks for DNS/auth, exact-IP blocklist evidence, provider portals (Postmaster/SNDS where available), and list-health inputs.
 - Explainable rule output: evidence, confidence, alternative hypotheses, owner, next action, and recheck date.
 - Remediation templates: stop/isolate, list hygiene, credential/compromise check, gradual rewarm, delist/escalation packet, and validation send.
+- Recipient-feedback risk check: campaign/group-send pattern, opt-in evidence, recent junk complaints, and a constrained re-entry audience.
 - Inbox-placement test integration or manual evidence capture; do not claim placement from delivery alone.
 
 ## Majority Needs Covered
@@ -106,3 +108,4 @@ An explainable deliverability incident console for low- and mid-volume senders: 
 - [Gmail low-volume feedback gap](../signals/2026-06-01-gmail-community-domain-reputation-escalation.md)
 - [Marketo blocklist incident runbook](../signals/2026-05-06-adobe-marketo-blocklist-incident-runbook.md)
 - [AWS false bounce and suppression](../signals/2026-02-05-aws-repost-ses-false-bounce-suppression.md)
+- [Microsoft outbound spam block](../signals/2026-06-09-microsoft-qa-outbound-spam-block.md)
