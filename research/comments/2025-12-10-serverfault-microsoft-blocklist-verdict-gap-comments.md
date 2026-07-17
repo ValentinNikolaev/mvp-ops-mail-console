@@ -6,7 +6,7 @@ comments_supported: "yes"
 comments_available_count: 12
 comments_parsed_count: 5
 parse_status: "partial"
-last_checked_at: "2026-07-16T23:43:27+02:00"
+last_checked_at: "2026-07-17T21:10:15+02:00"
 ---
 
 ## Most Useful Comments Summary

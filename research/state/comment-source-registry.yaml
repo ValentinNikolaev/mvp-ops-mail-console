@@ -6,7 +6,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
-    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Gmail Community"
@@ -15,7 +15,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
-    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Microsoft Q&A"
@@ -86,8 +86,8 @@ comment_sources:
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
-    comments_artifact_file: ""
-    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_artifact_file: "research/comments/2026-02-05-aws-repost-ses-false-bounce-suppression-comments.md"
+    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
     comments_recheck_policy: "retry-until-determined"
     note: "The page content is indexed but comment retrieval remains unavailable; retry until support is determined."
   - source: "Microsoft Q&A"
@@ -96,7 +96,7 @@ comment_sources:
     comments_available_count: 1
     comments_parsed_count: 1
     comments_artifact_file: "research/comments/2026-01-06-microsoft-qa-authenticated-transactional-junk-comments.md"
-    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
     comments_recheck_policy: "periodic-refresh"
     note: "The single question comment preserves the SCL=5/Junk header evidence."
   - source: "Server Fault"
@@ -108,3 +108,12 @@ comment_sources:
     comments_last_checked_at: "2026-07-16T23:43:27+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Five visible comments were parsed; seven hidden comments remain for retry."
+  - source: "Gmail Community"
+    url: "https://support.google.com/mail/thread/438266459/emails-are-getting-tagged-as-spam-to-gmail-users-domains-with-google?hl=en"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: null
+    comments_artifact_file: "research/comments/2026-06-01-gmail-community-domain-reputation-escalation-comments.md"
+    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Search indexing exposes useful reply text, but the direct Google renderer returned only shell content; full count and parse remain unavailable."
