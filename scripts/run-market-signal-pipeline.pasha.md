@@ -23,7 +23,7 @@ Find fresh market pain around email deliverability and turn it into a compact ma
 - Naming, versioning, and commit behavior from `research/config/write-rules.md`.
 - Official communities and technical forums.
 - Windows and Microsoft ecosystem sources count as valid project sources.
-- Fresh threads from 2025-2026 should be preferred over older material.
+- Threads published after 31 March 2026 should be preferred. Treat material dated on or before that date as secondary and potentially stale; retain it only for unique signal evidence or context for an existing canonical signal.
 - Only new articles and useful comments should be added.
 - If comments can be fetched for a source, parsing them is mandatory.
 - On the first successful comment fetch, record the total available count and the parsed count.

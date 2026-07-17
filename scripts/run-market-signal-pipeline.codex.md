@@ -21,7 +21,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 
 - Community and official ecosystem threads are preferred.
 - Windows and Microsoft ecosystem sources count as first-class sources for this project.
-- Fresh 2025-2026 discussions have priority.
+- Discussions published after 31 March 2026 have priority. Treat material dated on or before that date as secondary and potentially stale; use it only when it adds a unique signal or is needed as context for an existing canonical signal.
 - Reddit is optional, not mandatory for MVP.
 - Weak SEO pages should be skipped unless they contain a unique pain signal.
 - Only new articles and useful comments should be added to the database.
