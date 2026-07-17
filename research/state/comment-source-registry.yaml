@@ -6,7 +6,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
-    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Gmail Community"
@@ -15,7 +15,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
-    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "The Google renderer returned only shell content; counts and comment text remain unavailable."
   - source: "Microsoft Q&A"
@@ -87,7 +87,7 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-02-05-aws-repost-ses-false-bounce-suppression-comments.md"
-    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "retry-until-determined"
     note: "The page content is indexed but comment retrieval remains unavailable; retry until support is determined."
   - source: "Microsoft Q&A"
@@ -105,7 +105,7 @@ comment_sources:
     comments_available_count: 12
     comments_parsed_count: 5
     comments_artifact_file: "research/comments/2025-12-10-serverfault-microsoft-blocklist-verdict-gap-comments.md"
-    comments_last_checked_at: "2026-07-16T23:43:27+02:00"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Five visible comments were parsed; seven hidden comments remain for retry."
   - source: "Gmail Community"
@@ -114,6 +114,24 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2026-06-01-gmail-community-domain-reputation-escalation-comments.md"
-    comments_last_checked_at: "2026-07-17T21:10:15+02:00"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Search indexing exposes useful reply text, but the direct Google renderer returned only shell content; full count and parse remain unavailable."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5909406/email-deliverability-issue"
+    comments_supported: "yes"
+    comments_available_count: 2
+    comments_parsed_count: 2
+    comments_artifact_file: "research/comments/2026-06-02-microsoft-qa-shared-ip-s3150-block-comments.md"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Two visible answer-level comments were parsed; the question itself has zero direct comments."
+  - source: "Adobe Experience League Community"
+    url: "https://experienceleaguecommunities.adobe.com/adobe-marketo-engage-27/i-ve-been-spam-blocklisted-what-do-i-do-250333"
+    comments_supported: "yes"
+    comments_available_count: 3
+    comments_parsed_count: 3
+    comments_artifact_file: "research/comments/2026-05-06-adobe-marketo-blocklist-incident-runbook-comments.md"
+    comments_last_checked_at: "2026-07-17T21:26:40+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All three visible replies were parsed; they emphasize documented incident response and database hygiene."
