@@ -16,6 +16,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Existing files under `research/mvp-iterations/`
 - Existing files under `research/product-specs/`
 - `research/state/candidate-source-registry.yaml`
+- `research/state/no-signal-run-registry.yaml`
 - Current date and time at execution
 
 ## Source policy
@@ -60,6 +61,7 @@ Accept a signal when at least one of these is true:
 - Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.yaml`.
 - Track Tuesday product specification creation in `research/state/product-spec-registry.yaml`.
 - Track discovered, deferred, rejected, and promoted external source candidates in `research/state/candidate-source-registry.yaml`.
+- Track consecutive runs with no created or materially updated accepted signal in `research/state/no-signal-run-registry.yaml`.
 
 ## Monday and Friday MVP synthesis
 
@@ -126,6 +128,17 @@ Accept a signal when at least one of these is true:
 - Update the existing canonical signal file instead of creating near-duplicate follow-ups unless the new thread is materially distinct.
 - Do not create a new signal file for a comment if it only repeats the same pain already captured from the article or thread.
 - If a useful new comment materially extends an existing signal, update the existing canonical file instead of re-adding the article.
+
+## Empty-run counter and source expansion
+
+- At the end of every completed source pass, evaluate accepted signals for that run.
+- If the run created no signal and materially updated no existing signal, increment `consecutive_no_signal_runs` in `research/state/no-signal-run-registry.yaml` by one.
+- If the run created or materially updated at least one accepted signal, reset `consecutive_no_signal_runs` to zero.
+- Record the evaluation time, source-pass outcome, and the reason for incrementing or resetting.
+- When the counter reaches 3, the same run must perform a source-expansion pass before it ends. Find, validate, and add at least one new public, searchable in-scope discussion source to `research/config/signal-sources.json`.
+- The added source must be a community, issue tracker, or provider discussion area with primary user evidence and comment/reply support where the platform offers it. Do not satisfy this rule with an SEO page, vendor landing page, affiliate site, or a one-off documentation page.
+- Record the added source, validation rationale, and its first search result in `research/state/candidate-source-registry.yaml` and the run log. This three-empty-run rule is an explicit maintenance exception to the normal independent-evidence promotion threshold.
+- After a successful expansion pass, reset `consecutive_no_signal_runs` to zero and set `last_expansion_at`; if no eligible source can be found after a documented search, retain the counter at 3 and retry the expansion pass on every later empty run.
 
 ## Comment handling
 

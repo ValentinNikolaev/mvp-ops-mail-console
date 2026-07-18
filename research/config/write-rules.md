@@ -61,3 +61,11 @@ This file is the canonical write-policy reference for unattended runs.
 - Never promote a link that is only SEO, affiliate, a generic vendor landing page, a paid tool listing, a one-off support article without user evidence, or a destination that cannot be searched or read reliably.
 - Keep unproven candidates in `candidate` or `rejected` state with a concise reason; do not repeatedly search rejected candidates unless new independent evidence appears.
 - In every run log, report candidate sources discovered, promoted, deferred, or rejected. A candidate registry change is a substantive research change and follows the normal commit policy.
+
+## Empty-run source-expansion rules
+
+- `research/state/no-signal-run-registry.yaml` is the source of truth for consecutive runs with no created or materially updated accepted signal.
+- Increment its counter once per completed empty source pass; reset it to zero whenever the pass creates or materially updates an accepted signal.
+- At three consecutive empty runs, a source-expansion pass is mandatory in that same run. It must find and add at least one validated, in-scope community or issue-tracker source to `research/config/signal-sources.json`.
+- This explicit maintenance trigger overrides the ordinary two-referrer promotion threshold, but not the quality safeguards: the source must be public, searchable, able to yield primary user evidence, and support comment/reply parsing where available.
+- Log the validation query and rationale, update the candidate registry, and record `last_expansion_at` in the counter registry. If no eligible source is found, keep the counter at three and repeat the expansion pass on the next empty run.

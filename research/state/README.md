@@ -8,6 +8,7 @@ Use it for lightweight runtime metadata that helps future runs stay deterministi
 - deduplication cache material
 - source health notes
 - pipeline-side metadata that should remain visible in version history
+- consecutive empty-run counting and mandatory source-expansion decisions
 - comment availability and recheck decisions for already parsed items in strict YAML
 - comment available-count and parsed-count tracking in strict YAML
 - Monday/Friday MVP iteration registry and versioning notes in strict YAML
