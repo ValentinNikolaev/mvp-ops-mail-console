@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Gmail Community"
+    url: "https://support.google.com/mail/thread/448677573/emails-from-self-hosted-postal-mail-server-are-delivered-to-gmail-spam-folder?hl=en"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-07-07-gmail-self-hosted-postal-new-recipient-spam-comments.md"
+    comments_last_checked_at: "2026-07-18T20:01:23+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "The one visible expert reply was parsed; it adds DMARC and PTR checks to the new-recipient placement workflow."
   - source: "Google Workspace Admin Community"
     url: "https://support.google.com/a/thread/332194303/gmail-is-rejecting-blocking-emails-from-and-to-me?hl=en"
     comments_supported: "yes"
