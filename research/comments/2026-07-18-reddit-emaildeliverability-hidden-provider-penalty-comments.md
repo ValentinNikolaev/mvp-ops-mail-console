@@ -4,17 +4,18 @@ url: "https://www.reddit.com/r/emaildeliverability/comments/1tv3dw9/a_reminder_t
 canonical_id: "2026-07-18-reddit-emaildeliverability-hidden-provider-penalty"
 comments_supported: "yes"
 comments_available_count: null
-comments_parsed_count: 6
+comments_parsed_count: 7
 parse_status: "partial"
-last_checked_at: "2026-07-18T17:19:55+02:00"
+last_checked_at: "2026-07-18T19:03:21+02:00"
 ---
 
 ## Most Useful Comments Summary
-Наиболее полезная деталь — Postmaster Tools остаётся первым шагом для Gmail, но для распределённого низкого объёма может не дать данных, а shared Microsoft 365 IP делает IP-сигнал шумным. Комментарии рекомендуют измерять placement отдельно по Gmail и Microsoft и не менять пять факторов сразу.
+Наиболее полезная деталь — Postmaster Tools остаётся первым шагом для Gmail, но для распределённого низкого объёма может не дать данных, а shared Microsoft 365 IP делает IP-сигнал шумным. Повторный проход добавил явную жалобу: сильно фрагментированный малый объём по многим доменам сам похож на spam infrastructure. Комментарии рекомендуют измерять placement отдельно по Gmail и Microsoft и не менять пять факторов сразу.
 
 ## Useful Comment Artifacts
 - Разделять authentication, domain reputation, IP reputation и seed placement: это разные сигналы.
 - Для 26 доменов с малым объёмом на дом Postmaster Tools может показывать «no data».
+- Не считать сильное дробление доменов и ~2 сообщения на inbox «консервативным» без provider evidence: такой паттерн может стать отрицательным сигналом.
 - Сопоставлять content variant, complaints и placement отдельно по провайдеру.
 
 ## Parsing Gaps

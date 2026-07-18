@@ -166,11 +166,20 @@ comment_sources:
     url: "https://www.reddit.com/r/emaildeliverability/comments/1tv3dw9/a_reminder_to_test_your_assumptions_our_domains/"
     comments_supported: "yes"
     comments_available_count: null
-    comments_parsed_count: 6
+    comments_parsed_count: 7
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-hidden-provider-penalty-comments.md"
-    comments_last_checked_at: "2026-07-18T17:19:55+02:00"
+    comments_last_checked_at: "2026-07-18T19:03:21+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Six visible comments were parsed; expandable and deleted replies prevent a reliable total and require retry."
+    note: "Seven visible comments were parsed on the 19:03 retry; expandable and deleted replies prevent a reliable total and require retry."
+  - source: "Adobe Experience League Community"
+    url: "https://experienceleaguecommunities.adobe.com/campaign-classic-v7-campaign-v8-6/ac-marketing-instance-marketing-spam-denylist-preventing-servicing-email-communications-249190"
+    comments_supported: "yes"
+    comments_available_count: 2
+    comments_parsed_count: 2
+    comments_artifact_file: "research/comments/2026-03-13-adobe-marketing-denylist-service-email-comments.md"
+    comments_last_checked_at: "2026-07-18T19:03:21+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All two visible replies were parsed; they recommend reputation and configuration isolation for marketing versus servicing email."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1urqr3s/2026_email_deliverability_issues/"
     comments_supported: "yes"
