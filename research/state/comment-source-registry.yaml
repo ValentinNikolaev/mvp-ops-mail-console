@@ -171,3 +171,21 @@ comment_sources:
     comments_last_checked_at: "2026-07-18T17:19:55+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Six visible comments were parsed; expandable and deleted replies prevent a reliable total and require retry."
+  - source: "Reddit Emailmarketing"
+    url: "https://www.reddit.com/r/Emailmarketing/comments/1urqr3s/2026_email_deliverability_issues/"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: 6
+    comments_artifact_file: "research/comments/2026-07-18-reddit-emailmarketing-reply-rate-placement-gap-comments.md"
+    comments_last_checked_at: "2026-07-18T18:03:10+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Six visible top-level comments were parsed; Reddit does not expose a reliable total and retains hidden/reply branches, so retry is required."
+  - source: "Reddit Email Deliverability"
+    url: "https://www.reddit.com/r/emaildeliverability/comments/1u31al4/how_to_improve_email_deliverability_and_maintain/"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: 18
+    comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-low-maintenance-recovery-comments.md"
+    comments_last_checked_at: "2026-07-18T18:03:10+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Eighteen useful visible comments were parsed; expandable replies prevent a reliable total and require retry."

@@ -1,6 +1,6 @@
 schema_version: 1
 consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-18T17:22:30+02:00"
-last_evaluation: "initialized after a run with accepted signals; counter reset"
+last_evaluated_at: "2026-07-18T18:03:10+02:00"
+last_evaluation: "two new accepted Reddit signals created; counter reset"
 last_expansion_at: null
 last_expansion_result: null
