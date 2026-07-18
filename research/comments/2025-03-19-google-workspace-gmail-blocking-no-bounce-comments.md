@@ -6,11 +6,11 @@ comments_supported: "yes"
 comments_available_count: null
 comments_parsed_count: null
 parse_status: "failed"
-last_checked_at: "2026-07-18T15:03:00+02:00"
+last_checked_at: "2026-07-18T16:01:33+02:00"
 ---
 
 ## Most Useful Comments Summary
-The Google Community renderer returned only shell content, so no comment text or reliable count could be extracted in this pass.
+The Google Community renderer again returned only shell content, so no comment text or reliable count could be extracted in this pass.
 
 ## Useful Comment Artifacts
 - None preserved: thread content was unavailable to the parser.

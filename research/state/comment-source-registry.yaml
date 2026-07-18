@@ -6,18 +6,18 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
-    comments_last_checked_at: "2026-07-18T15:03:00+02:00"
+    comments_last_checked_at: "2026-07-18T16:01:33+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
+    note: "Retried 2026-07-18 at 16:01 +02:00; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/349591744/don-t-receive-dmarc-reports-from-google?hl=en"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
-    comments_last_checked_at: "2026-07-18T15:03:00+02:00"
+    comments_last_checked_at: "2026-07-18T16:01:33+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
+    note: "Retried 2026-07-18 at 16:01 +02:00; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5723349/new-domain-for-my-online-marketplace-and-they-go-t"
     comments_supported: "yes"
@@ -87,9 +87,9 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-02-05-aws-repost-ses-false-bounce-suppression-comments.md"
-    comments_last_checked_at: "2026-07-18T15:03:00+02:00"
+    comments_last_checked_at: "2026-07-18T16:01:33+02:00"
     comments_recheck_policy: "retry-until-determined"
-    note: "Retried 2026-07-18; direct retrieval failed while indexed page content remains available, so retry until comment support is determined."
+    note: "Retried 2026-07-18 at 16:01 +02:00; direct retrieval failed while indexed page content remains available, so retry until comment support is determined."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5694073/outlook-microsoft-365-marking-fully-authenticated"
     comments_supported: "yes"
@@ -114,9 +114,9 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2026-06-01-gmail-community-domain-reputation-escalation-comments.md"
-    comments_last_checked_at: "2026-07-18T15:03:00+02:00"
+    comments_last_checked_at: "2026-07-18T16:01:33+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18; search indexing exposes useful reply text, but the direct Google renderer still returned only shell content; full count and parse remain unavailable."
+    note: "Retried 2026-07-18 at 16:01 +02:00; search indexing exposes useful reply text, but the direct Google renderer still returned only shell content; full count and parse remain unavailable."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5909406/email-deliverability-issue"
     comments_supported: "yes"

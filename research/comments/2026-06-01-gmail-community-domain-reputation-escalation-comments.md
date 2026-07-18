@@ -6,11 +6,11 @@ comments_supported: "yes"
 comments_available_count: null
 comments_parsed_count: null
 parse_status: "failed"
-last_checked_at: "2026-07-18T15:03:00+02:00"
+last_checked_at: "2026-07-18T16:01:33+02:00"
 ---
 
 ## Most Useful Comments Summary
-Search indexing exposes the author's follow-up that a Google deliverability-form submission has no visible response timeline. The direct Google renderer supplied only shell content, so a reliable complete comment count and full thread parse are still unavailable.
+Search indexing exposes the author's follow-up that a Google deliverability-form submission has no visible response timeline. The direct Google renderer again supplied only shell content, so a reliable complete comment count and full thread parse are still unavailable.
 
 ## Useful Comment Artifacts
 - The author asks for a status after submitting the bulk-sender support form; escalation state is opaque and should be modeled as pending rather than resolved.
