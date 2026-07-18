@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "WordPress Support"
+    url: "https://wordpress.org/support/topic/sending-test-successful-but-not-received-in-my-inbox/"
+    comments_supported: "yes"
+    comments_available_count: 6
+    comments_parsed_count: 6
+    comments_artifact_file: "research/comments/2026-05-01-wordpress-smtp-success-recipient-silent-drop-comments.md"
+    comments_last_checked_at: "2026-07-18T22:02:41+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All six visible replies were parsed; they distinguish SMTP hand-off from provider placement and confirm a transactional-provider migration after DMARC alignment work."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/448677573/emails-from-self-hosted-postal-mail-server-are-delivered-to-gmail-spam-folder?hl=en"
     comments_supported: "yes"
