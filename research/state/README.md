@@ -11,6 +11,7 @@ Use it for lightweight runtime metadata that helps future runs stay deterministi
 - consecutive empty-run counting and mandatory source-expansion decisions
 - comment availability and recheck decisions for already parsed items in strict YAML
 - comment available-count and parsed-count tracking in strict YAML
+- daily comment-failure counts, last failure dates, and retry-exhausted decisions in strict YAML
 - Monday/Friday MVP iteration registry and versioning notes in strict YAML
 - Tuesday product specification registry and versioning notes in strict YAML
 

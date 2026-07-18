@@ -7,8 +7,10 @@ comment_sources:
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-03-19-google-workspace-gmail-blocking-no-bounce-comments.md"
     comments_last_checked_at: "2026-07-18T17:22:30+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18 at 17:22 +02:00; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-18"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Google renderer repeatedly returned only shell content. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/349591744/don-t-receive-dmarc-reports-from-google?hl=en"
     comments_supported: "yes"
@@ -16,8 +18,10 @@ comment_sources:
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2025-06-09-gmail-no-dmarc-reports-spam-not-delivered-comments.md"
     comments_last_checked_at: "2026-07-18T17:22:30+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18 at 17:22 +02:00; the Google renderer still returned only shell content, so counts and comment text remain unavailable."
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-18"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Google renderer repeatedly returned only shell content. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5723349/new-domain-for-my-online-marketplace-and-they-go-t"
     comments_supported: "yes"
@@ -88,8 +92,10 @@ comment_sources:
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-02-05-aws-repost-ses-false-bounce-suppression-comments.md"
     comments_last_checked_at: "2026-07-18T17:22:30+02:00"
-    comments_recheck_policy: "retry-until-determined"
-    note: "Retried 2026-07-18 at 17:22 +02:00; direct retrieval failed while indexed page content remains available, so retry until comment support is determined."
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-18"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Direct retrieval repeatedly failed while indexed page content remained available. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5694073/outlook-microsoft-365-marking-fully-authenticated"
     comments_supported: "yes"
@@ -115,8 +121,10 @@ comment_sources:
     comments_parsed_count: null
     comments_artifact_file: "research/comments/2026-06-01-gmail-community-domain-reputation-escalation-comments.md"
     comments_last_checked_at: "2026-07-18T17:22:30+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Retried 2026-07-18 at 17:22 +02:00; search indexing exposes useful reply text, but the direct Google renderer still returned only shell content; full count and parse remain unavailable."
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-18"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Google renderer repeatedly returned only shell content. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5909406/email-deliverability-issue"
     comments_supported: "yes"
@@ -160,8 +168,10 @@ comment_sources:
     comments_parsed_count: 6
     comments_artifact_file: "research/comments/2026-07-18-reddit-klaviyo-manual-diagnosis-fragmentation-comments.md"
     comments_last_checked_at: "2026-07-18T17:19:55+02:00"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Six visible comments were parsed; expandable replies prevent a reliable total and require retry."
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-18"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Direct Reddit retrieval repeatedly failed after an initial visible-comment pass. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1tv3dw9/a_reminder_to_test_your_assumptions_our_domains/"
     comments_supported: "yes"

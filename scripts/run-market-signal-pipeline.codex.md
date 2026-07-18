@@ -31,8 +31,9 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Only new articles and useful comments should be added to the database.
 - If comments are available for a source thread, parsing them is mandatory.
 - On the first successful comment fetch, record how many comments are available and how many were actually parsed.
-- If a prior run parsed only part of the available comments, the next run must retry.
-- Only stop retrying when comments are explicitly disabled or structurally unsupported for that thread.
+- Retry a failed comment retrieval no more than once per calendar day. Track the daily failure count and last failure date in the comment registry.
+- After the third failed daily comment retrieval, mark the thread `retry-exhausted` and do not retry it automatically. Reset only after a material source/access change or manual decision.
+- If a prior run parsed only part of the available comments without a retrieval failure, retry no more than once per calendar day until parsing is complete or the thread is explicitly unsupported.
 
 ## Acceptance rules
 
@@ -144,8 +145,9 @@ Accept a signal when at least one of these is true:
 
 - When comments are available, create or update the thread's comment artifact in `research/comments/`.
 - Record `comments_available_count` and `comments_parsed_count` in the registry.
-- If `comments_parsed_count < comments_available_count`, set the recheck policy to retry on the next run.
-- If the count is unknown because parsing failed partway through, retry on the next run.
+- If `comments_parsed_count < comments_available_count`, set the recheck policy to retry on the next eligible daily run.
+- If retrieval or parsing fails, increment `comment_failure_attempts` at most once for that calendar date and do not make a second automatic attempt that day.
+- After `comment_failure_attempts: 3`, set `comments_recheck_policy: retry-exhausted`, retain the artifact and failure reason, and stop automatic retries.
 - Extract a concise summary of the most useful comments and use that summary as an artifact for future synthesis work.
 
 ## Git policy

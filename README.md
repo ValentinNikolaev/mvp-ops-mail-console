@@ -48,8 +48,9 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - On the initial comment pass, record both the total available comment count and the parsed comment count.
 - Store comments as a first-class artifact in `research/comments/`.
 - Each comment artifact should contain a concise summary of the most useful comments for the current problem space.
-- If comments were only partially parsed in a previous run, the next run must try again until parsing is complete or comments are explicitly proven unavailable.
-- Only stop retrying when comments are explicitly disabled or clearly unsupported for that source/thread.
+- Retry a failed comment retrieval once per calendar day, never multiple times in the same day.
+- Stop automatic retries after three failed daily attempts by recording `retry-exhausted`; reset only after a material source/access change or a manual decision.
+- Partial comment parsing without a retrieval failure is also retried at most once per day.
 - Use `research/state/comment-source-registry.yaml` to remember whether comment rechecks are worth doing.
 
 ## Monday And Friday MVP Synthesis

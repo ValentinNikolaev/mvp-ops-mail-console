@@ -46,8 +46,9 @@ This file is the canonical write-policy reference for unattended runs.
   - parse status
   - concise summary of the most useful comments for the current request
   - a short list of comment-level artifacts or paraphrases worth preserving
-- If `comments_parsed_count` is lower than `comments_available_count`, set the registry policy to retry on the next run.
-- If counts are unknown because parsing was incomplete or failed, retry on the next run.
+- If `comments_parsed_count` is lower than `comments_available_count`, retry on the next eligible calendar day, not another hourly run that day.
+- For a failed retrieval or parse, store `comment_failure_attempts` and `comment_last_failure_date`. Increment at most once per calendar day and make no more than one automatic attempt that day.
+- At three failed daily attempts, set `comments_recheck_policy: retry-exhausted` and stop automatic retries. Reset this only after a material source/access change or a manual decision.
 - Only use `skip` when comments are explicitly disabled or structurally unsupported for that source/thread.
 
 ## Candidate source discovery rules
