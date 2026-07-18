@@ -217,3 +217,12 @@ comment_sources:
     comments_last_checked_at: "2026-07-18T18:03:10+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Eighteen useful visible comments were parsed; expandable replies prevent a reliable total and require retry."
+  - source: "Reddit Klaviyo"
+    url: "https://www.reddit.com/r/Klaviyo/comments/1t13hvz/why_is_my_company_asking_me_to_sign_up_my_spouse/"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: 8
+    comments_artifact_file: "research/comments/2026-05-01-reddit-klaviyo-manufactured-engagement-workaround-comments.md"
+    comments_last_checked_at: "2026-07-18T21:02:18+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Eight visible comments reject employee/spouse subscriptions as a durable deliverability remedy and recommend real engaged-profile segmentation; Reddit did not expose a reliable total."
