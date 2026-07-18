@@ -179,6 +179,76 @@
       "kind": "bing-rss",
       "siteScope": "site:repost.aws",
       "priority": 90
+    },
+    {
+      "name": "Reddit Emailmarketing",
+      "slug": "reddit-emailmarketing",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/Emailmarketing",
+      "priority": 80
+    },
+    {
+      "name": "Reddit Email Deliverability",
+      "slug": "reddit-emaildeliverability",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/emaildeliverability",
+      "priority": 85
+    },
+    {
+      "name": "Reddit Klaviyo",
+      "slug": "reddit-klaviyo",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/Klaviyo",
+      "priority": 75
+    },
+    {
+      "name": "Klaviyo Community",
+      "slug": "klaviyo-community",
+      "kind": "bing-rss",
+      "siteScope": "site:community.klaviyo.com",
+      "priority": 85
+    },
+    {
+      "name": "WordPress Support",
+      "slug": "wordpress-support",
+      "kind": "bing-rss",
+      "siteScope": "site:wordpress.org/support",
+      "priority": 75
+    },
+    {
+      "name": "Mautic Forum",
+      "slug": "mautic-forum",
+      "kind": "bing-rss",
+      "siteScope": "site:forum.mautic.org",
+      "priority": 80
+    },
+    {
+      "name": "cPanel Community",
+      "slug": "cpanel-community",
+      "kind": "bing-rss",
+      "siteScope": "site:support.cpanel.net/hc/en-us/community",
+      "priority": 80
+    },
+    {
+      "name": "Discourse Meta",
+      "slug": "discourse-meta",
+      "kind": "bing-rss",
+      "siteScope": "site:meta.discourse.org email spam SMTP deliverability",
+      "priority": 70
+    },
+    {
+      "name": "Mautic GitHub Issues",
+      "slug": "mautic-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/mautic/mautic/issues email deliverability spam",
+      "priority": 75
+    },
+    {
+      "name": "WP Mail SMTP Support",
+      "slug": "wp-mail-smtp-support",
+      "kind": "bing-rss",
+      "siteScope": "site:wordpress.org/support/plugin/wp-mail-smtp",
+      "priority": 80
     }
   ]
 }
