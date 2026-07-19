@@ -1,5 +1,23 @@
 schema_version: 1
 comment_sources:
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5855566/i-am-having-a-problem-when-i-am-sending-out-emails"
+    comments_supported: "yes"
+    comments_available_count: 6
+    comments_parsed_count: 6
+    comments_artifact_file: "research/comments/2026-04-08-microsoft-qa-self-sent-junk-reputation-comments.md"
+    comments_last_checked_at: "2026-07-19T14:01:15+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All six visible answer-thread comments were parsed. They establish that self-sent Junk placement can be server-side filtering with no usable self-safe-sender workaround and require an evidence-backed support escalation."
+  - source: "Reddit Email Deliverability"
+    url: "https://www.reddit.com/r/emaildeliverability/comments/1ujhclu/been_building_a_free_email_deliverability_toolkit/"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-07-08-reddit-emaildeliverability-guided-triage-tool-comments.md"
+    comments_last_checked_at: "2026-07-19T14:01:15+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "One useful visible expert comment was parsed from search content. Direct thread retrieval produced a cache miss, so the total remains unknown and the thread must be retried on the next eligible day."
   - source: "WordPress Support"
     url: "https://wordpress.org/support/topic/sending-test-successful-but-not-received-in-my-inbox/"
     comments_supported: "yes"
@@ -194,11 +212,11 @@ comment_sources:
     url: "https://www.reddit.com/r/emaildeliverability/comments/1tv3dw9/a_reminder_to_test_your_assumptions_our_domains/"
     comments_supported: "yes"
     comments_available_count: null
-    comments_parsed_count: 7
+    comments_parsed_count: 8
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-hidden-provider-penalty-comments.md"
-    comments_last_checked_at: "2026-07-18T19:03:21+02:00"
+    comments_last_checked_at: "2026-07-19T14:01:15+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Seven visible comments were parsed on the 19:03 retry; expandable and deleted replies prevent a reliable total and require retry."
+    note: "Eight visible comments are now captured, including the distinction between public checks, Postmaster data, provider-specific placement, and low-volume multi-domain fragmentation. Expandable and deleted replies prevent a reliable total and require retry."
   - source: "Adobe Experience League Community"
     url: "https://experienceleaguecommunities.adobe.com/campaign-classic-v7-campaign-v8-6/ac-marketing-instance-marketing-spam-denylist-preventing-servicing-email-communications-249190"
     comments_supported: "yes"
@@ -214,18 +232,18 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 6
     comments_artifact_file: "research/comments/2026-07-18-reddit-emailmarketing-reply-rate-placement-gap-comments.md"
-    comments_last_checked_at: "2026-07-18T18:03:10+02:00"
+    comments_last_checked_at: "2026-07-19T14:02:07+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Six visible top-level comments were parsed; Reddit does not expose a reliable total and retains hidden/reply branches, so retry is required."
+    note: "Six visible top-level comments were retained on the 2026-07-19 retry; Reddit does not expose a reliable total and retains hidden/reply branches, so retry is required."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1u31al4/how_to_improve_email_deliverability_and_maintain/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 18
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-low-maintenance-recovery-comments.md"
-    comments_last_checked_at: "2026-07-18T18:03:10+02:00"
+    comments_last_checked_at: "2026-07-19T14:02:07+02:00"
     comments_recheck_policy: "retry-until-counted"
-    note: "Eighteen useful visible comments were parsed; expandable replies prevent a reliable total and require retry."
+    note: "Eighteen useful visible comments were retained on the 2026-07-19 retry; expandable replies prevent a reliable total and require retry."
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1t13hvz/why_is_my_company_asking_me_to_sign_up_my_spouse/"
     comments_supported: "yes"
