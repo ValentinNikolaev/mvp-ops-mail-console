@@ -1,6 +1,6 @@
 schema_version: 1
 consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-19T16:02:02+02:00"
-last_evaluation: "one new accepted signal created (WordPress SMTP acceptance masking malformed-header silent discard); counter reset"
+last_evaluated_at: "2026-07-19T17:04:13+02:00"
+last_evaluation: "two new accepted signals created (campaign reputation spillover; shared-host SMTP placement); counter reset"
 last_expansion_at: null
 last_expansion_result: null

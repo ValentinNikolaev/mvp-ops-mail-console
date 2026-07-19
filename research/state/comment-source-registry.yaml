@@ -1,5 +1,23 @@
 schema_version: 1
 comment_sources:
+  - source: "Reddit Emailmarketing"
+    url: "https://www.reddit.com/r/Emailmarketing/comments/1t20vna/gmail_is_flagging_our_main_domain_as_spam_even/"
+    comments_supported: "yes"
+    comments_available_count: null
+    comments_parsed_count: 18
+    comments_artifact_file: "research/comments/2026-07-19-reddit-emailmarketing-campaign-spillover-reputation-comments.md"
+    comments_last_checked_at: "2026-07-19T17:04:13+02:00"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Eighteen visible comments/replies were parsed. Expandable Reddit branches prevent a reliable total, so retry on the next eligible calendar day."
+  - source: "WordPress Support"
+    url: "https://wordpress.org/support/topic/emails-going-to-spam-16/"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-07-19-wordpress-shared-host-reputation-placement-comments.md"
+    comments_last_checked_at: "2026-07-19T17:04:13+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "The single visible reply was parsed; it distinguishes SMTP configuration from shared-host IP reputation and placement."
   - source: "WordPress Support"
     url: "https://wordpress.org/support/topic/e-mails-showing-as-successfully-sent-not-getting-to-recipients/"
     comments_supported: "yes"
