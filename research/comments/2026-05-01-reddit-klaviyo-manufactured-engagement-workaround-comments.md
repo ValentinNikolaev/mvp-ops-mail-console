@@ -6,7 +6,7 @@ comments_supported: "yes"
 comments_available_count: null
 comments_parsed_count: 8
 parse_status: "partial"
-last_checked_at: "2026-07-18T21:02:18+02:00"
+last_checked_at: "2026-07-19T14:02:07+02:00"
 ---
 
 ## Most Useful Comments Summary
@@ -18,7 +18,7 @@ last_checked_at: "2026-07-18T21:02:18+02:00"
 - Apple auto-open дополнительно делает open rate ненадёжным показателем; remediation нельзя строить только на нём.
 
 ## Parsing Gaps
-- Поисковая выдача раскрыла восемь видимых комментариев, но Reddit не предоставил надёжный общий счётчик и может скрывать ветки. Повторить проход на следующем eligible calendar day.
+- Поисковая выдача раскрыла восемь видимых комментариев, но Reddit не предоставил надёжный общий счётчик и может скрывать ветки. Прямой повторный запрос 2026-07-19 вернул internal error; сохранить восемь комментариев и повторить один раз на следующем eligible calendar day.
 
 ## Source
 - [Original thread](https://www.reddit.com/r/Klaviyo/comments/1t13hvz/why_is_my_company_asking_me_to_sign_up_my_spouse/)

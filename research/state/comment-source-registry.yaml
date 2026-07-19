@@ -250,6 +250,8 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 8
     comments_artifact_file: "research/comments/2026-05-01-reddit-klaviyo-manufactured-engagement-workaround-comments.md"
-    comments_last_checked_at: "2026-07-18T21:02:18+02:00"
+    comments_last_checked_at: "2026-07-19T14:02:07+02:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-19"
     comments_recheck_policy: "retry-until-counted"
-    note: "Eight visible comments reject employee/spouse subscriptions as a durable deliverability remedy and recommend real engaged-profile segmentation; Reddit did not expose a reliable total."
+    note: "Direct Reddit retrieval returned an internal error on the 2026-07-19 retry; retain eight previously parsed visible comments and retry once on the next eligible calendar day."
