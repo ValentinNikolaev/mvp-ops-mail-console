@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Reddit Klaviyo"
+    url: "https://www.reddit.com/r/Klaviyo/comments/1t7477q/two_clients_neither_has_a_dmarc_record_one_is/"
+    comments_supported: "yes"
+    comments_available_count: 7
+    comments_parsed_count: 7
+    comments_artifact_file: "research/comments/2026-05-08-reddit-klaviyo-inconsistent-cadence-placement-comments.md"
+    comments_last_checked_at: "2026-07-19T22:03:07+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All seven visible top-level comments were parsed. They require a multi-factor explanation across cadence, engagement, alignment, domain age, and shared-IP context; domain replacement and artificial warm-up are not first-line fixes."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-au/answers/questions/5881008/emails-im-sending-going-to-junk-spam"
     comments_supported: "yes"
