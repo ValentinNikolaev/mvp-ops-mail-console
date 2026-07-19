@@ -1,6 +1,15 @@
 schema_version: 1
 comment_sources:
   - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5880500/all-requests-from-this-subscription-are-blocked-du"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 0
+    comments_artifact_file: "research/comments/2026-05-04-microsoft-qa-acs-subscription-reputation-block-comments.md"
+    comments_last_checked_at: "2026-07-19T15:01:57+02:00"
+    comments_recheck_policy: "retry-next-eligible-day"
+    note: "The thread reports one question-level comment, but its body was not exposed by the readable page response. The first pass is partial; retry once on the next eligible calendar day. Answer-level comment counts are zero."
+  - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5855566/i-am-having-a-problem-when-i-am-sending-out-emails"
     comments_supported: "yes"
     comments_available_count: 6
