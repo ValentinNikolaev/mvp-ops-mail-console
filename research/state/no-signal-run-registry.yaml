@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 1
-last_evaluated_at: "2026-07-19T20:03:33+02:00"
-last_evaluation: "no new or materially updated accepted signal; all fresh in-scope results duplicated canonical signals"
+consecutive_no_signal_runs: 0
+last_evaluated_at: "2026-07-19T21:01:31+02:00"
+last_evaluation: "created one accepted Microsoft Q&A signal with a complete four-comment pass"
 last_expansion_at: null
 last_expansion_result: null

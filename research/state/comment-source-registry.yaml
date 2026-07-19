@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-au/answers/questions/5881008/emails-im-sending-going-to-junk-spam"
+    comments_supported: "yes"
+    comments_available_count: 4
+    comments_parsed_count: 4
+    comments_artifact_file: "research/comments/2026-05-05-microsoft-qa-shared-outlook-html-filtering-comments.md"
+    comments_last_checked_at: "2026-07-19T21:01:31+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All four visible answer-level comments were parsed. They require recipient-header evidence and use a successful plain-text A/B test to isolate a possible HTML/content filtering trigger."
   - source: "Gmail Community"
     url: "https://support.google.com/mail/thread/440576481/spam-issues?hl=en"
     comments_supported: "yes"
