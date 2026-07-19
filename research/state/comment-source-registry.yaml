@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "WordPress Support"
+    url: "https://wordpress.org/support/topic/e-mails-showing-as-successfully-sent-not-getting-to-recipients/"
+    comments_supported: "yes"
+    comments_available_count: 8
+    comments_parsed_count: 8
+    comments_artifact_file: "research/comments/2026-02-12-wordpress-post-smtp-accepted-silent-discard-comments.md"
+    comments_last_checked_at: "2026-07-19T16:02:02+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All eight visible replies were parsed. They distinguish SMTP acceptance from placement and isolate duplicate/header-like form fields as a likely silent-discard cause; the reporter's final test remains unresolved."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5880500/all-requests-from-this-subscription-are-blocked-du"
     comments_supported: "yes"
