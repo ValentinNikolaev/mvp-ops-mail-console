@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-19T22:03:07+02:00"
-last_evaluation: "created one accepted Reddit Klaviyo signal with a complete seven-comment pass"
-last_expansion_at: null
-last_expansion_result: null
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-24T20:51:23+02:00"
+last_evaluation: "manual 24-source pass found no new or materially updated accepted signal; results were stale, provider guidance, commercial/SEO, infrastructure noise outside scope, or duplicates of existing canonical evidence; Friday MVP iteration 003 was created from the sample through 2026-07-23"
+last_expansion_at: "2026-07-22T21:03:32+02:00"
+last_expansion_result: "promoted Reddit DigitalMarketing as a public, searchable, comment-capable in-scope community source under the three-empty-run maintenance exception; its first thread was registered for next-day comment retry after a direct cache miss"

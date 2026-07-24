@@ -18,13 +18,13 @@ canonical_id: "2026-05-22-serverfault-new-domain-reputation-vs-dmarc"
 ---
 
 ## Summary
-Малый отправитель с новым доменом настроил SPF, DKIM и DMARC, получает PASS и чистый blacklist report, но письмо к крупному поставщику через Outlook попало в Junk. До настройки аутентификации он отправил 48 писем, из которых 11 hard-bounce; при объёме около 72 исходящих писем у него нет достаточного provider feedback для уверенной диагностики. Обсуждение отделяет DMARC policy от placement: `p=reject` не является общим объяснением Junk, а корректная аутентификация не создаёт reputation автоматически.
+Малый отправитель с новым доменом настроил SPF, DKIM и DMARC, получает PASS и чистый blacklist report, но письмо к крупному поставщику через Outlook попало в Junk. До настройки аутентификации он отправил 48 писем, из которых 11 hard-bounce; при объёме около 72 исходящих писем у него нет достаточного provider feedback для уверенной диагностики. Обсуждение отделяет DMARC policy от placement: `p=reject` не является общим объяснением Junk, а корректная аутентификация не создаёт reputation автоматически. Обновлённый 22 июля ответ уточняет исключение: внутренний redirect у получателя может сломать SPF и иногда DKIM, после чего Microsoft способен поместить именно эту пересланную копию в Junk; это не доказывает, что `p=reject` — причина общего placement-проблемы. Он также предлагает проверять SCL/BCL и полные headers у получателя, искать повторяемый pattern, а не делать вывод по одному письму.
 
 ## Why It Matters
-Консоль должна показывать отдельные слои: authentication, domain age/history, bounce spike, внешние blocklists, provider-specific placement и доказательства по каждому. Она должна объяснять, что переключение DMARC policy не является лечением reputation, предложить безопасный warm-up и список наблюдаемых метрик, а также явно отметить границы контроля отправителя над recipient filtering.
+Консоль должна показывать отдельные слои: authentication, domain age/history, bounce spike, внешние blocklists, provider-specific placement, forwarding path, SCL/BCL/header evidence и доказательства по каждому. Она должна объяснять, что переключение DMARC policy не является лечением reputation, предложить безопасный warm-up и список наблюдаемых метрик, а также отделять единичный forwarding-induced failure от повторяемой проблемы репутации или placement.
 
 ## Evidence
-У автора SPF/DKIM/DMARC проходят, MXToolbox не находит listing, однако Outlook-получатель видит Junk после ранней кампании с 11 hard bounces из 48 адресов.
+У автора SPF/DKIM/DMARC проходят, MXToolbox не находит listing, однако Outlook-получатель видит Junk после ранней кампании с 11 hard bounces из 48 адресов. Обновлённый ответ: новая история домена, редкий объём и ранние bounce — достаточная репутационная гипотеза, тогда как пересылка объясняет только копию с нарушенным DMARC.
 
 ## Comment Insights
 Полный разбор пяти комментариев сохранён в [artifact](../comments/2026-05-22-serverfault-new-domain-reputation-vs-dmarc-comments.md): `p=none` полезен для поэтапного наблюдения и выравнивания authorised senders, но не гарантирует Inbox; `p=reject` ожидаемо ведёт к reject, а не к Spam.

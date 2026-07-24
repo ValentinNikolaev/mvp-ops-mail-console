@@ -1,2 +1,8 @@
 schema_version: 1
-product_specs: []
+product_specs:
+  - version_id: "001"
+    date: "2026-07-21"
+    weekday: "Tuesday"
+    file: "research/product-specs/2026-07-21-product-spec-001.md"
+    based_on_mvp_iteration: "002"
+    last_updated_at: "2026-07-21T17:03:15+02:00"

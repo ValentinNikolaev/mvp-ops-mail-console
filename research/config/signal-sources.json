@@ -249,6 +249,34 @@
       "kind": "bing-rss",
       "siteScope": "site:wordpress.org/support/plugin/wp-mail-smtp",
       "priority": 80
+    },
+    {
+      "name": "Reddit StopSpamFolders",
+      "slug": "reddit-stopspamfolders",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/StopSpamFolders",
+      "priority": 70
+    },
+    {
+      "name": "Reddit EmailMarketingNow",
+      "slug": "reddit-emailmarketingnow",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/emailmarketingnow",
+      "priority": 70
+    },
+    {
+      "name": "Reddit DigitalMarketing",
+      "slug": "reddit-digitalmarketing",
+      "kind": "bing-rss",
+      "siteScope": "site:reddit.com/r/DigitalMarketing email deliverability reputation inbox placement",
+      "priority": 70
+    },
+    {
+      "name": "Brevo Community",
+      "slug": "brevo-community",
+      "kind": "bing-rss",
+      "siteScope": "site:community.brevo.com email deliverability spam inbox placement",
+      "priority": 85
     }
   ]
 }
