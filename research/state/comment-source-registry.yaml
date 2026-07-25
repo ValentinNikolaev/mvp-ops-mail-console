@@ -526,3 +526,84 @@ comment_sources:
     comments_last_checked_at: "2026-07-23T23:18:14+02:00"
     comments_recheck_policy: "retry-until-counted"
     note: "Five useful search-visible comments were parsed. Reddit did not expose a reliable total or all expandable branches; retry once on the next eligible calendar day."
+  - source: "Hacker News"
+    url: "https://news.ycombinator.com/item?id=47386460"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:34.808289+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Hacker News"
+    url: "https://news.ycombinator.com/item?id=47369375"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:35.126984+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Hacker News"
+    url: "https://news.ycombinator.com/item?id=43829927"
+    comments_supported: "yes"
+    comments_available_count: 58
+    comments_parsed_count: 58
+    comments_artifact_file: "research/comments/2025-04-29-hacker-news-ask-hn-is-there-hope-for-microsoft-365-support-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:35.712976+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Hacker News"
+    url: "https://news.ycombinator.com/item?id=32678532"
+    comments_supported: "yes"
+    comments_available_count: 11
+    comments_parsed_count: 11
+    comments_artifact_file: "research/comments/2022-09-01-hacker-news-ask-hn-does-any-use-a-separate-email-just-for-account-regist-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:36.550008+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Hacker News"
+    url: "https://news.ycombinator.com/item?id=23963445"
+    comments_supported: "yes"
+    comments_available_count: 10
+    comments_parsed_count: 10
+    comments_artifact_file: "research/comments/2020-07-27-hacker-news-ask-hn-any-improvement-in-gmail-s-treatment-of-small-servers-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:37.023840+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1195797/why-does-email-sent-with-php-mail-land-in-spam-while-authenticated-smtp-mail-f"
+    comments_supported: "yes"
+    comments_available_count: 3
+    comments_parsed_count: 3
+    comments_artifact_file: "research/comments/2025-11-06-server-fault-why-does-email-sent-with-php-mail-land-in-spam-while-authent-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:37.325489+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1173308/improving-spamassassin-in-2025-does-it-make-sense-to-depend-solely-on-bayes"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2025-02-20-server-fault-improving-spamassassin-in-2025-does-it-make-sense-to-depend--comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:37.556546+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1169936/spf-helo-ehlo-not-published-for-google-workspace-mailservers"
+    comments_supported: "yes"
+    comments_available_count: 3
+    comments_parsed_count: 3
+    comments_artifact_file: "research/comments/2025-01-09-server-fault-spf-helo-ehlo-not-published-for-google-workspace-mailservers-comments.md"
+    comments_last_checked_at: "2026-07-25T22:52:37.800338+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Reddit EmailMarketingNow"
+    url: "https://ikeahackers.net/2026/06/ikea-billy-reading-nook.html"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-25T22:52:37.836333+00:00"
+    comments_recheck_policy: "skip"
+    note: "Python collector comment pass: unsupported."

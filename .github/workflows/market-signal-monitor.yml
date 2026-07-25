@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: market-signal-monitor-main
@@ -47,3 +47,16 @@ jobs:
           path: ${{ steps.collect.outputs.file }}
           if-no-files-found: error
           retention-days: 30
+
+      - name: Commit as Valentin
+        run: |
+          git config user.name "Valentin Nikolaev"
+          git config user.email "435393+ValentinNikolaev@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No generated files to commit."
+            exit 0
+          fi
+          git commit -m "chore: update generated files $(date -u +%F\ %H%M)"
+          git pull --rebase origin main
+          git push
