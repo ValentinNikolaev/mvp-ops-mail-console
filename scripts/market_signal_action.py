@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
-"""GitHub Actions runner for the market-signal monitor.
-
-Collection is deterministic; acceptance and prose are delegated to the OpenAI
-Responses API. The model can only write allowed research outputs and its JSON
-payload is validated before it reaches the working tree.
-"""
+"""Python-only GitHub Actions collector for the market-signal monitor."""
 from __future__ import annotations
 
 import argparse
 import json
-import os
 import re
 import sys
 import urllib.parse
@@ -21,11 +15,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "research/config/signal-sources.json"
 INBOX = ROOT / "research/.automation"
-ALLOWED = (
-    "research/signals/", "research/comments/", "research/digests/daily/",
-    "research/logs/", "research/state/", "research/mvp-iterations/",
-    "research/product-specs/",
-)
 
 
 def get(url: str, timeout: int = 30) -> str:
@@ -64,7 +53,10 @@ def stackexchange_items(config: dict) -> list[dict]:
 
 def collect() -> Path:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    results, failures = [], []
+    existing_urls = set(re.findall(r'^url:\s*"?([^"\n]+)', "\n".join(p.read_text(encoding="utf-8") for p in (ROOT / "research/signals").glob("*.md")), re.MULTILINE))
+    positive = re.compile("|".join(re.escape(x) for x in config["global"]["positivePatterns"]), re.I)
+    excluded = re.compile("|".join(re.escape(x) for x in config["global"]["excludePatterns"]), re.I)
+    results, failures, seen = [], [], set()
     for source in config["sources"]:
         try:
             if source["kind"] == "hn-algolia":
@@ -73,76 +65,32 @@ def collect() -> Path:
                 items = stackexchange_items(config)
             else:
                 items = rss_items(source, config)
-            results.append({"source": source["name"], "slug": source["slug"], "items": items})
+            candidates = []
+            for item in items:
+                url = item["url"].split("#", 1)[0].rstrip("/")
+                text = f'{item["title"]} {item["snippet"]}'
+                if not url or url in seen or url in existing_urls or excluded.search(text) or not positive.search(text):
+                    continue
+                seen.add(url)
+                item["url"] = url
+                item["match_terms"] = sorted(set(m.group(0).lower() for m in positive.finditer(text)))
+                candidates.append(item)
+            results.append({"source": source["name"], "slug": source["slug"], "items": candidates})
         except Exception as exc:  # a source failure must not stop the pass
             failures.append({"source": source["name"], "error": str(exc)})
     INBOX.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc)
     path = INBOX / f"candidates-{now:%Y%m%dT%H%M%SZ}.json"
-    path.write_text(json.dumps({"generated_at": now.isoformat(), "results": results, "failures": failures}, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.write_text(json.dumps({"generated_at": now.isoformat(), "results": results, "failures": failures, "automation": {"mode": "collection-only", "note": "Candidates are ranked/deduplicated by deterministic rules. They are not accepted signals until a reviewer verifies thread and comment evidence."}}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(path.relative_to(ROOT))
     return path
 
 
-def read_context(candidates: Path) -> str:
-    def read(path: str, limit: int = 60000) -> str:
-        return (ROOT / path).read_text(encoding="utf-8")[:limit]
-    signals = "\n".join(sorted(p.name + "\n" + p.read_text(encoding="utf-8")[:500] for p in (ROOT / "research/signals").glob("*.md")))
-    return "\n\n".join([
-        "PIPELINE:\n" + read("scripts/run-market-signal-pipeline.codex.md"),
-        "WRITE RULES:\n" + read("research/config/write-rules.md"),
-        "SIGNAL TEMPLATE:\n" + read("research/config/signal-template.md"),
-        "DIGEST TEMPLATE:\n" + read("research/config/digest-template.md"),
-        "EXISTING SIGNAL INDEX:\n" + signals[:60000],
-        "COMMENT REGISTRY:\n" + read("research/state/comment-source-registry.yaml"),
-        "CANDIDATES:\n" + candidates.read_text(encoding="utf-8")[:100000],
-    ])
-
-
-def output_text(response: dict) -> str:
-    for item in response.get("output", []):
-        for content in item.get("content", []):
-            if content.get("type") == "output_text":
-                return content["text"]
-    raise RuntimeError("Responses API returned no output_text")
-
-
-def review(candidates: Path) -> list[dict]:
-    key = os.environ.get("OPENAI_API_KEY")
-    if not key:
-        raise RuntimeError("OPENAI_API_KEY is required for the review step")
-    prompt = """Review the supplied market-signal research material. Return ONLY JSON with this schema:
-{"files":[{"path":"research/...","content":"complete UTF-8 file content"}],"summary":"short run summary"}.
-Apply every pipeline and write rule exactly. Preserve all existing content unless a material update is justified. Create a run log every run. Never edit configs/templates, source code, GitHub files, or any path outside the allowed research output folders. If comment text/counts were not actually available in candidates, record a retry state rather than inventing them. Write zero signal files when evidence is not distinct. JSON must be valid and contain no Markdown fence."""
-    payload = {"model": os.environ.get("OPENAI_MODEL", "gpt-5.6-terra"), "input": [{"role": "system", "content": prompt}, {"role": "user", "content": read_context(candidates)}], "text": {"verbosity": "medium"}}
-    request = urllib.request.Request("https://api.openai.com/v1/responses", data=json.dumps(payload).encode(), headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(request, timeout=240) as response:
-        data = json.loads(response.read().decode())
-    return json.loads(output_text(data))["files"]
-
-
-def apply(files: list[dict]) -> None:
-    for item in files:
-        path, content = item.get("path", ""), item.get("content", "")
-        if not isinstance(content, str) or not path.startswith(ALLOWED) or ".." in Path(path).parts:
-            raise RuntimeError(f"refusing model output path: {path!r}")
-        target = ROOT / path
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(content.rstrip() + "\n", encoding="utf-8")
-        print(path)
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=("collect", "review"))
-    parser.add_argument("--candidates", type=Path)
+    parser.add_argument("command", choices=("collect",))
     args = parser.parse_args()
-    if args.command == "collect":
-        collect()
-        return
-    if not args.candidates:
-        raise SystemExit("review requires --candidates")
-    apply(review(args.candidates))
+    collect()
 
 
 if __name__ == "__main__":

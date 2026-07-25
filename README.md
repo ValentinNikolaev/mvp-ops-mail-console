@@ -26,7 +26,7 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 
 ## GitHub Actions monitor
 
-`.github/workflows/market-signal-monitor.yml` is the unattended alternative. It runs hourly at minute 17, fast-forwards `main` before collection, fetches the configured sources with `scripts/market_signal_action.py`, and sends the bounded candidate set to the OpenAI Responses API for rule-based review. Add an `OPENAI_API_KEY` repository secret before enabling it. The workflow is serialized, validates the resulting files, and uses `GITHUB_TOKEN` to commit only substantive research changes; no desktop SSH key is involved.
+`.github/workflows/market-signal-monitor.yml` is a Python-only unattended collector. It runs hourly at minute 17, fast-forwards `main` before collection, searches every configured source, normalizes and deduplicates URLs against existing signals, filters configured exclusion terms, and uploads ranked candidate evidence as a 30-day GitHub Actions artifact. It uses no OpenAI API key and makes no research-content commit: acceptance, comment parsing, and Russian business analysis remain review steps because they require source-specific semantic judgment that cannot safely be inferred from search snippets.
 
 ## Git policy
 
