@@ -24,6 +24,10 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 
 Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when creating a recurring Codex automation for this project. The automation should run once every hour, inspect the configured sources, update the markdown database, and then always stage all changed files, commit if there is a diff, and push to `main`.
 
+## GitHub Actions monitor
+
+`.github/workflows/market-signal-monitor.yml` is the unattended alternative. It runs hourly at minute 17, fast-forwards `main` before collection, fetches the configured sources with `scripts/market_signal_action.py`, and sends the bounded candidate set to the OpenAI Responses API for rule-based review. Add an `OPENAI_API_KEY` repository secret before enabling it. The workflow is serialized, validates the resulting files, and uses `GITHUB_TOKEN` to commit only substantive research changes; no desktop SSH key is involved.
+
 ## Git policy
 
 - All generated and maintained files live in Git.
