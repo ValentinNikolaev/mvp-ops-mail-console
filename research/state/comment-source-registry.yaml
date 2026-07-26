@@ -15,9 +15,11 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 17
     comments_artifact_file: "research/comments/2026-07-22-reddit-emailmarketing-seed-test-preflight-gap-comments.md"
-    comments_last_checked_at: "2026-07-23T17:10:17+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The 2026-07-23 direct retry retained 17 useful visible top-level comments/replies; Reddit still exposes no reliable total and has expandable branches. The new visible discussion is non-distinct; retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit EmailMarketingNow"
     url: "https://www.reddit.com/r/emailmarketingnow/comments/1uirq1w/what_changed_in_email_deliverability_this_month/"
     comments_supported: "yes"
@@ -33,74 +35,88 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 4
     comments_artifact_file: "research/comments/2026-03-15-reddit-emaildeliverability-provider-placement-divergence-comments.md"
-    comments_last_checked_at: "2026-07-22T14:02:32+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Four useful visible comments establish that clean authentication and warm-up do not prove provider-level placement; Yahoo-specific 100% Spam must be tracked separately. Reddit did not reveal a reliable total, so retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1v2xnd4/how_do_you_overcome_emails_going_to_spam_promotion/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 4
     comments_artifact_file: "research/comments/2026-07-22-reddit-emailmarketing-promotions-visibility-gap-comments.md"
-    comments_last_checked_at: "2026-07-23T17:10:17+02:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-23"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Four useful visible comments distinguish Promotions from Spam and require provider/time-scoped placement evidence. The 2026-07-23 direct thread retry returned an internal error before counts or new text could be read; retry on the next eligible calendar day."
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-26"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit StopSpamFolders"
     url: "https://www.reddit.com/r/StopSpamFolders/comments/1tkm3lg/spent_3_weeks_figuring_out_why_our_emails_stopped/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 11
     comments_artifact_file: "research/comments/2026-05-22-reddit-stopspamfolders-placement-tooling-gap-comments.md"
-    comments_last_checked_at: "2026-07-23T17:10:17+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The 2026-07-23 direct retry returned an internal error. Retain eleven useful visible comments on the delivered-versus-inboxed gap, telemetry freshness, Outlook coverage, and MPP/security-scanner distortion; retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1uv9sqm/google_postmaster_tools_updates/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 4
     comments_artifact_file: "research/comments/2026-07-13-reddit-emaildeliverability-postmaster-reporting-lag-comments.md"
-    comments_last_checked_at: "2026-07-21T18:03:25+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed four useful visible comments. Reddit hides expandable branches and does not expose a reliable total; comments distinguish a synchronized Postmaster reporting delay from an actual delivery failure and require contemporaneous SMTP, seed, and DMARC evidence. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1ujmdcv/anyone_else_seeing_a_drop_in_gmail_open_rates/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 9
     comments_artifact_file: "research/comments/2026-06-30-reddit-emaildeliverability-gmail-open-rate-placement-gap-comments.md"
-    comments_last_checked_at: "2026-07-21T17:03:15+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed nine useful visible comments. Reddit hides expandable branches and does not expose a reliable total; comments distinguish measurement from inbox placement, require telemetry freshness, and identify all domain sending sources. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1u6q5mk/huge_spike_in_bounce_rate_overnight_almost_a/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 5
     comments_artifact_file: "research/comments/2026-07-21-reddit-klaviyo-gmail-bounce-verdict-gap-comments.md"
-    comments_last_checked_at: "2026-07-21T16:03:37+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed five visible comments. Reddit hides expandable branches and does not reveal a reliable total; the comments require pausing broad sends, classifying Gmail SMTP verdicts, and correlating Postmaster before resumption. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1ug5te2/how_do_you_actually_diagnose_deliverability/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 8
     comments_artifact_file: "research/comments/2026-07-21-reddit-emailmarketing-manual-diagnosis-fragmentation-comments.md"
-    comments_last_checked_at: "2026-07-21T14:02:14+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed six visible top-level comments. They require provider/domain/campaign segmentation, SMTP-verdict composition, change-history comparison, and treating seed tests/ESP dashboards as directional rather than recipient truth. Reddit hides expandable replies and does not expose a reliable total; retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1tre8yg/ive_been_inundated_with_1000s_of_fake_emails/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 18
     comments_artifact_file: "research/comments/2026-05-30-reddit-klaviyo-bot-signup-reputation-contamination-comments.md"
-    comments_last_checked_at: "2026-07-21T12:03:00+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed 18 visible comments/replies. Reddit hides expandable branches and does not reveal a reliable total; the discussion attributes the surge to Shopify-synced bot/customer signups and calls for ingress isolation, list cleanup, and controlled re-entry. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5788143/deliverability-issue-valid-transactional-emails-be"
     comments_supported: "yes"
@@ -161,20 +177,22 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 1
     comments_artifact_file: "research/comments/2026-06-10-gmail-community-bidirectional-spam-classification-comments.md"
-    comments_last_checked_at: "2026-07-23T00:03:06+02:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-21"
-    comments_recheck_policy: "retry-until-counted"
-    note: "One visible expert reply was parsed from the indexed thread. The 2026-07-21 direct-thread retry returned an internal fetch error, so the total remains unavailable; retry on the next eligible calendar day."
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-26"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (this source has no supported collector parser). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1t20vna/gmail_is_flagging_our_main_domain_as_spam_even/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 18
     comments_artifact_file: "research/comments/2026-07-19-reddit-emailmarketing-campaign-spillover-reputation-comments.md"
-    comments_last_checked_at: "2026-07-21T00:03:27+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The direct 2026-07-21 pass retained the existing 18 useful visible comments/replies; expandable Reddit branches prevent a reliable total, so retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "WordPress Support"
     url: "https://wordpress.org/support/topic/emails-going-to-spam-16/"
     comments_supported: "yes"
@@ -217,11 +235,11 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 1
     comments_artifact_file: "research/comments/2026-07-08-reddit-emaildeliverability-guided-triage-tool-comments.md"
-    comments_last_checked_at: "2026-07-21T00:03:27+02:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-21"
-    comments_recheck_policy: "retry-until-counted"
-    note: "One useful visible expert comment was parsed from search content. The 2026-07-21 direct-thread retry returned an internal fetch error, so the total remains unknown and the thread must be retried on the next eligible day."
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-26"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "WordPress Support"
     url: "https://wordpress.org/support/topic/sending-test-successful-but-not-received-in-my-inbox/"
     comments_supported: "yes"
@@ -418,9 +436,11 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 8
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-hidden-provider-penalty-comments.md"
-    comments_last_checked_at: "2026-07-21T00:03:27+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The direct 2026-07-21 pass retained the existing eight useful visible comments, including the distinction between public checks, Postmaster data, provider-specific placement, and low-volume multi-domain fragmentation. Expandable and deleted replies prevent a reliable total and require retry."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Adobe Experience League Community"
     url: "https://experienceleaguecommunities.adobe.com/campaign-classic-v7-campaign-v8-6/ac-marketing-instance-marketing-spam-denylist-preventing-servicing-email-communications-249190"
     comments_supported: "yes"
@@ -436,9 +456,11 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 18
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-low-maintenance-recovery-comments.md"
-    comments_last_checked_at: "2026-07-21T00:03:27+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The direct 2026-07-21 pass retained 18 useful visible comments; expandable replies prevent a reliable total and require retry."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1t13hvz/why_is_my_company_asking_me_to_sign_up_my_spouse/"
     comments_supported: "yes"
@@ -456,40 +478,44 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 8
     comments_artifact_file: "research/comments/2026-07-20-reddit-emailmarketing-reply-rate-placement-diagnosis-comments.md"
-    comments_last_checked_at: "2026-07-23T01:03:01+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The 2026-07-23 retry retained eight useful visible comments; Reddit does not expose a reliable total and may retain hidden reply branches, so retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1v2jp6r/any_reliable_inbox_placement_tests_providers/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-21-reddit-emailmarketing-inbox-placement-test-visibility-comments.md"
-    comments_last_checked_at: "2026-07-21T23:04:49+02:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-21"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Search preview exposed placement-test guidance but the direct Reddit thread fetch returned a cache-miss/internal error before comment counts or texts could be read. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit DigitalMarketing"
     url: "https://www.reddit.com/r/DigitalMarketing/comments/1v2j1c1/how_do_you_check_sender_reputation_before/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-22-reddit-digitalmarketing-pre-send-reputation-monitoring-comments.md"
-    comments_last_checked_at: "2026-07-22T21:03:32+02:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-22"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "The source-expansion search result gives a current first-person need for pre-send reputation monitoring across domains, but direct Reddit retrieval returned cache-miss before count or comment text could be read. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit DigitalMarketing"
     url: "https://www.reddit.com/r/DigitalMarketing/comments/1ud8g96/cold_email_deliverability_got_brutal_this_year/"
     comments_supported: "yes"
     comments_available_count: null
     comments_parsed_count: 7
     comments_artifact_file: "research/comments/2026-06-23-reddit-digitalmarketing-provider-scoped-feedback-gap-comments.md"
-    comments_last_checked_at: "2026-07-22T22:01:55+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Parsed seven substantive visible comments; Reddit did not expose a reliable total or expandable-branch count. Comments require provider/domain/lane segmentation, real engagement and complaint evidence, and a pause/quarantine workflow. Retry on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5890488/remote-server-returned-554-5-7-0-%28-5.7.520-smtp-55"
     comments_supported: "yes"
@@ -505,9 +531,11 @@ comment_sources:
     comments_available_count: 7
     comments_parsed_count: 3
     comments_artifact_file: "research/comments/2026-02-19-adobe-bounced-address-reactivation-runbook-comments.md"
-    comments_last_checked_at: "2026-07-23T18:03:08+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-complete"
-    note: "Parsed three visible replies. Four nested replies are hidden behind the community renderer; retry once on the next eligible calendar day to complete the artifact."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (this source has no supported collector parser). Prior available/parsed counts and artifact are retained."
   - source: "Brevo Community"
     url: "https://community.brevo.com/t/low-ip-reputation-score-causing-issues-with-email-deliverability-of-brevo-marketing-emails/7054"
     comments_supported: "yes"
@@ -523,9 +551,11 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 5
     comments_artifact_file: "research/comments/2026-06-15-reddit-klaviyo-gmail-bounce-spike-comments.md"
-    comments_last_checked_at: "2026-07-23T23:18:14+02:00"
+    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
-    note: "Five useful search-visible comments were parsed. Reddit did not expose a reliable total or all expandable branches; retry once on the next eligible calendar day."
+    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=47386460"
     comments_supported: "yes"
