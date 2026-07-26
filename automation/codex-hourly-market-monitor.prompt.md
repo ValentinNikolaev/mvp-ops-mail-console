@@ -1,5 +1,14 @@
 Run the hourly market-signal monitoring workflow for this repository.
 
+Before any processing—including reading prompts/configuration, collecting candidates, inspecting research, or parsing comments—refresh the local checkout from GitHub:
+
+1. `git fetch --prune origin`
+2. `git pull --ff-only origin main`
+
+If either command fails, preserve all local work, report the exact blocker, and stop. Do not process potentially stale repository data.
+
+All changes to this scheduled task prompt must be committed back to this source prompt file.
+
 Requirements:
 - Read `scripts/run-market-signal-pipeline.codex.md` first.
 - Read `research/config/signal-sources.json` first.
