@@ -706,3 +706,58 @@ comment_sources:
     comments_last_checked_at: "2026-07-27T16:03:35.670460+00:00"
     comments_recheck_policy: "skip"
     note: "Static Microsoft documentation; comments are structurally unsupported."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/use-blocklists"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T18:48:24.994201+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T18:48:25.016454+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/quickstart-blocklist"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T18:48:25.039276+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/urlblocklist"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T18:48:25.062408+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/applications-that-can-bypass-appcontrol"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T18:48:25.086126+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
