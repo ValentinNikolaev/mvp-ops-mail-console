@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Microsoft Q&A SPF record change"
+    url: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"
+    canonical_url: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"
+    discovered_at: "2026-07-27T18:03:35+02:00"
+    referring_thread: "2026-07-27 collection pass"
+    status: "rejected"
+    first_search_result: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"
+    rationale: "Public user Q&A, but it is a narrow Azure DNS SPF-editing question without a deliverability, filtering, reputation, visibility, or remediation-workflow pain signal. It does not meet the accepted-signal or source-promotion threshold."
+    next_review: "Do not re-evaluate unless independently referenced by accepted user evidence."
   - name: "Postal GitHub Discussions"
     url: "https://github.com/orgs/postalserver/discussions"
     canonical_url: "https://github.com/orgs/postalserver/discussions"

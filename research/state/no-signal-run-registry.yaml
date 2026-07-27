@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-27T17:04:09+02:00"
-last_evaluation: "24 successful configured-source searches and one Server Fault TLS failure yielded two already-rejected Hacker News candidates: an older adjacent multi-agent outreach thread and promotional list-cleaner content. No new or materially updated accepted signal passed recency, scope, uniqueness, and evidence checks."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-27T18:03:35+02:00"
+last_evaluation: "25 successful configured-source searches and one Server Fault TLS failure yielded five static Microsoft documentation pages, one narrow Microsoft Q&A SPF-editing question, and two already-rejected Hacker News candidates. No new or materially updated accepted signal passed scope, uniqueness, recency, and user-pain evidence checks."
 last_expansion_at: "2026-07-27T17:04:09+02:00"
 last_expansion_result: "promoted Postal GitHub Discussions as a public, searchable, actively maintained mail-delivery platform discussion source under the three-empty-run maintenance exception; indexed support threads provide primary sender evidence and reply support suitable for parsing"

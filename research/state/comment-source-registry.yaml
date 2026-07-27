@@ -659,3 +659,50 @@ comment_sources:
     comment_last_failure_date: "2026-07-27"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/it-it/defender-office-365/email-authentication-spf-configure"
+    comments_supported: "no"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T16:03:35.499566+00:00"
+    comments_recheck_policy: "skip"
+    note: "Static Microsoft documentation; comments are structurally unsupported."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: "research/comments/2026-07-21-microsoft-qa-azure-dns-spf-change-comments.md"
+    comments_last_checked_at: "2026-07-27T16:03:35.546104+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "A user Q&A thread; direct retrieval confirmed the page but the collector cannot reliably enumerate its reply/comment feed. Retry on the next eligible calendar day."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+    comments_supported: "no"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T16:03:35.585153+00:00"
+    comments_recheck_policy: "skip"
+    note: "Static Microsoft documentation; comments are structurally unsupported."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide"
+    comments_supported: "no"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T16:03:35.626627+00:00"
+    comments_recheck_policy: "skip"
+    note: "Static Microsoft documentation; comments are structurally unsupported."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-about"
+    comments_supported: "no"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T16:03:35.670460+00:00"
+    comments_recheck_policy: "skip"
+    note: "Static Microsoft documentation; comments are structurally unsupported."
