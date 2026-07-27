@@ -284,6 +284,13 @@
       "kind": "bing-rss",
       "siteScope": "site:community.brevo.com email deliverability spam inbox placement",
       "priority": 85
+    },
+    {
+      "name": "Postal GitHub Discussions",
+      "slug": "postal-github-discussions",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/orgs/postalserver/discussions email deliverability spam reputation",
+      "priority": 80
     }
   ]
 }

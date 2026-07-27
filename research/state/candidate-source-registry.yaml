@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Postal GitHub Discussions"
+    url: "https://github.com/orgs/postalserver/discussions"
+    canonical_url: "https://github.com/orgs/postalserver/discussions"
+    discovered_at: "2026-07-27T17:04:09+02:00"
+    referring_thread: "2026-07-27 source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://github.com/orgs/postalserver/discussions/3078"
+    rationale: "Public, searchable discussion area for an actively released open-source mail-delivery platform (Postal v3.3.6 released April 2026). Its indexed support threads contain first-person SMTP/rspamd and spam-rejection reports with reply support, making it a valid community evidence source under the mandatory three-empty-run expansion exception."
+    next_review: "Run the normal source pass; parse available replies for any accepted thread and apply canonical URL/content deduplication."
   - name: "Microsoft Defender SPF documentation"
     url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
     canonical_url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
