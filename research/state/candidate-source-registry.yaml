@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "docker-mailserver GitHub Discussions"
+    url: "https://github.com/orgs/docker-mailserver/discussions"
+    canonical_url: "https://github.com/orgs/docker-mailserver/discussions"
+    discovered_at: "2026-07-27T21:01:36+02:00"
+    referring_thread: "2026-07-27 source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://github.com/orgs/docker-mailserver/discussions/3965"
+    rationale: "Public, searchable, actively maintained open-source mail-server Q&A community. A visible discussion shows a self-hosted sender navigating SPF/DKIM/DMARC, anti-spam checks, relay design, and reputation/backscatter risk with five comments and five replies. It satisfies the mandatory three-empty-run maintenance exception and supports comment parsing."
+    next_review: "Run the normal source pass; parse available replies for any accepted thread and apply canonical URL/content deduplication."
   - name: "Microsoft Q&A SPF record change"
     url: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"
     canonical_url: "https://learn.microsoft.com/en-us/answers/questions/1662105/how-can-make-a-change-to-the-spf-record-for-my-dns"

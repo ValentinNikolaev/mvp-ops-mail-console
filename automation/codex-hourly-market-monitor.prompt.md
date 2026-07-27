@@ -39,6 +39,14 @@ Requirements:
 - Also act as an experienced venture investor and business consultant.
 - Include the proposed MVP ops tool, which majority needs from the sample it closes, pros, cons, open questions, value and problem severity, business model and scalability, market and competitors, marketing and sales channels, and 3 main business risks with mitigations.
 - Use `research/state/mvp-iteration-registry.yaml` to avoid duplicate Monday/Friday syntheses across repeated hourly runs on the same day.
+- After writing or materially updating a Monday/Friday MVP synthesis, run the installed `agent-plugins:council` skill from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
+- Use the current MVP synthesis, the latest Tuesday product specification, and the strongest signal/comment evidence as council context.
+- Save only the final Council Verdict as a separate markdown file in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md` using `research/mvp-council-verdicts/TEMPLATE.md`.
+- If the same day's MVP synthesis is revised, update the matching council verdict file instead of creating another verdict file.
+- Mention the council verdict file path in the run log and final run summary whenever it is created or updated.
+- Whenever an MVP synthesis and its matching Council verdict are both prepared in the same run, create or update the GitHub release for that MVP iteration after committing and pushing the files. This release rule is artifact-driven and must not depend on the task scheduler or weekday trigger.
+- Use tag `mvp-iteration-NNN`, title `MVP Iteration NNN - YYYY-MM-DD`, and release notes that summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the two prepared artifact paths.
+- If the tag or release already exists for the same iteration, update the existing release notes instead of creating a duplicate release.
 - If the run date is Tuesday, create or update one versioned product specification in `research/product-specs/` using `research/product-specs/TEMPLATE.md`.
 - Base the Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
 - Keep the Tuesday specification in that separate folder only.
@@ -62,12 +70,16 @@ Requirements:
 - Otherwise, commit and push if there is a real diff after staging.
 - Use commit message format `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push to branch `main`.
+- Create or update the GitHub release only after the commit containing the prepared MVP synthesis and Council verdict has been pushed to `main`.
 - Do not edit config or templates unless they are clearly broken, except when promoting a validated candidate source under the candidate-source rules.
 
 After the run:
 - Summarize how many sources succeeded, how many failed, and how many signals were created or updated.
 - Summarize how many comment-capable threads were checked, how many comments were available, how many were parsed, and which threads remain incomplete for retry.
 - If a Monday or Friday MVP synthesis was created or updated, mention its file path and iteration id.
+- If an MVP council verdict was created or updated, mention its file path and source MVP iteration id.
+- If a GitHub release was created or updated, mention its tag and URL.
 - If a Tuesday product specification was created or updated, mention its file path and version id.
 - If push failed, report the exact blocker.
+- If release creation or update failed, report the exact blocker.
 - Summarize candidate sources discovered, promoted, deferred, or rejected.

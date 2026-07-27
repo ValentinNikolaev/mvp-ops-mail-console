@@ -14,6 +14,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/state/candidate-source-registry.yaml` - evaluated third-party links that may become permanent sources after independent evidence.
 - `research/digests/daily/` - daily digest files for new or updated signals.
 - `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
+- `research/mvp-council-verdicts/` - separate Council verdicts that pressure-test Monday/Friday MVP syntheses.
 - `research/product-specs/` - Tuesday versioned product specifications based on the latest MVP synthesis.
 - `research/logs/` - per-run execution logs. Tracked in Git.
 - `research/state/` - tracked run state and repo-side metadata when the pipeline needs them.
@@ -34,6 +35,7 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - If the only changed files are under `research/logs/`, do not commit or push.
 - If there are staged non-log changes, commit them and push to branch `main`.
 - If there are no file changes, do not create an empty commit.
+- When an MVP synthesis and its matching Council verdict are both prepared, create or update the GitHub release for that MVP iteration after the commit has been pushed.
 
 ## Source Of Truth
 
@@ -82,6 +84,18 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
   - marketing and sales channels
   - 3 main business risks with mitigations
 - Use tracked state in `research/state/mvp-iteration-registry.yaml` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
+- After creating or materially updating an MVP synthesis, run `agent-plugins:council` from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
+- Save the final verdict separately in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`.
+- Update the matching verdict file when the same day's MVP synthesis is revised; do not append council output to the synthesis itself.
+- Once both the MVP synthesis and matching Council verdict are prepared, publish or update the GitHub release for that iteration. This is based on the prepared artifacts, not on whether the task was started by the hourly scheduler.
+
+## MVP Releases
+
+- Release trigger: a run creates or materially updates both an MVP synthesis and its matching Council verdict.
+- Tag format: `mvp-iteration-NNN`.
+- Title format: `MVP Iteration NNN - YYYY-MM-DD`.
+- Release notes should summarize the MVP, the Council recommendation, the one thing to do first, and link the two artifact files.
+- Existing releases for the same iteration should be updated, not duplicated.
 
 ## Tuesday Product Specification
 

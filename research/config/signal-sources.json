@@ -291,6 +291,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/orgs/postalserver/discussions email deliverability spam reputation",
       "priority": 80
+    },
+    {
+      "name": "docker-mailserver GitHub Discussions",
+      "slug": "docker-mailserver-github-discussions",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/orgs/docker-mailserver/discussions email spam deliverability reputation",
+      "priority": 80
     }
   ]
 }

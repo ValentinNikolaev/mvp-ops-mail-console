@@ -14,6 +14,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Existing files under `research/comments/`
 - Existing files under `research/digests/daily/`
 - Existing files under `research/mvp-iterations/`
+- Existing files under `research/mvp-council-verdicts/`
 - Existing files under `research/product-specs/`
 - `research/state/candidate-source-registry.yaml`
 - `research/state/no-signal-run-registry.yaml`
@@ -55,6 +56,9 @@ Accept a signal when at least one of these is true:
 - Use YAML frontmatter exactly as described in `research/config/signal-template.md`.
 - Write a daily digest in `research/digests/daily/YYYY-MM-DD.md`.
 - On Mondays and Fridays, write one incremental refined MVP synthesis in `research/mvp-iterations/`.
+- After writing or materially updating a Monday/Friday MVP synthesis, run the installed `agent-plugins:council` skill from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
+- Save the final council verdict as a separate markdown file in `research/mvp-council-verdicts/`.
+- Whenever an MVP synthesis and its matching council verdict are both prepared in the same run, create or update the GitHub release for that MVP iteration after committing and pushing the files. This release rule is artifact-driven and must not depend on the task scheduler or weekday trigger.
 - On Tuesdays, write one versioned product specification in `research/product-specs/`.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
@@ -94,6 +98,12 @@ Accept a signal when at least one of these is true:
   - 3 main business risks and mitigations
 - Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.
 - Use the template in `research/mvp-iterations/TEMPLATE.md`.
+- After the synthesis is complete, run `agent-plugins:council` from `valentin-agent-plugins` on the whole MVP using the current MVP synthesis, the latest Tuesday product specification, and the strongest signal/comment evidence as context.
+- Frame the council question neutrally: pressure-test the whole MVP, identify what is strongest, what will fail, what should be simplified or expanded, and what the next implementation decision should be.
+- Save only the final Council Verdict in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, using `research/mvp-council-verdicts/TEMPLATE.md`.
+- If the same day's MVP synthesis is revised, update the matching council verdict file instead of creating another verdict file.
+- Keep advisor transcripts out of the repository unless explicitly requested; store the verdict, recommendation, and first action only.
+- Mention the council verdict file path in the run log and final run summary whenever it is created or updated.
 
 ## Tuesday product specification
 
@@ -158,6 +168,16 @@ Accept a signal when at least one of these is true:
 - If there is a diff outside `research/logs/`, commit it with `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push the result to branch `main`.
 - Do not create empty commits.
+- After a successful push, if this run prepared both an MVP synthesis and its matching council verdict, create or update the GitHub release described in `Release policy`.
+
+## Release policy
+
+- This policy is triggered by prepared artifacts, not by the scheduler: whenever a run creates or materially updates both `research/mvp-iterations/YYYY-MM-DD-mvp-iteration-NNN.md` and `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, publish a GitHub release for that MVP iteration.
+- Use tag `mvp-iteration-NNN` and title `MVP Iteration NNN - YYYY-MM-DD`.
+- Release notes must summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the MVP synthesis and Council verdict paths.
+- Create or update the release only after the commit containing both prepared files has been pushed to `main`.
+- If the tag or release already exists for the same iteration, update the existing release notes instead of creating a duplicate release.
+- If release creation or update fails, leave the pushed files in place and report the exact blocker in the run log and final summary.
 
 ## Failure handling
 
