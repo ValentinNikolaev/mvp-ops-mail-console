@@ -5,6 +5,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 ## Structure
 
 - `scripts/run-market-signal-pipeline.codex.md` - canonical pipeline instructions for Codex.
+- `scripts/run-mvp-processing.codex.md` - dedicated MVP artifact workflow prompt for `mvp-iteration -> council -> product-spec -> release`.
 - `research/config/signal-sources.json` - source list, keyword clusters, and filtering rules.
 - `research/config/write-rules.md` - canonical naming, versioning, and commit-gating rules.
 - `research/config/signal-template.md` - canonical structure for one signal file.
@@ -15,7 +16,7 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 - `research/digests/daily/` - daily digest files for new or updated signals.
 - `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
 - `research/mvp-council-verdicts/` - separate Council verdicts that pressure-test Monday/Friday MVP syntheses.
-- `research/product-specs/` - Tuesday versioned product specifications based on the latest MVP synthesis.
+- `research/product-specs/` - versioned product specifications based on prepared MVP iterations.
 - `research/logs/` - per-run execution logs. Tracked in Git.
 - `research/state/` - tracked run state and repo-side metadata when the pipeline needs them.
 - `automation/codex-hourly-market-monitor.prompt.md` - prompt mirror for the Codex cron automation.
@@ -35,14 +36,14 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - If the only changed files are under `research/logs/`, do not commit or push.
 - If there are staged non-log changes, commit them and push to branch `main`.
 - If there are no file changes, do not create an empty commit.
-- When an MVP synthesis and its matching Council verdict are both prepared, create or update the GitHub release for that MVP iteration after the commit has been pushed.
+- When an MVP synthesis, matching Council verdict, and matching product specification are all prepared, create or update the GitHub release for that MVP iteration after the commit has been pushed.
 
 ## Source Of Truth
 
-- Use this precedence order when synthesizing Monday/Friday MVP documents and Tuesday product specifications:
+- Use this precedence order when synthesizing MVP documents and product specifications:
   1. `research/signals/` and useful comments captured from source threads
   2. `research/config/` and tracked state registries
-  3. latest Tuesday product specification
+  3. latest product specification
   4. older MVP syntheses
 - If sources disagree, prefer the higher-precedence layer and note the conflict briefly instead of silently blending them.
 
@@ -87,33 +88,33 @@ Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when crea
 - After creating or materially updating an MVP synthesis, run `agent-plugins:council` from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
 - Save the final verdict separately in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`.
 - Update the matching verdict file when the same day's MVP synthesis is revised; do not append council output to the synthesis itself.
-- Once both the MVP synthesis and matching Council verdict are prepared, publish or update the GitHub release for that iteration. This is based on the prepared artifacts, not on whether the task was started by the hourly scheduler.
+- Once the MVP synthesis, matching Council verdict, and matching product specification are prepared, publish or update the GitHub release for that iteration. This is based on the prepared artifacts, not on whether the task was started by the hourly scheduler.
 
 ## MVP Releases
 
-- Release trigger: a run creates or materially updates both an MVP synthesis and its matching Council verdict.
+- Release trigger: a run creates or materially updates an MVP synthesis, matching Council verdict, and matching product specification.
 - Tag format: `mvp-iteration-NNN`.
 - Title format: `MVP Iteration NNN - YYYY-MM-DD`.
-- Release notes should summarize the MVP, the Council recommendation, the one thing to do first, and link the two artifact files.
+- Release notes should summarize the MVP, the Council recommendation, the one thing to do first, and link the three artifact files.
 - Existing releases for the same iteration should be updated, not duplicated.
 
-## Tuesday Product Specification
+## Product Specification
 
-- On Tuesdays, create a versioned product specification in `research/product-specs/`.
-- Base each Tuesday specification on the latest available MVP document from `research/mvp-iterations/`.
+- Whenever an MVP synthesis is created or materially updated, create or update the matching versioned product specification in `research/product-specs/`.
+- Base each product specification on the MVP document prepared in the same run from `research/mvp-iterations/`.
 - Keep these product specifications separate from raw signals, digests, and MVP syntheses.
-- Each Tuesday specification should be written from the perspective of an expert software architect, systems engineer, and business analyst.
-- Each Tuesday specification should be a comprehensive pre-implementation blueprint.
-- The Tuesday document should cover both product specification and MVP architecture.
-- Each Tuesday specification should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
-- Structure the Tuesday specification with these exact top-level headers:
+- Each product specification should be written from the perspective of an expert software architect, systems engineer, and business analyst.
+- Each product specification should be a comprehensive pre-implementation blueprint.
+- The product specification should cover both product specification and MVP architecture.
+- Each product specification should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
+- Structure the product specification with these exact top-level headers:
   - `Executive Summary`
   - `Pros & Benefits`
   - `Cons & Risks`
   - `Proposed Tech Stack & Tools`
 - `Executive Summary` should be only a 2-word to 3-word overview of the proposed solution.
 - `Proposed Tech Stack & Tools` should be a bulleted list of specific technologies with reasons, and should also cover the proposed MVP architecture and major system components.
-- Use `research/state/product-spec-registry.yaml` so repeated hourly runs on the same Tuesday update the same spec file instead of creating duplicates.
+- Use `research/state/product-spec-registry.yaml` so product specifications stay one-to-one with MVP iterations and repeated runs update the matching spec file instead of creating duplicates.
 
 ## Debugging
 

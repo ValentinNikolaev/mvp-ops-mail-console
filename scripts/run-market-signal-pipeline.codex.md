@@ -16,6 +16,7 @@ Collect fresh pain signals for an explainable ops console for low-volume and mid
 - Existing files under `research/mvp-iterations/`
 - Existing files under `research/mvp-council-verdicts/`
 - Existing files under `research/product-specs/`
+- `scripts/run-mvp-processing.codex.md`
 - `research/state/candidate-source-registry.yaml`
 - `research/state/no-signal-run-registry.yaml`
 - Current date and time at execution
@@ -58,13 +59,14 @@ Accept a signal when at least one of these is true:
 - On Mondays and Fridays, write one incremental refined MVP synthesis in `research/mvp-iterations/`.
 - After writing or materially updating a Monday/Friday MVP synthesis, run the installed `agent-plugins:council` skill from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
 - Save the final council verdict as a separate markdown file in `research/mvp-council-verdicts/`.
-- Whenever an MVP synthesis and its matching council verdict are both prepared in the same run, create or update the GitHub release for that MVP iteration after committing and pushing the files. This release rule is artifact-driven and must not depend on the task scheduler or weekday trigger.
-- On Tuesdays, write one versioned product specification in `research/product-specs/`.
+- Whenever an MVP synthesis is created or materially updated, create or update the matching versioned product specification in `research/product-specs/` after the MVP synthesis and Council verdict are prepared.
+- Whenever an MVP synthesis, its matching council verdict, and its matching product specification are all prepared in the same run, create or update the GitHub release for that MVP iteration after committing and pushing the files. This release rule is artifact-driven and must not depend on the task scheduler or weekday trigger.
+- For all MVP artifact work, use the dedicated MVP processing prompt in `scripts/run-mvp-processing.codex.md`; it is the canonical instruction for the `mvp-iteration -> council -> product-spec -> release` chain.
 - Write a run log in `research/logs/YYYY-MM-DD/run-HHmmss.md`.
 - If useful runtime metadata appears, store it in `research/state/`.
 - Track comment availability, available-count, parsed-count, artifact path, and recheck decisions in `research/state/comment-source-registry.yaml`.
 - Track Monday/Friday MVP synthesis creation in `research/state/mvp-iteration-registry.yaml`.
-- Track Tuesday product specification creation in `research/state/product-spec-registry.yaml`.
+- Track product specification creation in `research/state/product-spec-registry.yaml`.
 - Track discovered, deferred, rejected, and promoted external source candidates in `research/state/candidate-source-registry.yaml`.
 - Track consecutive runs with no created or materially updated accepted signal in `research/state/no-signal-run-registry.yaml`.
 
@@ -72,7 +74,7 @@ Accept a signal when at least one of these is true:
 
 - This synthesis must live in the separate folder `research/mvp-iterations/`.
 - It should be an incremented refined version, not a raw digest.
-- Before writing, review the latest relevant MVP syntheses and the latest relevant Tuesday product specifications.
+- Before writing, review the latest relevant MVP syntheses and the latest relevant product specifications.
 - Use the source-of-truth order from `research/config/write-rules.md`.
 - It should be written as a senior business analyst and implementation planner with strong backend and ops judgment.
 - It should identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
@@ -98,17 +100,17 @@ Accept a signal when at least one of these is true:
   - 3 main business risks and mitigations
 - Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.
 - Use the template in `research/mvp-iterations/TEMPLATE.md`.
-- After the synthesis is complete, run `agent-plugins:council` from `valentin-agent-plugins` on the whole MVP using the current MVP synthesis, the latest Tuesday product specification, and the strongest signal/comment evidence as context.
+- After the synthesis is complete, run `agent-plugins:council` from `valentin-agent-plugins` on the whole MVP using the current MVP synthesis, the latest relevant product specification, and the strongest signal/comment evidence as context.
 - Frame the council question neutrally: pressure-test the whole MVP, identify what is strongest, what will fail, what should be simplified or expanded, and what the next implementation decision should be.
 - Save only the final Council Verdict in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, using `research/mvp-council-verdicts/TEMPLATE.md`.
 - If the same day's MVP synthesis is revised, update the matching council verdict file instead of creating another verdict file.
 - Keep advisor transcripts out of the repository unless explicitly requested; store the verdict, recommendation, and first action only.
 - Mention the council verdict file path in the run log and final run summary whenever it is created or updated.
 
-## Tuesday product specification
+## Product specification
 
 - This specification must live in the separate folder `research/product-specs/`.
-- It must be based on the latest available MVP document from `research/mvp-iterations/`.
+- It must be based on the MVP document prepared in the same run from `research/mvp-iterations/`.
 - It should be written from the perspective of an expert software architect, systems engineer, and business analyst.
 - It should be a comprehensive pre-implementation blueprint.
 - It should cover both the product specification and the MVP architecture.
@@ -130,7 +132,8 @@ Accept a signal when at least one of these is true:
   - `Cons & Risks`
   - `Proposed Tech Stack & Tools`
 - Under `Proposed Tech Stack & Tools`, use bullet points with specific technologies and the reason for each choice, and include the proposed MVP architecture.
-- Create at most one Tuesday specification per calendar date unless the same day's file needs a material revision; if revised, update the existing file instead of creating duplicates.
+- Create one product specification per MVP iteration. Use the matching MVP iteration id as the product spec version id so product specs and MVP iterations stay one-to-one.
+- If the matching MVP synthesis is revised, update the existing product spec for that MVP iteration instead of creating a duplicate.
 - Use the template in `research/product-specs/TEMPLATE.md`.
 
 ## Deduplication
@@ -168,14 +171,14 @@ Accept a signal when at least one of these is true:
 - If there is a diff outside `research/logs/`, commit it with `research: hourly signal update YYYY-MM-DD HHmm`.
 - Push the result to branch `main`.
 - Do not create empty commits.
-- After a successful push, if this run prepared both an MVP synthesis and its matching council verdict, create or update the GitHub release described in `Release policy`.
+- After a successful push, if this run prepared the MVP synthesis, matching council verdict, and matching product specification, create or update the GitHub release described in `Release policy`.
 
 ## Release policy
 
-- This policy is triggered by prepared artifacts, not by the scheduler: whenever a run creates or materially updates both `research/mvp-iterations/YYYY-MM-DD-mvp-iteration-NNN.md` and `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, publish a GitHub release for that MVP iteration.
+- This policy is triggered by prepared artifacts, not by the scheduler: whenever a run creates or materially updates `research/mvp-iterations/YYYY-MM-DD-mvp-iteration-NNN.md`, `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, and `research/product-specs/YYYY-MM-DD-product-spec-NNN.md`, publish a GitHub release for that MVP iteration.
 - Use tag `mvp-iteration-NNN` and title `MVP Iteration NNN - YYYY-MM-DD`.
-- Release notes must summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the MVP synthesis and Council verdict paths.
-- Create or update the release only after the commit containing both prepared files has been pushed to `main`.
+- Release notes must summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the MVP synthesis, Council verdict, and product specification paths.
+- Create or update the release only after the commit containing all prepared MVP artifacts has been pushed to `main`.
 - If the tag or release already exists for the same iteration, update the existing release notes instead of creating a duplicate release.
 - If release creation or update fails, leave the pushed files in place and report the exact blocker in the run log and final summary.
 

@@ -2,9 +2,10 @@
 
 ## Snapshot
 
-- Weekday: Tuesday
+- Weekday: <weekday>
 - Version: NNN
 - Based on MVP file: `research/mvp-iterations/<file>.md`
+- Based on Council verdict: `research/mvp-council-verdicts/<file>.md`
 - Based on sample through: YYYY-MM-DD
 
 ## Executive Summary

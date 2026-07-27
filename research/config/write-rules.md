@@ -10,13 +10,14 @@ This file is the canonical write-policy reference for unattended runs.
 - Run logs: `YYYY-MM-DD/run-HHmmss.md`
 - Monday/Friday MVP syntheses: `YYYY-MM-DD-mvp-iteration-NNN.md`
 - Monday/Friday MVP council verdicts: `YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`
-- Tuesday product specifications: `YYYY-MM-DD-product-spec-NNN.md`
+- Product specifications: `YYYY-MM-DD-product-spec-NNN.md`
 
 ## Versioning rules
 
 - `NNN` is a zero-padded repository-wide sequence number from the relevant YAML registry.
 - On the same calendar date, update the existing MVP synthesis or product spec file instead of inventing a second filename unless there is a materially different version requirement.
 - Registry files are the source of truth for file reuse and next version ids.
+- Product specs should stay one-to-one with MVP iterations. For specs created from an MVP iteration, use the matching MVP iteration id as the product spec version id.
 - Council verdict files reuse the linked MVP iteration id and date. If the linked MVP synthesis is revised, update the matching verdict file instead of creating a second verdict.
 
 ## Commit gating
@@ -24,31 +25,40 @@ This file is the canonical write-policy reference for unattended runs.
 - Always stage all changes with `git add -A`.
 - If the only staged changes are under `research/logs/`, do not commit and do not push.
 - If any staged changes exist outside `research/logs/`, commit and push, and it is acceptable to include the corresponding log file in the same commit.
-- If a run prepares both an MVP synthesis and its matching Council verdict, create or update the GitHub release only after the commit containing those artifacts has been pushed to `main`.
+- If a run prepares an MVP synthesis, matching Council verdict, and matching product specification, create or update the GitHub release only after the commit containing those artifacts has been pushed to `main`.
 
 ## Synthesis precedence
 
-- Monday/Friday MVP and Tuesday product-spec outputs must use this source-of-truth order:
+- MVP and product-spec outputs must use this source-of-truth order:
   1. `research/signals/` plus useful captured comments
   2. `research/config/` and YAML state registries
-  3. latest Tuesday product specification
+  3. latest product specification
   4. older MVP syntheses
 - When there is conflict, prefer the higher-ranked source and note the conflict briefly.
 
 ## MVP council verdict rules
 
 - After a Monday/Friday MVP synthesis is created or materially updated, run `agent-plugins:council` from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
-- Use the current MVP synthesis, latest Tuesday product specification, and strongest signal/comment evidence as council context.
+- Use the current MVP synthesis, latest relevant product specification, and strongest signal/comment evidence as council context.
 - Save only the final Council Verdict in `research/mvp-council-verdicts/` using `research/mvp-council-verdicts/TEMPLATE.md`.
 - Do not store the full advisor transcript unless explicitly requested.
 - Mention the verdict file path in the run log and final run summary.
 
+## Product specification rules
+
+- `scripts/run-mvp-processing.codex.md` is the canonical prompt for the full MVP artifact chain: `mvp-iteration -> council -> product-spec -> release`.
+- Product specifications are triggered by prepared MVP artifacts, not by weekday or scheduler assumptions.
+- Whenever a run creates or materially updates an MVP synthesis, create or update the matching product specification after the MVP synthesis and Council verdict are prepared.
+- Use one product specification per MVP iteration, with the product spec version id matching the MVP iteration id.
+- If the linked MVP synthesis is revised, update the matching product spec file instead of creating another spec.
+- Mention the product spec file path, version id, and source MVP iteration id in the run log and final summary.
+
 ## Release rules
 
 - Releases are triggered by prepared artifacts, not by calendar assumptions or scheduler configuration.
-- Whenever a run creates or materially updates both `research/mvp-iterations/YYYY-MM-DD-mvp-iteration-NNN.md` and `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, create or update the GitHub release for that MVP iteration.
+- Whenever a run creates or materially updates `research/mvp-iterations/YYYY-MM-DD-mvp-iteration-NNN.md`, `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`, and `research/product-specs/YYYY-MM-DD-product-spec-NNN.md`, create or update the GitHub release for that MVP iteration.
 - Use tag `mvp-iteration-NNN` and title `MVP Iteration NNN - YYYY-MM-DD`.
-- Release notes must summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the MVP synthesis and Council verdict paths.
+- Release notes must summarize the MVP synthesis, the Council recommendation, the one thing to do first, and link the MVP synthesis, Council verdict, and product specification paths.
 - If the release already exists for the iteration, update it instead of creating a duplicate.
 - If release creation or update fails, record the blocker in the run log and final summary.
 
