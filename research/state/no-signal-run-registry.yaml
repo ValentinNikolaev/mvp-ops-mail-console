@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-26T13:02:21+02:00"
-last_evaluation: "23 successful configured-source searches and one Server Fault TLS failure yielded two non-accepted Hacker News candidates: an older adjacent multi-agent outreach thread and an SEO list-cleaner promotion. No new or materially updated accepted signal passed recency, scope, uniqueness, and evidence checks. The third consecutive empty pass completed a required source expansion."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-27T12:05:07+02:00"
+last_evaluation: "24 successful configured-source searches and one Server Fault TLS failure yielded three non-accepted candidates: generic Microsoft SPF documentation without user evidence, an older adjacent Hacker News multi-agent outreach thread, and a promotional list-cleaner post. No new or materially updated accepted signal passed recency, scope, uniqueness, and evidence checks."
 last_expansion_at: "2026-07-26T13:02:21+02:00"
 last_expansion_result: "promoted Microsoft Community Hub as a public, searchable, Microsoft ecosystem discussion source under the three-empty-run maintenance exception; current threads expose direct sender evidence and visible replies suitable for parsing"

@@ -648,3 +648,14 @@ comment_sources:
     comment_last_failure_date: "2026-07-26"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-27T10:05:07.398759+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-27"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."

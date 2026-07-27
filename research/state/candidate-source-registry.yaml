@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Microsoft Defender SPF documentation"
+    url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    canonical_url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    discovered_at: "2026-07-27T12:05:07+02:00"
+    referring_thread: "2026-07-27 collection pass"
+    status: "rejected"
+    first_search_result: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    rationale: "Official SPF setup documentation, but not a user discussion and contains no direct operational pain evidence. It is a generic documentation destination rather than a candidate discussion source."
+    next_review: "Do not re-evaluate unless independently referenced by accepted user evidence."
   - name: "Microsoft Community Hub"
     url: "https://techcommunity.microsoft.com/"
     canonical_url: "https://techcommunity.microsoft.com/"
