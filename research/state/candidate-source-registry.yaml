@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Microsoft Community Hub"
+    url: "https://techcommunity.microsoft.com/"
+    canonical_url: "https://techcommunity.microsoft.com/"
+    discovered_at: "2026-07-26T13:02:21+02:00"
+    referring_thread: "source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://techcommunity.microsoft.com/discussions/exchange_general/m365-tenant-emails-marked-as-spam-scl5-catphish-despite-perfect-authentication/4489993"
+    rationale: "Public, searchable Microsoft discussion community with a current first-person Exchange Online report of SCL=5/CAT:PHISH despite SPF, DKIM, DMARC, and composite authentication passing. The thread has a visible reply and is directly in scope for explainable provider filtering and reputation remediation. Promoted under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass, parse available replies for accepted threads, and apply canonical URL/content deduplication."
   - name: "Brevo Community"
     url: "https://community.brevo.com/"
     canonical_url: "https://community.brevo.com/"

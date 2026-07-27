@@ -89,6 +89,7 @@ Accept a signal when at least one of these is true:
   - value and problem severity
   - business model and scalability
   - market sizing and competitors
+  - marketing and sales channels
   - likely acquisition and retention economics
   - 3 main business risks and mitigations
 - Create at most one Monday synthesis and one Friday synthesis per calendar date unless there is a material need to revise the same day's file; if revised, update the existing file instead of creating duplicates.

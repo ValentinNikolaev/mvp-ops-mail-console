@@ -133,6 +133,13 @@
       "priority": 100
     },
     {
+      "name": "Microsoft Community Hub",
+      "slug": "microsoft-community-hub",
+      "kind": "bing-rss",
+      "siteScope": "site:techcommunity.microsoft.com/discussions email deliverability spam reputation",
+      "priority": 90
+    },
+    {
       "name": "Hacker News",
       "slug": "hacker-news",
       "kind": "hn-algolia",

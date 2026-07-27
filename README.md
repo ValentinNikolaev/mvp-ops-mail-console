@@ -5,7 +5,6 @@ This repository contains a Codex-native monitoring setup for collecting fresh ma
 ## Structure
 
 - `scripts/run-market-signal-pipeline.codex.md` - canonical pipeline instructions for Codex.
-- `scripts/run-market-signal-pipeline.pasha.md` - same pipeline written separately for Pasha.
 - `research/config/signal-sources.json` - source list, keyword clusters, and filtering rules.
 - `research/config/write-rules.md` - canonical naming, versioning, and commit-gating rules.
 - `research/config/signal-template.md` - canonical structure for one signal file.
@@ -118,4 +117,4 @@ The monitor extracts relevant external links from accepted signals and useful co
 
 - To rebuild a signal manually, edit or remove only the affected markdown file in `research/signals/` and let the next automation run recreate it.
 - To adjust source coverage, edit `research/config/signal-sources.json`.
-- If the automation prompt needs to change, update `scripts/run-market-signal-pipeline.codex.md`, `scripts/run-market-signal-pipeline.pasha.md`, and `automation/codex-hourly-market-monitor.prompt.md` together.
+- If the automation prompt needs to change, update `scripts/run-market-signal-pipeline.codex.md` and `automation/codex-hourly-market-monitor.prompt.md` together.
