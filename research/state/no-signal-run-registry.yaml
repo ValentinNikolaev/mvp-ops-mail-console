@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-28T16:04:34+02:00"
-last_evaluation: "28 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. The mandatory source-expansion pass then validated Mail-in-a-Box GitHub Issues and accepted one distinct, current user-pain signal after parsing all four available issue comments."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-28T17:03:00+02:00"
+last_evaluation: "29 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. Neither added distinct in-scope evidence, so no accepted signal was created or materially updated."
 last_expansion_at: "2026-07-28T16:04:34+02:00"
 last_expansion_result: "promoted Mail-in-a-Box GitHub Issues under the three-empty-run maintenance exception after validating its public searchable tracker, current user-reported silent spam-training failure, and four reply-capable comments; accepted the validation thread as a distinct signal."
