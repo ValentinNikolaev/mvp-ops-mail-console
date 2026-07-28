@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-28T13:03:24+02:00"
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-28T14:03:28+02:00"
 last_evaluation: "27 successful configured-source searches and one Server Fault TLS failure yielded two previously rejected Hacker News candidates. Their existing comment artifacts remain complete (2 available / 2 parsed); no new or materially updated accepted signal passed scope, uniqueness, recency, and user-pain evidence checks."
 last_expansion_at: "2026-07-28T13:03:24+02:00"
 last_expansion_result: "promoted Mailu GitHub Discussions as a public, searchable, actively released open-source Docker mail-server community under the three-empty-run maintenance exception; its visible SMTP throttling discussion has a first-person report and reply-supported remediation exchange"
