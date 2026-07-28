@@ -612,21 +612,23 @@ comment_sources:
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=47386460"
     comments_supported: "yes"
-    comments_available_count: 1
-    comments_parsed_count: 1
+    comments_available_count: 0
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-25T22:52:34.808289+00:00"
+    comments_last_checked_at: "2026-07-28T20:42:08.848496+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=47369375"
     comments_supported: "yes"
-    comments_available_count: 1
-    comments_parsed_count: 1
+    comments_available_count: 0
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-25T22:52:35.126984+00:00"
+    comments_last_checked_at: "2026-07-28T20:42:09.066005+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=43829927"
     comments_supported: "yes"
