@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Rspamd GitHub Issues"
+    url: "https://github.com/rspamd/rspamd/issues"
+    canonical_url: "https://github.com/rspamd/rspamd/issues"
+    discovered_at: "2026-07-28T22:05:12+02:00"
+    referring_thread: "https://github.com/rspamd/rspamd/issues/6047"
+    status: "promoted"
+    first_search_result: "https://github.com/rspamd/rspamd/issues/6047"
+    rationale: "Public, searchable, actively maintained spam-filter issue tracker. The current first-person issue shows documented Bayes autolearn balancing silently failing, reports the operational impact on spam/ham learning, and has two retrievable replies including a working configuration workaround. It qualifies under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass; parse GitHub comments for accepted threads and apply canonical URL/content deduplication."
   - name: "Stalwart GitHub Discussions"
     url: "https://github.com/stalwartlabs/stalwart/discussions"
     canonical_url: "https://github.com/stalwartlabs/stalwart/discussions"

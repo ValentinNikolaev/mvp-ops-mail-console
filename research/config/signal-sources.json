@@ -326,6 +326,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/mail-in-a-box/mailinabox/issues email spam filtering deliverability reputation",
       "priority": 80
+    },
+    {
+      "name": "Rspamd GitHub Issues",
+      "slug": "rspamd-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/rspamd/rspamd/issues email spam filtering SPF DKIM DMARC deliverability reputation",
+      "priority": 85
     }
   ]
 }

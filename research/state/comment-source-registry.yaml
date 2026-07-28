@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Rspamd GitHub Issues"
+    url: "https://github.com/rspamd/rspamd/issues/6047"
+    comments_supported: "yes"
+    comments_available_count: 2
+    comments_parsed_count: 2
+    comments_artifact_file: "research/comments/2026-05-20-rspamd-github-issues-bayes-autolearn-balance-failure-comments.md"
+    comments_last_checked_at: "2026-07-28T22:05:12+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Expansion validation retrieved and parsed both GitHub comments. The follow-up confirms that documented check_balance is ineffective and supplies an explicit balance.enabled workaround."
   - source: "Stalwart GitHub Discussions"
     url: "https://github.com/stalwartlabs/stalwart/discussions/3004"
     comments_supported: "yes"
@@ -38,15 +47,16 @@ comment_sources:
     note: "The one visible reply was fully parsed. It confirms that DKIM/DMARC verification does not prevent spam rejection for a new shared-IP or new-domain transactional stream and suggests reputation, cadence, and HTML/link checks."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1ttz568/anyone_else_noticing_that_deliverability_is/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 17
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-22-reddit-emailmarketing-seed-test-preflight-gap-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:33.257972+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit EmailMarketingNow"
     url: "https://www.reddit.com/r/emailmarketingnow/comments/1uirq1w/what_changed_in_email_deliverability_this_month/"
     comments_supported: "yes"
@@ -58,15 +68,16 @@ comment_sources:
     note: "Parsed the one visible reply during the source-expansion first pass. It supports evidence-scoped diagnosis but adds no distinct accepted signal."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1ruhpyb/high_spam_placement_1218_need_advice/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 4
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-reddit-emaildeliverability-provider-placement-divergence-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:33.426710+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1v2xnd4/how_do_you_overcome_emails_going_to_spam_promotion/"
     comments_supported: "yes"
@@ -80,70 +91,76 @@ comment_sources:
     note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
   - source: "Reddit StopSpamFolders"
     url: "https://www.reddit.com/r/StopSpamFolders/comments/1tkm3lg/spent_3_weeks_figuring_out_why_our_emails_stopped/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 11
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-05-22-reddit-stopspamfolders-placement-tooling-gap-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:33.615829+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1uv9sqm/google_postmaster_tools_updates/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 4
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-13-reddit-emaildeliverability-postmaster-reporting-lag-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:33.797294+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1ujmdcv/anyone_else_seeing_a_drop_in_gmail_open_rates/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 9
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-06-30-reddit-emaildeliverability-gmail-open-rate-placement-gap-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:33.972011+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1u6q5mk/huge_spike_in_bounce_rate_overnight_almost_a/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 5
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-21-reddit-klaviyo-gmail-bounce-verdict-gap-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:34.165649+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1ug5te2/how_do_you_actually_diagnose_deliverability/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 8
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-21-reddit-emailmarketing-manual-diagnosis-fragmentation-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:34.357622+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1tre8yg/ive_been_inundated_with_1000s_of_fake_emails/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 18
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-05-30-reddit-klaviyo-bot-signup-reputation-contamination-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:34.555988+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5788143/deliverability-issue-valid-transactional-emails-be"
     comments_supported: "yes"
@@ -211,15 +228,16 @@ comment_sources:
     note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (this source has no supported collector parser). Prior available/parsed counts and artifact are retained."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1t20vna/gmail_is_flagging_our_main_domain_as_spam_even/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 18
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-19-reddit-emailmarketing-campaign-spillover-reputation-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:34.738233+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "WordPress Support"
     url: "https://wordpress.org/support/topic/emails-going-to-spam-16/"
     comments_supported: "yes"
@@ -459,15 +477,16 @@ comment_sources:
     note: "Direct Reddit retrieval repeatedly failed after an initial visible-comment pass. The three-daily-attempt cap is exhausted; do not retry automatically unless access materially changes."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1tv3dw9/a_reminder_to_test_your_assumptions_our_domains/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 8
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-hidden-provider-penalty-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:35.137993+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Adobe Experience League Community"
     url: "https://experienceleaguecommunities.adobe.com/campaign-classic-v7-campaign-v8-6/ac-marketing-instance-marketing-spam-denylist-preventing-servicing-email-communications-249190"
     comments_supported: "yes"
@@ -479,15 +498,16 @@ comment_sources:
     note: "All two visible replies were parsed; they recommend reputation and configuration isolation for marketing versus servicing email."
   - source: "Reddit Email Deliverability"
     url: "https://www.reddit.com/r/emaildeliverability/comments/1u31al4/how_to_improve_email_deliverability_and_maintain/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 18
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-18-reddit-emaildeliverability-low-maintenance-recovery-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:35.325904+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1t13hvz/why_is_my_company_asking_me_to_sign_up_my_spouse/"
     comments_supported: "yes"
@@ -501,48 +521,52 @@ comment_sources:
     note: "The 2026-07-21 direct retry returned an internal fetch error. Retain eight previously parsed visible comments; the three-daily-attempt cap is exhausted."
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1urqr3s/2026_email_deliverability_issues/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 8
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-20-reddit-emailmarketing-reply-rate-placement-diagnosis-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:35.506461+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit Emailmarketing"
     url: "https://www.reddit.com/r/Emailmarketing/comments/1v2jp6r/any_reliable_inbox_placement_tests_providers/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-21-reddit-emailmarketing-inbox-placement-test-visibility-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-26"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    comments_last_checked_at: "2026-07-28T20:09:35.696090+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-28"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit DigitalMarketing"
     url: "https://www.reddit.com/r/DigitalMarketing/comments/1v2j1c1/how_do_you_check_sender_reputation_before/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-22-reddit-digitalmarketing-pre-send-reputation-monitoring-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-26"
-    comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    comments_last_checked_at: "2026-07-28T20:09:35.895513+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-28"
+    comments_recheck_policy: "retry-exhausted"
+    note: "Python collector comment pass: retry."
+
   - source: "Reddit DigitalMarketing"
     url: "https://www.reddit.com/r/DigitalMarketing/comments/1ud8g96/cold_email_deliverability_got_brutal_this_year/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 7
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-06-23-reddit-digitalmarketing-provider-scoped-feedback-gap-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:36.114658+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/answers/questions/5890488/remote-server-returned-554-5-7-0-%28-5.7.520-smtp-55"
     comments_supported: "yes"
@@ -554,15 +578,16 @@ comment_sources:
     note: "Parsed both available answer-level discussion replies; they document low-volume 554 5.7.520 blocking that persists despite delist status, a 72-hour wait, and account verification."
   - source: "Adobe Experience League Community"
     url: "https://experienceleaguecommunities.adobe.com/adobe-marketo-engage-27/recommended-approach-to-reintroduce-bounced-emails-into-marketing-campaigns-248654"
-    comments_supported: "yes"
-    comments_available_count: 7
-    comments_parsed_count: 3
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-02-19-adobe-bounced-address-reactivation-runbook-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
-    comments_recheck_policy: "retry-until-complete"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (this source has no supported collector parser). Prior available/parsed counts and artifact are retained."
+    comments_last_checked_at: "2026-07-28T20:09:36.127392+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+
   - source: "Brevo Community"
     url: "https://community.brevo.com/t/low-ip-reputation-score-causing-issues-with-email-deliverability-of-brevo-marketing-emails/7054"
     comments_supported: "yes"
@@ -574,15 +599,16 @@ comment_sources:
     note: "The one available reply was fully parsed. It directs an account-specific investigation with message IDs, supporting an evidence-pack and escalation workflow after provider-specific shared-IP reputation blocking."
   - source: "Reddit Klaviyo"
     url: "https://www.reddit.com/r/Klaviyo/comments/1u6q5mk/huge_spike_in_bounce_rate_overnight_almost_a/"
-    comments_supported: "yes"
+    comments_supported: "unknown"
     comments_available_count: null
-    comments_parsed_count: 5
-    comments_artifact_file: "research/comments/2026-06-15-reddit-klaviyo-gmail-bounce-spike-comments.md"
-    comments_last_checked_at: "2026-07-26T10:12:00+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_parsed_count: 0
+    comments_artifact_file: "research/comments/2026-07-21-reddit-klaviyo-gmail-bounce-verdict-gap-comments.md"
+    comments_last_checked_at: "2026-07-28T20:09:34.165649+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "Direct comment retry on 2026-07-26 could not retrieve a reliable comment feed (Reddit returned HTTP 403). Prior available/parsed counts and artifact are retained."
+    note: "Python collector comment pass: retry."
+
   - source: "Hacker News"
     url: "https://news.ycombinator.com/item?id=47386460"
     comments_supported: "yes"
@@ -670,22 +696,24 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-26T00:59:24.476589+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-26"
+    comments_last_checked_at: "2026-07-28T20:09:36.331105+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T10:05:07.398759+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.343613+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/it-it/defender-office-365/email-authentication-spf-configure"
     comments_supported: "no"
@@ -701,11 +729,12 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-07-21-microsoft-qa-azure-dns-spf-change-comments.md"
-    comments_last_checked_at: "2026-07-27T16:03:35.546104+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.356190+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
-    note: "A user Q&A thread; direct retrieval confirmed the page but the collector cannot reliably enumerate its reply/comment feed. Retry on the next eligible calendar day."
+    note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
     comments_supported: "no"
@@ -739,52 +768,68 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T18:48:24.994201+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.372012+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T18:48:25.016454+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.384166+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/quickstart-blocklist"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T18:48:25.039276+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.397283+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/urlblocklist"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T18:48:25.062408+00:00"
-    comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comments_last_checked_at: "2026-07-28T20:09:36.409415+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/applications-that-can-bypass-appcontrol"
     comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T18:48:25.086126+00:00"
+    comments_last_checked_at: "2026-07-28T20:09:36.420871+00:00"
+    comment_failure_attempts: 2
+    comment_last_failure_date: "2026-07-28"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+
+  - source: "Reddit Klaviyo"
+    url: "https://www.reddit.com/r/Klaviyo/comments/1u6q5mk/huge_spike_in_bounce_rate_overnight_almost_a/"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: "research/comments/2026-06-15-reddit-klaviyo-gmail-bounce-spike-comments.md"
+    comments_last_checked_at: "2026-07-28T20:09:36.318564+00:00"
     comment_failure_attempts: 1
-    comment_last_failure_date: "2026-07-27"
+    comment_last_failure_date: "2026-07-28"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."

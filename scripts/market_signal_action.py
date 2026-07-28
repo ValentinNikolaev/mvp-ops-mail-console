@@ -120,6 +120,20 @@ def fetch_comments(url: str) -> tuple[int | None, list[str], str]:
         data = json.loads(get("https://api.stackexchange.com/2.3/questions/" + question_id + "/comments?" + urllib.parse.urlencode({"site": "serverfault", "filter": "withbody", "pagesize": 100})))
         comments = [re.sub(r"<[^>]+>", "", item.get("body", "")).strip() for item in data.get("items", [])]
         return len(comments), comments, "complete"
+    if parts.netloc == "github.com":
+        match = re.match(r"^/([^/]+)/([^/]+)/issues/(\d+)$", parts.path)
+        if not match:
+            return None, [], "unsupported"
+        owner, repo, issue_number = match.groups()
+        issue = json.loads(get(f"https://api.github.com/repos/{owner}/{repo}/issues/{issue_number}"))
+        available = int(issue.get("comments", 0))
+        comments = []
+        for page in range(1, (available // 100) + 2):
+            page_items = json.loads(get(f"https://api.github.com/repos/{owner}/{repo}/issues/{issue_number}/comments?" + urllib.parse.urlencode({"per_page": 100, "page": page})))
+            comments.extend(item.get("body", "").strip() for item in page_items if item.get("body", "").strip())
+            if len(page_items) < 100:
+                break
+        return available, comments, "complete"
     # This collector has no reliable parser for this source yet. Treat it as a
     # retriable retrieval gap, not as proof that comments are unsupported.
     return None, [], "retry"
@@ -134,7 +148,7 @@ def comment_id(item: dict, source_slug: str) -> str:
 
 def comment_retry_allowed(url: str) -> bool:
     text = COMMENT_REGISTRY.read_text(encoding="utf-8")
-    pattern = re.compile(rf'(?ms)^  - source: .*?^    url: "{re.escape(url)}".*?(?=^  - source:|\Z)')
+    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n  - source:|\Z)')
     match = pattern.search(text)
     if not match:
         return True
@@ -144,7 +158,7 @@ def comment_retry_allowed(url: str) -> bool:
 
 def upsert_comment_registry(source: str, url: str, available: int | None, parsed: int, artifact: str | None, status: str) -> None:
     text = COMMENT_REGISTRY.read_text(encoding="utf-8")
-    pattern = re.compile(rf'(?ms)^  - source: .*?^    url: "{re.escape(url)}".*?(?=^  - source:|\Z)')
+    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n  - source:|\Z)')
     previous = pattern.search(text)
     previous_text = previous.group(0) if previous else ""
     today = f"{datetime.now(timezone.utc):%Y-%m-%d}"
