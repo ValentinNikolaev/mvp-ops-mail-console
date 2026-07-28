@@ -148,7 +148,7 @@ def comment_id(item: dict, source_slug: str) -> str:
 
 def comment_retry_allowed(url: str) -> bool:
     text = COMMENT_REGISTRY.read_text(encoding="utf-8")
-    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n  - source:|\Z)')
+    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n(?:\s*\n)*  - source:|\Z)')
     match = pattern.search(text)
     if not match:
         return True
@@ -158,7 +158,7 @@ def comment_retry_allowed(url: str) -> bool:
 
 def upsert_comment_registry(source: str, url: str, available: int | None, parsed: int, artifact: str | None, status: str) -> None:
     text = COMMENT_REGISTRY.read_text(encoding="utf-8")
-    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n  - source:|\Z)')
+    pattern = re.compile(rf'(?m)^  - source: [^\n]*\n    url: "{re.escape(url)}"(?:\n    [^\n]*)*(?=\n(?:\s*\n)*  - source:|\Z)')
     previous = pattern.search(text)
     previous_text = previous.group(0) if previous else ""
     today = f"{datetime.now(timezone.utc):%Y-%m-%d}"
