@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-28T19:03:25+02:00"
-last_evaluation: "29 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. The required third empty-pass expansion validated Stalwart GitHub Discussions and its current relay-SPF thread, yielding one distinct accepted signal after parsing all 304 available comments."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-28T20:41:56+02:00"
+last_evaluation: "30 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. Both candidate comment artifacts remain complete; no accepted signal was created or materially updated."
 last_expansion_at: "2026-07-28T19:03:25+02:00"
 last_expansion_result: "promoted Stalwart GitHub Discussions under the three-empty-run maintenance exception after validating its public searchable community, current first-person relay SPF failure at Gmail, and 304 reply-capable comments; accepted the validation thread as a distinct signal."
