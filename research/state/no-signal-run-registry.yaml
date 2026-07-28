@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-28T10:03:49+02:00"
-last_evaluation: "26 successful configured-source searches and one Server Fault TLS failure yielded two previously rejected Hacker News candidates. Their comment artifacts remain complete (2 available / 2 parsed); no new or materially updated accepted signal passed scope, uniqueness, recency, and user-pain evidence checks. The third consecutive empty pass triggered and completed source expansion."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-28T11:03:58+02:00"
+last_evaluation: "27 successful configured-source searches and one Server Fault TLS failure yielded two previously rejected Hacker News candidates. Their comment artifacts remain complete (2 available / 2 parsed); no new or materially updated accepted signal passed scope, uniqueness, recency, and user-pain evidence checks."
 last_expansion_at: "2026-07-28T10:03:49+02:00"
 last_expansion_result: "promoted Listmonk GitHub Issues as a public, searchable, active open-source newsletter community under the three-empty-run maintenance exception; its issue threads provide first-person low-volume SMTP throttling, delivery-rate, reputation, and remediation evidence with visible GitHub comments suitable for parsing"
