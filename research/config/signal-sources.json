@@ -298,6 +298,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/orgs/docker-mailserver/discussions email spam deliverability reputation",
       "priority": 80
+    },
+    {
+      "name": "Listmonk GitHub Issues",
+      "slug": "listmonk-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/knadh/listmonk/issues email deliverability spam reputation",
+      "priority": 80
     }
   ]
 }

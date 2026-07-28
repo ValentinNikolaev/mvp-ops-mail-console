@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Listmonk GitHub Issues"
+    url: "https://github.com/knadh/listmonk/issues/645"
+    comments_supported: "yes"
+    comments_available_count: 3
+    comments_parsed_count: 3
+    comments_artifact_file: "research/comments/2022-01-03-listmonk-smtp-message-throttling-comments.md"
+    comments_last_checked_at: "2026-07-28T10:03:49+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Expansion validation parsed all three GitHub issue comments. They document concrete rate-limit settings, a low-volume 100/hour constraint, and ESP routing as a transactional-delivery workaround."
   - source: "Brevo Community"
     url: "https://community.brevo.com/t/high-probability-of-spam-when-sending-transactional-emails/7185"
     comments_supported: "yes"
