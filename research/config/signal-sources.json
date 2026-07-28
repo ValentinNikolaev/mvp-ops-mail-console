@@ -305,6 +305,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/knadh/listmonk/issues email deliverability spam reputation",
       "priority": 80
+    },
+    {
+      "name": "Mailu GitHub Discussions",
+      "slug": "mailu-github-discussions",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/Mailu/Mailu/discussions email deliverability spam reputation throttling",
+      "priority": 80
     }
   ]
 }

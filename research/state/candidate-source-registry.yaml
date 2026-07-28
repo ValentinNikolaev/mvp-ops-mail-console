@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Mailu GitHub Discussions"
+    url: "https://github.com/Mailu/Mailu/discussions"
+    canonical_url: "https://github.com/Mailu/Mailu/discussions"
+    discovered_at: "2026-07-28T13:03:24+02:00"
+    referring_thread: "2026-07-28 source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://github.com/Mailu/Mailu/discussions/3496"
+    rationale: "Public, searchable GitHub discussion area for an actively released open-source Docker mail server (latest release May 2026). Its visible SMTP throttling discussion has a first-person report, a remediation exchange, and reply support. It is a valid community source under the mandatory three-empty-run maintenance exception; future matched threads must have comments parsed before acceptance."
+    next_review: "Run the normal source pass; parse visible GitHub replies for any accepted thread and apply canonical URL and content deduplication."
   - name: "Listmonk GitHub Issues"
     url: "https://github.com/knadh/listmonk/issues"
     canonical_url: "https://github.com/knadh/listmonk/issues"
