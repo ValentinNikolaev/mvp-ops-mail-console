@@ -312,6 +312,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/Mailu/Mailu/discussions email deliverability spam reputation throttling",
       "priority": 80
+    },
+    {
+      "name": "Mail-in-a-Box GitHub Issues",
+      "slug": "mail-in-a-box-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/mail-in-a-box/mailinabox/issues email spam filtering deliverability reputation",
+      "priority": 80
     }
   ]
 }

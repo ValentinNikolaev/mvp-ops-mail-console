@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Mail-in-a-Box GitHub Issues"
+    url: "https://github.com/mail-in-a-box/mailinabox/issues/2570"
+    comments_supported: "yes"
+    comments_available_count: 4
+    comments_parsed_count: 4
+    comments_artifact_file: "research/comments/2026-04-14-mail-in-a-box-silent-spam-training-failure-comments.md"
+    comments_last_checked_at: "2026-07-28T16:04:34+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Source-expansion validation parsed all four GitHub issue comments. They confirm IMAPSieve covers MOVE and legacy COPY paths, and a project contributor confirms sieve scripts are needed for the Ubuntu 26.04 upgrade path."
   - source: "Listmonk GitHub Issues"
     url: "https://github.com/knadh/listmonk/issues/645"
     comments_supported: "yes"

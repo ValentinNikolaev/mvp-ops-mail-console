@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 2
-last_evaluated_at: "2026-07-28T15:05:07+02:00"
-last_evaluation: "28 successful configured-source searches and one Server Fault TLS failure yielded two previously rejected Hacker News candidates. Their existing comment artifacts remain complete (2 available / 2 parsed); no new or materially updated accepted signal passed scope, uniqueness, recency, and user-pain evidence checks."
-last_expansion_at: "2026-07-28T13:03:24+02:00"
-last_expansion_result: "promoted Mailu GitHub Discussions as a public, searchable, actively released open-source Docker mail-server community under the three-empty-run maintenance exception; its visible SMTP throttling discussion has a first-person report and reply-supported remediation exchange"
+consecutive_no_signal_runs: 0
+last_evaluated_at: "2026-07-28T16:04:34+02:00"
+last_evaluation: "28 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. The mandatory source-expansion pass then validated Mail-in-a-Box GitHub Issues and accepted one distinct, current user-pain signal after parsing all four available issue comments."
+last_expansion_at: "2026-07-28T16:04:34+02:00"
+last_expansion_result: "promoted Mail-in-a-Box GitHub Issues under the three-empty-run maintenance exception after validating its public searchable tracker, current user-reported silent spam-training failure, and four reply-capable comments; accepted the validation thread as a distinct signal."
