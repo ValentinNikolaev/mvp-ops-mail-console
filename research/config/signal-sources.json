@@ -314,6 +314,13 @@
       "priority": 80
     },
     {
+      "name": "Stalwart GitHub Discussions",
+      "slug": "stalwart-github-discussions",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/stalwartlabs/stalwart/discussions email SPF DKIM DMARC spam deliverability reputation",
+      "priority": 80
+    },
+    {
       "name": "Mail-in-a-Box GitHub Issues",
       "slug": "mail-in-a-box-github-issues",
       "kind": "bing-rss",

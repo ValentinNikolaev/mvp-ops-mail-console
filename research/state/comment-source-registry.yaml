@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Stalwart GitHub Discussions"
+    url: "https://github.com/stalwartlabs/stalwart/discussions/3004"
+    comments_supported: "yes"
+    comments_available_count: 304
+    comments_parsed_count: 304
+    comments_artifact_file: "research/comments/2026-04-20-stalwart-github-discussions-relay-spf-visibility-gap-comments.md"
+    comments_last_checked_at: "2026-07-28T19:03:25+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "All four GitHub API pages (304 replies) were retrieved and parsed. The useful delivery subthread proves automatic DNS emitted an inadequate SPF record for a relay, while a manual TXT change made Gmail change from SPF fail to SPF pass."
   - source: "Mail-in-a-Box GitHub Issues"
     url: "https://github.com/mail-in-a-box/mailinabox/issues/2570"
     comments_supported: "yes"
