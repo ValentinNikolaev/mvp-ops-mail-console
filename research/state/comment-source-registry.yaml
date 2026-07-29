@@ -624,9 +624,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-29T12:57:26.169256+00:00"
+    comments_last_checked_at: "2026-07-29T13:57:38.037163+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -652,9 +653,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-29T12:57:26.422053+00:00"
+    comments_last_checked_at: "2026-07-29T13:57:38.225413+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -939,5 +941,14 @@ comment_sources:
     comments_parsed_count: 4
     comments_artifact_file: "research/comments/2026-07-28-server-fault-why-does-sending-an-email-go-to-the-spam-folder-comments.md"
     comments_last_checked_at: "2026-07-29T12:57:26.486925+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Python collector comment pass: complete."
+  - source: "Server Fault"
+    url: "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder"
+    comments_supported: "yes"
+    comments_available_count: 4
+    comments_parsed_count: 4
+    comments_artifact_file: "research/comments/2026-07-28-server-fault-why-does-sending-an-email-go-to-the-spam-folder-comments.md"
+    comments_last_checked_at: "2026-07-29T13:57:38.314796+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
