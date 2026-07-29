@@ -624,9 +624,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-29T11:07:48.125883+00:00"
+    comments_last_checked_at: "2026-07-29T11:57:43.647450+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -650,9 +651,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-29T11:07:48.314921+00:00"
+    comments_last_checked_at: "2026-07-29T11:57:43.802096+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -913,6 +915,17 @@ comment_sources:
     comments_parsed_count: 0
     comments_artifact_file: null
     comments_last_checked_at: "2026-07-29T09:16:15.298283+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5782777/how-do-i-fix-email-with-dmarc-spf-and-dkim-issues"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-29T11:57:43.452454+00:00"
     comment_failure_attempts: 1
     comment_last_failure_date: "2026-07-29"
     comments_recheck_policy: "retry-until-counted"
