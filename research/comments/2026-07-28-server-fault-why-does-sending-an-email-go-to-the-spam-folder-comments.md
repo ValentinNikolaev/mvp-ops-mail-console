@@ -3,8 +3,8 @@ source: "Server Fault"
 url: "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder"
 canonical_id: "2026-07-28-server-fault-why-does-sending-an-email-go-to-the-spam-folder"
 comments_supported: "yes"
-comments_available_count: 5
-comments_parsed_count: 5
+comments_available_count: 6
+comments_parsed_count: 6
 parse_status: "complete"
 ---
 
@@ -12,6 +12,7 @@ parse_status: "complete"
 - Deterministic collector preserved the thread comments below for later review.
 
 ## Useful Comment Artifacts
+- spf check failed what about the SPF configuration failed? Did it not include all of the IP addresses?
 - This question is similar to: How to send emails and avoid them being classified as spam?. If you believe it’s different, please edit the question, make it clear how it’s different and/or how the answers on that question are not helpful for your problem.
 - The MX record is not blacklisted on mxtoolbox. The SPF on mxtoolbox says the domain is ok  (PrefixDesc SoftFail) while spf-record.com says it is not (one record found - spf check failed).
 - Right now I would suggest that you check a few things by yourself. Otherwise you would be revealing probably more than you want to the public. 2 sites I would recommend.  1) mxtoolbox.com Let&#39;s you check your domain&#39;s MX record and if it is blacklisted  2) spf-record.com Checks your SPF record and some other stuff as well  I fear there is a mistake in your domain settings, like MX record or spf record. Those sites should help you find it.
