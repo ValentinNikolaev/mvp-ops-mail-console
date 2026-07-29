@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-29T10:05:10+02:00"
-last_evaluation: "31 successful configured-source searches and one Server Fault TLS failure yielded only two previously rejected Hacker News candidates. The required third-empty-run expansion validated Modoboa GitHub Issues and its current Rspamd-training thread; the thread was accepted as a distinct signal, so the counter reset to zero."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-29T11:02:50+02:00"
+last_evaluation: "32 configured-source searches succeeded and Server Fault failed TLS verification. The only rule-matched candidates were the two previously rejected Hacker News posts; no accepted signal was created or materially updated, so the counter increased from zero to one."
 last_expansion_at: "2026-07-29T10:05:10+02:00"
 last_expansion_result: "promoted Modoboa GitHub Issues under the three-empty-run maintenance exception after validating a public searchable active issue tracker, a current first-person Rspamd training/remediation gap, and six accessible GitHub comments; accepted the validation issue as a distinct signal."
