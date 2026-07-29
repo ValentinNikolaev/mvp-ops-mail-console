@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Modoboa GitHub Issues"
+    url: "https://github.com/modoboa/modoboa/issues/4114"
+    comments_supported: "yes"
+    comments_available_count: 6
+    comments_parsed_count: 6
+    comments_artifact_file: "research/comments/2026-07-21-modoboa-github-issues-rspamd-training-feedback-gap-comments.md"
+    comments_last_checked_at: "2026-07-29T10:05:10+02:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Expansion validation retrieved and parsed all six GitHub comments. They specify a safe, pluggable Rspamd training workflow with explicit scope and failure handling."
   - source: "Rspamd GitHub Issues"
     url: "https://github.com/rspamd/rspamd/issues/6047"
     comments_supported: "yes"
@@ -615,9 +624,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-29T07:40:57.044364+00:00"
+    comments_last_checked_at: "2026-07-29T08:03:50.627107+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -634,9 +644,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-29T07:40:57.463701+00:00"
+    comments_last_checked_at: "2026-07-29T08:03:50.919134+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 

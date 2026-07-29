@@ -333,6 +333,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/rspamd/rspamd/issues email spam filtering SPF DKIM DMARC deliverability reputation",
       "priority": 85
+    },
+    {
+      "name": "Modoboa GitHub Issues",
+      "slug": "modoboa-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/modoboa/modoboa/issues email spam filtering Rspamd DKIM DMARC deliverability reputation",
+      "priority": 80
     }
   ]
 }
