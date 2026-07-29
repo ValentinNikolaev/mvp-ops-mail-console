@@ -624,9 +624,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-29T09:02:49.798671+00:00"
+    comments_last_checked_at: "2026-07-29T09:16:15.487270+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -646,9 +647,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-29T09:02:50.110386+00:00"
+    comments_last_checked_at: "2026-07-29T09:16:15.681648+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -731,11 +733,12 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-28T20:09:36.331105+00:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-28"
-    comments_recheck_policy: "retry-until-counted"
+    comments_last_checked_at: "2026-07-29T09:16:15.291397+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-exhausted"
     note: "Python collector comment pass: retry."
+
 
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
@@ -743,11 +746,12 @@ comment_sources:
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-28T20:09:36.343613+00:00"
-    comment_failure_attempts: 2
-    comment_last_failure_date: "2026-07-28"
-    comments_recheck_policy: "retry-until-counted"
+    comments_last_checked_at: "2026-07-29T09:16:15.292906+00:00"
+    comment_failure_attempts: 3
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-exhausted"
     note: "Python collector comment pass: retry."
+
 
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/it-it/defender-office-365/email-authentication-spf-configure"
@@ -781,22 +785,28 @@ comment_sources:
     note: "Static Microsoft documentation; comments are structurally unsupported."
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide"
-    comments_supported: "no"
+    comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T16:03:35.626627+00:00"
-    comments_recheck_policy: "skip"
-    note: "Static Microsoft documentation; comments are structurally unsupported."
+    comments_last_checked_at: "2026-07-29T09:16:15.299424+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-about"
-    comments_supported: "no"
+    comments_supported: "unknown"
     comments_available_count: null
     comments_parsed_count: 0
     comments_artifact_file: null
-    comments_last_checked_at: "2026-07-27T16:03:35.670460+00:00"
-    comments_recheck_policy: "skip"
-    note: "Static Microsoft documentation; comments are structurally unsupported."
+    comments_last_checked_at: "2026-07-29T09:16:15.295556+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+
   - source: "Microsoft Q&A"
     url: "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/use-blocklists"
     comments_supported: "unknown"
@@ -866,5 +876,38 @@ comment_sources:
     comments_last_checked_at: "2026-07-28T20:09:36.318564+00:00"
     comment_failure_attempts: 1
     comment_last_failure_date: "2026-07-28"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/defender-office-365/email-auth-sec-ops-guide"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-29T09:16:15.294434+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/system-center/spf/overview?view=sc-spf-2022"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-29T09:16:15.297042+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
+    comments_recheck_policy: "retry-until-counted"
+    note: "Python collector comment pass: retry."
+  - source: "Microsoft Q&A"
+    url: "https://learn.microsoft.com/en-us/answers/questions/5782777/how-do-i-fix-email-with-dmarc-spf-and-dkim-issues"
+    comments_supported: "unknown"
+    comments_available_count: null
+    comments_parsed_count: 0
+    comments_artifact_file: null
+    comments_last_checked_at: "2026-07-29T09:16:15.298283+00:00"
+    comment_failure_attempts: 1
+    comment_last_failure_date: "2026-07-29"
     comments_recheck_policy: "retry-until-counted"
     note: "Python collector comment pass: retry."
