@@ -314,6 +314,13 @@
       "priority": 80
     },
     {
+      "name": "Mailu GitHub Issues",
+      "slug": "mailu-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/Mailu/Mailu/issues email spam filtering deliverability reputation",
+      "priority": 80
+    },
+    {
       "name": "Stalwart GitHub Discussions",
       "slug": "stalwart-github-discussions",
       "kind": "bing-rss",

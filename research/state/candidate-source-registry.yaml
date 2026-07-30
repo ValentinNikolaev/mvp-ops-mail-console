@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Mailu GitHub Issues"
+    url: "https://github.com/Mailu/Mailu/issues"
+    canonical_url: "https://github.com/Mailu/Mailu/issues"
+    discovered_at: "2026-07-30T18:35:35+02:00"
+    referring_thread: "https://github.com/Mailu/Mailu/issues/4011"
+    status: "promoted"
+    first_search_result: "https://github.com/Mailu/Mailu/issues/4011"
+    rationale: "Public, searchable issue tracker for an actively maintained open-source mail server. The April 2026 first-person report shows Dovecot filing legitimate mail into Junk despite a low Rspamd score; both accessible comments supply a reproducible header-level root cause and remediation. It qualifies under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass; parse GitHub comments for accepted threads and apply canonical URL/content deduplication."
   - name: "rspamd_trainer"
     url: "https://github.com/MrTango/rspamd_trainer"
     canonical_url: "https://github.com/MrTango/rspamd_trainer"

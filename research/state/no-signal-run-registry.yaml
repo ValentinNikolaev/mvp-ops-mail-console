@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 2
-last_evaluated_at: "2026-07-29T12:05:00+02:00"
-last_evaluation: "32 configured-source searches succeeded and Server Fault failed TLS verification. The only rule-matched candidates were the two previously rejected Hacker News posts; no accepted signal was created or materially updated, so the counter increased from one to two."
-last_expansion_at: "2026-07-29T10:05:10+02:00"
-last_expansion_result: "promoted Modoboa GitHub Issues under the three-empty-run maintenance exception after validating a public searchable active issue tracker, a current first-person Rspamd training/remediation gap, and six accessible GitHub comments; accepted the validation issue as a distinct signal."
+consecutive_no_signal_runs: 0
+last_evaluated_at: "2026-07-30T18:35:35+02:00"
+last_evaluation: "32 configured-source searches succeeded and Server Fault failed TLS verification. The two configured matches were previously rejected Hacker News posts; the third empty pass triggered the required expansion, and the validated Mailu issue supplied one distinct accepted signal, so the counter was reset."
+last_expansion_at: "2026-07-30T18:35:35+02:00"
+last_expansion_result: "promoted Mailu GitHub Issues under the three-empty-run maintenance exception after validating its public searchable issue tracker and a current first-person Dovecot/Rspamd misclassification report with two accessible comments; accepted the validation issue as a distinct signal."
