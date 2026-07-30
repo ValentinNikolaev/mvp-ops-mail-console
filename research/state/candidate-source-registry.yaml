@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "MXToolbox Blacklist Check"
+    url: "https://mxtoolbox.com/blacklists.aspx"
+    canonical_url: "https://mxtoolbox.com/blacklists.aspx"
+    discovered_at: "2026-07-30T19:05:38+02:00"
+    referring_thread: "https://techcommunity.microsoft.com/discussions/exchange_general/m365-tenant-emails-marked-as-spam-scl5-catphish-despite-perfect-authentication/4489993"
+    status: "rejected"
+    first_search_result: "https://mxtoolbox.com/blacklists.aspx"
+    rationale: "Useful comment-level remediation reference, but it is a commercial checker rather than a public searchable user-discussion or authoritative provider-evidence source. It cannot qualify as a permanent research source."
+    next_review: "Do not promote unless independent primary user evidence changes its role."
   - name: "Mailu GitHub Issues"
     url: "https://github.com/Mailu/Mailu/issues"
     canonical_url: "https://github.com/Mailu/Mailu/issues"

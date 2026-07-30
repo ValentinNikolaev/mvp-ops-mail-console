@@ -1,6 +1,6 @@
 schema_version: 1
 consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-30T18:35:35+02:00"
-last_evaluation: "32 configured-source searches succeeded and Server Fault failed TLS verification. The two configured matches were previously rejected Hacker News posts; the third empty pass triggered the required expansion, and the validated Mailu issue supplied one distinct accepted signal, so the counter was reset."
+last_evaluated_at: "2026-07-30T19:05:38+02:00"
+last_evaluation: "Focused priority-source web pass accepted one distinct Microsoft Community Hub signal with its complete one-comment artifact, so the counter remains reset. The full local collector timed out before completion and is recorded as a run limitation."
 last_expansion_at: "2026-07-30T18:35:35+02:00"
 last_expansion_result: "promoted Mailu GitHub Issues under the three-empty-run maintenance exception after validating its public searchable issue tracker and a current first-person Dovecot/Rspamd misclassification report with two accessible comments; accepted the validation issue as a distinct signal."
