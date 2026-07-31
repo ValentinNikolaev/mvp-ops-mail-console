@@ -368,6 +368,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/simple-login/app/discussions email SPF DKIM ARC SRS forwarding spam deliverability",
       "priority": 75
+    },
+    {
+      "name": "Postal GitHub Issues",
+      "slug": "postal-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/postalserver/postal/issues email SPF DKIM DMARC spam deliverability reputation",
+      "priority": 85
     }
   ]
 }

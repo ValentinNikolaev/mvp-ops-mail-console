@@ -4,7 +4,7 @@
 
 - Weekday: Friday
 - Version: 005
-- Based on sample through: 2026-07-30
+- Based on sample through: 2026-07-31
 - Reviewed MVP files: `2026-07-27-mvp-iteration-004.md`
 - Reviewed product spec files: `2026-07-28-product-spec-005.md`
 
@@ -22,17 +22,20 @@ A manual-first, read-only email-delivery incident workbench for agencies and MSP
 
 - Narrow v1 from a broad incident console to one incident workspace and an exportable provider/ESP support packet.
 - Use four initial evidence inputs: headers, NDRs, ESP delivery/bounce export rows, and seed observations.
+- Reframe v1 as an evidence-to-handoff compiler: a provider pass and a sender UI warning are separate observations until SMTP-path evidence connects them.
 
 ## Fixes
 
 - Do not label hypotheses as diagnosis or infer inbox placement from sent/open aggregates.
 - Block risky advice when evidence is incomplete; return `confirmed`, `suspected`, or `insufficient evidence` plus the smallest next collection step.
+- Never collapse a literal SPF configuration check and receiver-side SPF pass into one status; label evaluator, mechanism, path scope, and missing context.
 
 ## Requirements
 
 - Canonical incident schema for identities, auth alignment, route, recipient provider, SMTP/NDR code, pool/IP, timestamps, source provenance, sensitivity, and freshness.
 - Eight to twelve versioned deterministic rules for auth-pass spam placement, explicit 4xx/5xx/policy rejection, shared-pool suspicion, list/cadence/content changes, forwarding/path issues, and not-observable outcomes.
 - Case-completeness rubric, redaction preview, immutable audit events, packet export, and scheduled outcome recheck.
+- For authentication claims, preserve `Authentication-Results`, `Received` chain, MAIL FROM/Return-Path, HELO, connecting IP, DKIM domain/alignment, recipient provider, evaluator, and raw-artifact provenance; otherwise gate causal output.
 - Measure baseline and pilot outcomes: time-to-triage, time-to-escalation, packet acceptance, recurrence, and operator throughput.
 
 ## Majority Needs Covered
@@ -44,6 +47,7 @@ A manual-first, read-only email-delivery incident workbench for agencies and MSP
 ## Proposed MVP Shape
 
 - One guided case: paste/upload evidence -> normalize redacted facts -> assess completeness -> evaluate bounded rules -> create provider/ESP packet and recheck.
+- Emit either a decision-ready packet or a partial evidence-gap/handoff packet with the exact next collection request; both retain claim-to-source links and a redaction manifest.
 - First supported scope: Gmail and Microsoft 365 cases; defer connectors, continuous monitoring, collaboration suites, predictive scoring, and automatic changes.
 - Validate against 20–30 historical agency/MSP incidents before adding integrations; select a connector only when it improves paid retention.
 
@@ -100,3 +104,4 @@ A manual-first, read-only email-delivery incident workbench for agencies and MSP
 - [Authenticated M365 tenant spam](../signals/2026-01-28-microsoft-community-hub-authenticated-m365-tenant-spam.md)
 - [Dovecot/Rspamd Junk misclassification](../signals/2026-04-10-mailu-github-issues-rspamd-score-junk-misclassification.md)
 - [Seed-test preflight gap](../signals/2026-07-22-reddit-emailmarketing-seed-test-preflight-gap.md)
+- [Postal SPF validation visibility gap](../signals/2026-07-23-postal-github-issues-spf-validation-visibility-gap.md)

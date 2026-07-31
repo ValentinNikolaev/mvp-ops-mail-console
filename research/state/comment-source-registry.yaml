@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Postal GitHub Issues"
+    url: "https://github.com/postalserver/postal/issues/3611"
+    comments_supported: "yes"
+    comments_available_count: 2
+    comments_parsed_count: 2
+    comments_artifact_file: "research/comments/2026-07-23-postal-github-issues-spf-validation-reports-false-negative-with-proofpoint-email-protecti-comments.md"
+    comments_last_checked_at: "2026-07-31T19:10:00+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Focused GitHub API comment pass: complete; 2/2 replies parsed."
   - source: "Mailu GitHub Issues"
     url: "https://github.com/Mailu/Mailu/issues/4011"
     comments_supported: "yes"
@@ -633,9 +642,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-31T18:47:25.839690+00:00"
+    comments_last_checked_at: "2026-07-31T19:05:21.251553+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -727,9 +737,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-31T18:47:25.997618+00:00"
+    comments_last_checked_at: "2026-07-31T19:05:21.554679+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
