@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 1
-last_evaluated_at: "2026-07-31T13:23:22+02:00"
-last_evaluation: "Completed configured source pass accepted no new or materially updated signal: 34 sources succeeded, Server Fault failed because TLS verification reports an expired certificate, and the two Hacker News matches remain rejected with complete 0/0 comment artifacts. Counter incremented after the prior run reset it through source expansion."
+consecutive_no_signal_runs: 2
+last_evaluated_at: "2026-07-31T14:08:30+02:00"
+last_evaluation: "Completed configured source pass accepted no new or materially updated signal: 34 sources succeeded, Server Fault failed because TLS verification reports an expired certificate, and the two Hacker News matches remain rejected with complete 0/0 comment artifacts. Counter incremented; the mandatory source-expansion threshold has not yet been reached."
 last_expansion_at: "2026-07-31T11:02:25+02:00"
 last_expansion_result: "promoted CIPP GitHub Issues under the three-empty-run maintenance exception after validating its public searchable Microsoft 365 MSP issue tracker, a current external-domain anti-spam-policy request, and GitHub comment support. No accepted signal resulted from the configured source pass."
