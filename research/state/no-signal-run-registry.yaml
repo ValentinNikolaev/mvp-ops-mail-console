@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-31T21:10:00+02:00"
-last_evaluation: "Completed configured source pass accepted one new high-confidence Postal GitHub issue after focused thread and 2/2 comment verification; 36 sources succeeded and Server Fault failed because TLS verification reports an expired certificate."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-31T22:02:08+02:00"
+last_evaluation: "Completed configured source pass with no created or materially updated accepted signal; 37 sources succeeded and Server Fault failed because TLS verification reports an expired certificate. The two matched Hacker News threads remain rejected and comment-complete at 0/0."
 last_expansion_at: "2026-07-31T21:10:00+02:00"
 last_expansion_result: "promoted Postal GitHub Issues under the high-confidence community-thread exception and the mandatory three-empty-run maintenance rule after validating current July 2026 SPF configuration-versus-effective-path evidence and fully parsing both GitHub replies."
