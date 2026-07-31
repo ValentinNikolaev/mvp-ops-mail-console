@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 1
-last_evaluated_at: "2026-07-31T19:06:44+02:00"
+consecutive_no_signal_runs: 2
+last_evaluated_at: "2026-07-31T20:05:28+02:00"
 last_evaluation: "Completed configured source pass accepted no new or materially updated signal: 36 sources succeeded, Server Fault failed because TLS verification reports an expired certificate, and the two Hacker News matches remain rejected with complete 0/0 comment artifacts."
 last_expansion_at: "2026-07-31T18:07:42+02:00"
 last_expansion_result: "promoted SimpleLogin GitHub Discussions under the three-empty-run maintenance exception after validating its public searchable current 2026 ARC/SRS and self-hosted SMTP discussion evidence and GitHub reply support. No accepted signal resulted from the configured source pass."
