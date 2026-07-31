@@ -1,135 +1,70 @@
 # MVP Ops Mail Console Research Monitor
 
-This repository contains a Codex-native monitoring setup for collecting fresh market pain signals about deliverability, reputation, provider filtering, and remediation workflows.
+## Status
 
-## Structure
+**Archived / suspended.**
 
-- `scripts/run-market-signal-pipeline.codex.md` - canonical pipeline instructions for Codex.
-- `scripts/run-mvp-processing.codex.md` - dedicated MVP artifact workflow prompt for `mvp-iteration -> council -> product-spec -> release`.
-- `research/config/signal-sources.json` - source list, keyword clusters, and filtering rules.
-- `research/config/write-rules.md` - canonical naming, versioning, and commit-gating rules.
-- `research/config/signal-template.md` - canonical structure for one signal file.
-- `research/config/digest-template.md` - canonical structure for daily digests.
-- `research/signals/` - one markdown file per normalized signal.
-- `research/comments/` - one comment artifact per source thread when comments are available or partially parsed.
-- `research/state/candidate-source-registry.yaml` - evaluated third-party links that may become permanent sources after independent evidence.
-- `research/digests/daily/` - daily digest files for new or updated signals.
-- `research/mvp-iterations/` - Monday/Friday incremental MVP syntheses in a separate folder.
-- `research/mvp-council-verdicts/` - separate Council verdicts that pressure-test Monday/Friday MVP syntheses.
-- `research/product-specs/` - versioned product specifications based on prepared MVP iterations.
-- `research/logs/` - per-run execution logs. Tracked in Git.
-- `research/state/` - tracked run state and repo-side metadata when the pipeline needs them.
-- `automation/codex-hourly-market-monitor.prompt.md` - prompt mirror for the Codex cron automation.
+This project is no longer being actively developed or monitored. The repository is kept as an archive of the research corpus, MVP iterations, council verdicts, product specifications, and the final business-viability assessment.
 
-## Codex automation
+## Why This Project Was Suspended
 
-Use the prompt from `automation/codex-hourly-market-monitor.prompt.md` when creating a recurring Codex automation for this project. The automation should run once every hour, inspect the configured sources, update the markdown database, and then always stage all changed files, commit if there is a diff, and push to `main`.
+The project was suspended after the business-viability assessment concluded **VALIDATE FIRST**, not **GO**.
 
-## GitHub Actions monitor
+The core idea remains plausible: an evidence-packet workbench for agencies, MSPs, and deliverability consultants handling Gmail and Microsoft 365 email-delivery incidents. The research corpus contains repeated public pain signals around authenticated email still landing in spam, being rejected, or producing contradictory provider feedback. Adjacent tools such as deliverability monitors, seed testing products, and DNS diagnostics also show that customers do spend money in this general category.
 
-`.github/workflows/market-signal-monitor.yml` is a Python-only unattended collector. It runs hourly at minute 17, fast-forwards `main` before collection, searches every configured source, normalizes and deduplicates URLs against existing signals, filters configured exclusion terms, and uploads ranked candidate evidence as a 30-day GitHub Actions artifact. It also appends the same reviewable evidence to `research/candidates/YYYY-MM-DD.md` and commits that ledger with `GITHUB_TOKEN`. It uses no OpenAI API key. Candidate ledger entries are not accepted signals: source-thread/comment verification is still required before an item enters `research/signals/`.
+However, the assessment found that the project should not move into full build mode yet:
 
-## Git policy
+- There is no direct evidence that agencies or MSPs will pay recurring SaaS fees for an evidence-packet workflow.
+- Willingness to pay scored only **4/10**.
+- Evidence of demand scored **6/10**, because the pain is real but mostly inferred from public signals and adjacent competitors.
+- Competitive position scored **5/10**, with no durable moat yet visible.
+- The base financial model works only if the product reaches roughly **EUR 249/month ARPU**, low CAC, and repeated agency usage.
+- The pessimistic case does not recover development cost within 36 months.
+- A useful MVP is not tiny: the estimate was **760-1,540 person-hours**, with a realistic cash cost of **EUR 25,000-EUR 140,000** and full economic cost materially higher once founder time is counted.
 
-- All generated and maintained files live in Git.
-- The pipeline should use `git add -A`.
-- If the only changed files are under `research/logs/`, do not commit or push.
-- If there are staged non-log changes, commit them and push to branch `main`.
-- If there are no file changes, do not create an empty commit.
-- When an MVP synthesis, matching Council verdict, and matching product specification are all prepared, create or update the GitHub release for that MVP iteration after the commit has been pushed.
+The main unsupported assumption is that a redacted incident packet would save enough agency triage and escalation time to create recurring retention rather than one-off diagnostic use.
 
-## Source Of Truth
+## Final Recommendation
 
-- Use this precedence order when synthesizing MVP documents and product specifications:
-  1. `research/signals/` and useful comments captured from source threads
-  2. `research/config/` and tracked state registries
-  3. latest product specification
-  4. older MVP syntheses
-- If sources disagree, prefer the higher-precedence layer and note the conflict briefly instead of silently blending them.
+Do not build the full product now.
 
-## Comment policy
+The next rational step, if this project is ever revived, is validation before implementation:
 
-- Add only new articles and useful comments.
-- If comments are available, parsing them is mandatory.
-- On the initial comment pass, record both the total available comment count and the parsed comment count.
-- Store comments as a first-class artifact in `research/comments/`.
-- Each comment artifact should contain a concise summary of the most useful comments for the current problem space.
-- Retry a failed comment retrieval once per calendar day, never multiple times in the same day.
-- Stop automatic retries after three failed daily attempts by recording `retry-exhausted`; reset only after a material source/access change or a manual decision.
-- Partial comment parsing without a retrieval failure is also retried at most once per day.
-- Use `research/state/comment-source-registry.yaml` to remember whether comment rechecks are worth doing.
+1. Interview 20-30 qualified agencies, MSPs, or deliverability consultants.
+2. Run 10-20 concierge packet prototypes on real historical incidents.
+3. Sell at least 3 paid pilots before building a full web application.
+4. Continue only if packets save at least 30% of triage or escalation preparation time.
+5. Stop or pivot if month-2 retained usage is below 40%, or if CAC cannot plausibly stay below EUR 1,500 at the base ARPU.
 
-## Monday And Friday MVP Synthesis
+## Archived Outputs
 
-- On Mondays and Fridays, create an incremental refined MVP synthesis in `research/mvp-iterations/`.
-- Keep these MVP syntheses separate from raw signal files and daily digests.
-- Each synthesis should describe a potential MVP ops tool for low-volume and mid-volume senders that combines reputation, blocklists, provider feedback, inbox placement, and remediation steps into one explainable console.
-- Each synthesis should act as if written by a senior business analyst and implementation planner with strong backend and ops judgment.
-- Each synthesis should always review the latest relevant MVP documents and the latest relevant product specification documents before writing.
-- Each synthesis should identify all finalized decisions, changes, fixes, and requirements from the reviewed context.
-- Keep the result concise, specific, and optimized for token efficiency.
-- Each synthesis should also include a venture-style business assessment from the perspective of an experienced investor and business consultant.
-- Each synthesis should include:
-  - the proposed MVP
-  - finalized decisions
-  - changes
-  - fixes
-  - requirements
-  - what majority needs from the sample it closes
-  - pros
-  - cons
-  - open questions
-  - value and problem severity
-  - business model and scalability
-  - market and competitors
-  - marketing and sales channels
-  - 3 main business risks with mitigations
-- Use tracked state in `research/state/mvp-iteration-registry.yaml` so the automation does not create duplicate Monday/Friday syntheses during repeated hourly runs on the same day.
-- After creating or materially updating an MVP synthesis, run `agent-plugins:council` from `valentin-agent-plugins` (requested alias: `valentin-agent-plugins::counsil`) to brainstorm and pressure-test the whole MVP.
-- Save the final verdict separately in `research/mvp-council-verdicts/YYYY-MM-DD-mvp-iteration-NNN-council-verdict.md`.
-- Update the matching verdict file when the same day's MVP synthesis is revised; do not append council output to the synthesis itself.
-- Once the MVP synthesis, matching Council verdict, and matching product specification are prepared, publish or update the GitHub release for that iteration. This is based on the prepared artifacts, not on whether the task was started by the hourly scheduler.
+Primary viability assessment:
 
-## MVP Releases
+- `analysis/business-viability/executive-summary.md`
+- `analysis/business-viability/assessment.json`
+- `analysis/business-viability/financial-model.csv`
+- `analysis/business-viability/sources.md`
 
-- Release trigger: a run creates or materially updates an MVP synthesis, matching Council verdict, and matching product specification.
-- Tag format: `mvp-iteration-NNN`.
-- Title format: `MVP Iteration NNN - YYYY-MM-DD`.
-- Release notes should summarize the MVP, the Council recommendation, the one thing to do first, and link the three artifact files.
-- Existing releases for the same iteration should be updated, not duplicated.
+Research and product artifacts:
 
-## Product Specification
+- `research/signals/` - accepted market pain signals.
+- `research/comments/` - useful source-thread comment artifacts.
+- `research/digests/daily/` - daily monitoring digests.
+- `research/mvp-iterations/` - synthesized MVP iterations.
+- `research/mvp-council-verdicts/` - pressure-test verdicts.
+- `research/product-specs/` - product specifications derived from the MVP iterations.
+- `research/state/` - monitor state and registries.
+- `research/config/` - historical monitoring and writing rules.
 
-- Whenever an MVP synthesis is created or materially updated, create or update the matching versioned product specification in `research/product-specs/`.
-- Base each product specification on the MVP document prepared in the same run from `research/mvp-iterations/`.
-- Keep these product specifications separate from raw signals, digests, and MVP syntheses.
-- Each product specification should be written from the perspective of an expert software architect, systems engineer, and business analyst.
-- Each product specification should be a comprehensive pre-implementation blueprint.
-- The product specification should cover both product specification and MVP architecture.
-- Each product specification should describe a simple product that can be built quickly, cheaply, and with a stack that is relatively easy to maintain and scale.
-- Structure the product specification with these exact top-level headers:
-  - `Executive Summary`
-  - `Pros & Benefits`
-  - `Cons & Risks`
-  - `Proposed Tech Stack & Tools`
-- `Executive Summary` should be only a 2-word to 3-word overview of the proposed solution.
-- `Proposed Tech Stack & Tools` should be a bulleted list of specific technologies with reasons, and should also cover the proposed MVP architecture and major system components.
-- Use `research/state/product-spec-registry.yaml` so product specifications stay one-to-one with MVP iterations and repeated runs update the matching spec file instead of creating duplicates.
+Automation and scripts are preserved for reference only:
 
-## Debugging
+- `automation/codex-hourly-market-monitor.prompt.md`
+- `scripts/run-market-signal-pipeline.codex.md`
+- `scripts/run-mvp-processing.codex.md`
+- `scripts/market_signal_action.py`
 
-- Check the newest run log under `research/logs/YYYY-MM-DD/`.
-- Read the latest digest under `research/digests/daily/` to confirm what changed.
-- If a source is flaky, the automation should log the error and continue with the rest.
+## Archive Policy
 
-## Self-Expanding Source Discovery
+The historical data should remain readable and reproducible, but the monitor should not be treated as active. Do not restart recurring collection, MVP synthesis, release automation, or product-spec generation unless the project is explicitly revived.
 
-The monitor extracts relevant external links from accepted signals and useful comments. It records them as candidates first, then promotes only sources with independent evidence or a validated high-confidence community-thread exception. SEO, affiliate, generic vendor, and unreadable destinations remain excluded. The authoritative promotion rules and candidate schema live in `research/config/write-rules.md` and `research/state/candidate-source-registry.yaml`.
-- If Git push fails in unattended mode, confirm the remote, branch, and authentication are already configured on the host.
-- If outputs start drifting, inspect `research/config/write-rules.md` and the YAML registries in `research/state/` first.
-
-## Recovery
-
-- To rebuild a signal manually, edit or remove only the affected markdown file in `research/signals/` and let the next automation run recreate it.
-- To adjust source coverage, edit `research/config/signal-sources.json`.
-- If the automation prompt needs to change, update `scripts/run-market-signal-pipeline.codex.md` and `automation/codex-hourly-market-monitor.prompt.md` together.
+If revived, begin from the validation plan in `analysis/business-viability/risks-and-validation.md`, not from the old automation loop.
