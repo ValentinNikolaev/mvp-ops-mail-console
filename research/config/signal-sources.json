@@ -347,6 +347,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/modoboa/modoboa/issues email spam filtering Rspamd DKIM DMARC deliverability reputation",
       "priority": 80
+    },
+    {
+      "name": "CIPP GitHub Issues",
+      "slug": "cipp-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/KelvinTegelaar/CIPP/issues Exchange anti-spam email filtering reputation",
+      "priority": 80
     }
   ]
 }
