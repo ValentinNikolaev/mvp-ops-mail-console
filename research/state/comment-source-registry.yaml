@@ -1,5 +1,14 @@
 schema_version: 1
 comment_sources:
+  - source: "Stalwart GitHub Issues"
+    url: "https://github.com/stalwartlabs/stalwart/issues/3193"
+    comments_supported: "yes"
+    comments_available_count: 1
+    comments_parsed_count: 1
+    comments_artifact_file: "research/comments/2026-06-06-stalwart-github-issues-ed25519-dkim-gmail-verification-comments.md"
+    comments_last_checked_at: "2026-07-31T22:03:34+00:00"
+    comments_recheck_policy: "periodic-refresh"
+    note: "Focused GitHub API comment pass: complete; 1/1 reply parsed. The sole reply is the platform triage redirect, not technical remediation evidence."
   - source: "Postal GitHub Issues"
     url: "https://github.com/postalserver/postal/issues/3611"
     comments_supported: "yes"
@@ -642,9 +651,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-31T21:40:42.217946+00:00"
+    comments_last_checked_at: "2026-07-31T22:03:04.609856+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -742,9 +752,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-31T21:40:42.413176+00:00"
+    comments_last_checked_at: "2026-07-31T22:03:04.925135+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 

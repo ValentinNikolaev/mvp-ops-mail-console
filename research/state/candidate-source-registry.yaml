@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Stalwart GitHub Issues"
+    url: "https://github.com/stalwartlabs/stalwart/issues"
+    canonical_url: "https://github.com/stalwartlabs/stalwart/issues"
+    discovered_at: "2026-08-01T00:03:34+02:00"
+    referring_thread: "https://github.com/stalwartlabs/stalwart/issues/3193"
+    status: "promoted"
+    first_search_result: "https://github.com/stalwartlabs/stalwart/issues/3193"
+    rationale: "Public, searchable issue tracker for an active mail-server project. A current June 2026 first-person report documents per-domain Ed25519 DKIM failure at Gmail despite matching DNS keys and an RSA DKIM pass; GitHub exposes and the initial pass parsed its one available reply. Promoted under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass; parse GitHub comments for accepted threads and apply canonical URL/content deduplication."
   - name: "Postal GitHub Issues"
     url: "https://github.com/postalserver/postal/issues"
     canonical_url: "https://github.com/postalserver/postal/issues"
