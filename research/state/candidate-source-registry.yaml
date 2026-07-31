@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "Frappe Mail GitHub Issues"
+    url: "https://github.com/frappe/mail/issues"
+    canonical_url: "https://github.com/frappe/mail/issues"
+    discovered_at: "2026-07-31T15:05:28+02:00"
+    referring_thread: "2026-07-31 source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://github.com/frappe/mail/issues"
+    rationale: "Public, searchable issue tracker for an active open-source mail client. Current 2026 issues include first-party requests for improved spam defenses and cold-email screening, making it a viable source of user-reported filtering and remediation evidence; GitHub exposes issue comments for mandatory parsing. Promoted under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass; parse GitHub comments for any accepted thread and apply canonical URL and content deduplication."
   - name: "CIPP GitHub Issues"
     url: "https://github.com/KelvinTegelaar/CIPP/issues"
     canonical_url: "https://github.com/KelvinTegelaar/CIPP/issues"

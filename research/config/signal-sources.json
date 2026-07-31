@@ -354,6 +354,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/KelvinTegelaar/CIPP/issues Exchange anti-spam email filtering reputation",
       "priority": 80
+    },
+    {
+      "name": "Frappe Mail GitHub Issues",
+      "slug": "frappe-mail-github-issues",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/frappe/mail/issues email spam filtering screening deliverability",
+      "priority": 75
     }
   ]
 }
