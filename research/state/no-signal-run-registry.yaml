@@ -1,6 +1,6 @@
 schema_version: 1
-consecutive_no_signal_runs: 0
-last_evaluated_at: "2026-07-31T15:05:28+02:00"
-last_evaluation: "Completed configured source pass accepted no new or materially updated signal: 34 sources succeeded, Server Fault failed because TLS verification reports an expired certificate, and the two Hacker News matches remain rejected with complete 0/0 comment artifacts. The third consecutive empty pass triggered source expansion and then reset the counter."
+consecutive_no_signal_runs: 1
+last_evaluated_at: "2026-07-31T16:06:40+02:00"
+last_evaluation: "Completed configured source pass accepted no new or materially updated signal: 35 sources succeeded, Server Fault failed because TLS verification reports an expired certificate, and the two Hacker News matches remain rejected with complete 0/0 comment artifacts. The empty-pass counter incremented after the prior source-expansion reset."
 last_expansion_at: "2026-07-31T15:05:28+02:00"
 last_expansion_result: "promoted Frappe Mail GitHub Issues under the three-empty-run maintenance exception after validating its public searchable active mail-project issue tracker, current 2026 spam-defense and cold-email-screening issues, and GitHub comment support. No accepted signal resulted from the configured source pass."
