@@ -1,0 +1,77 @@
+{
+  "project": {
+    "name": "Evidence Packet Workbench",
+    "summary": "Manual-first email-delivery incident workbench for agencies/MSPs that turns headers, NDRs, ESP exports, seed observations, and notes into bounded hypotheses and redacted support packets.",
+    "target_customer": "Agencies/MSPs and deliverability consultants handling repeated Gmail/Microsoft 365 incidents for clients.",
+    "business_model": "B2B SaaS subscription by agency workspace/client/domain/active incident, with optional paid expert review."
+  },
+  "scores": {
+    "problem_severity": 8,
+    "evidence_of_demand": 6,
+    "willingness_to_pay": 4,
+    "market_accessibility": 5,
+    "competitive_position": 5,
+    "mvp_feasibility": 7,
+    "unit_economics": 6,
+    "scalability": 6,
+    "overall_viability": 6
+  },
+  "estimates": {
+    "mvp_hours": {
+      "optimistic": 760,
+      "realistic": 1540,
+      "pessimistic": 2560
+    },
+    "mvp_cash_cost": {
+      "minimum": 25000,
+      "realistic": 75000,
+      "maximum": 140000,
+      "currency": "EUR"
+    },
+    "monthly_infrastructure": {
+      "pilot": 75,
+      "early": 300,
+      "growth": 1200,
+      "scale": 8000
+    },
+    "marketing_budget": {
+      "lean_validation": 1500,
+      "realistic_launch": 12000,
+      "accelerated_launch": 60000
+    },
+    "break_even": {
+      "customers": 30,
+      "monthly_revenue": 7500,
+      "estimated_month": 9,
+      "cumulative_estimated_month": 22
+    }
+  },
+  "recommendation": {
+    "decision": "VALIDATE_FIRST",
+    "confidence": "MEDIUM",
+    "main_reasons": [
+      "Repeated public pain signals and adjacent paid tools support problem severity.",
+      "The exact recurring SaaS willingness to pay for evidence packets is unproven.",
+      "MVP is feasible but requires privacy-safe artifact handling and trustworthy rule output.",
+      "The project can work as a niche SaaS/productized service if retention and CAC are validated."
+    ],
+    "critical_assumptions": [
+      "Agencies/MSPs have multiple relevant incidents per quarter.",
+      "Packets save at least 30% of triage/escalation prep time.",
+      "Customers pay EUR 149-399/month and retain after the first incident.",
+      "Sensitive artifact intake is acceptable with redaction and retention controls."
+    ],
+    "next_actions": [
+      "Interview 20-30 qualified agencies/MSPs.",
+      "Run 10-20 concierge packet prototypes on historical cases.",
+      "Sell 3 paid pilots before full MVP build.",
+      "Build parser/rule fixture prototype only after paid pilot signal."
+    ],
+    "kill_criteria": [
+      "Fewer than 3 of 10 qualified prospects agree to paid pilot.",
+      "Concierge packets save less than 30% time.",
+      "Month-2 retained usage below 40%.",
+      "CAC cannot plausibly stay below EUR 1,500 at base ARPU."
+    ]
+  }
+}
