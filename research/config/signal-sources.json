@@ -361,6 +361,13 @@
       "kind": "bing-rss",
       "siteScope": "site:github.com/frappe/mail/issues email spam filtering screening deliverability",
       "priority": 75
+    },
+    {
+      "name": "SimpleLogin GitHub Discussions",
+      "slug": "simplelogin-github-discussions",
+      "kind": "bing-rss",
+      "siteScope": "site:github.com/simple-login/app/discussions email SPF DKIM ARC SRS forwarding spam deliverability",
+      "priority": 75
     }
   ]
 }

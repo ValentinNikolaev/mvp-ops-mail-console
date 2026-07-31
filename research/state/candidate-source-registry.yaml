@@ -1,5 +1,14 @@
 schema_version: 1
 candidate_sources:
+  - name: "SimpleLogin GitHub Discussions"
+    url: "https://github.com/simple-login/app/discussions"
+    canonical_url: "https://github.com/simple-login/app/discussions"
+    discovered_at: "2026-07-31T18:07:42+02:00"
+    referring_thread: "2026-07-31 source-expansion pass"
+    status: "promoted"
+    first_search_result: "https://github.com/simple-login/app/discussions"
+    rationale: "Public, searchable GitHub discussion area for an active email-alias and forwarding project. Current 2026 threads include ARC/SRS and self-hosted SMTP questions, giving direct user evidence for forwarding authentication, routing, and delivery/remediation workflows; GitHub exposes replies for mandatory parsing. Promoted under the mandatory three-empty-run maintenance exception."
+    next_review: "Run the normal source pass; parse available GitHub replies for any accepted thread and apply canonical URL/content deduplication."
   - name: "Frappe Mail GitHub Issues"
     url: "https://github.com/frappe/mail/issues"
     canonical_url: "https://github.com/frappe/mail/issues"
