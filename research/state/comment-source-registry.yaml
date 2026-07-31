@@ -633,9 +633,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-15-hacker-news-ask-hn-email-identity-isolation-for-multi-agent-outreach-sys-comments.md"
-    comments_last_checked_at: "2026-07-31T03:25:26.087347+00:00"
+    comments_last_checked_at: "2026-07-31T05:27:57.673781+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -700,9 +701,10 @@ comment_sources:
     comments_available_count: 0
     comments_parsed_count: 0
     comments_artifact_file: "research/comments/2026-03-13-hacker-news-free-email-list-cleaner-improve-email-deliverability-and-cam-comments.md"
-    comments_last_checked_at: "2026-07-31T03:25:26.234190+00:00"
+    comments_last_checked_at: "2026-07-31T05:27:57.822027+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
@@ -1025,9 +1027,10 @@ comment_sources:
     comments_available_count: 6
     comments_parsed_count: 6
     comments_artifact_file: "research/comments/2026-07-28-server-fault-why-does-sending-an-email-go-to-the-spam-folder-comments.md"
-    comments_last_checked_at: "2026-07-31T03:25:26.303679+00:00"
+    comments_last_checked_at: "2026-07-31T05:27:57.890527+00:00"
     comments_recheck_policy: "periodic-refresh"
     note: "Python collector comment pass: complete."
+
 
 
 
